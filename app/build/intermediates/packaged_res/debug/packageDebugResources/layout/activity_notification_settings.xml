@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/white">
+
+    <!-- Title -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cài đặt thông báo"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/red_primary"
+        android:gravity="center"
+        android:paddingBottom="32dp"/>
+
+    <!-- Current Time Display -->
+    <TextView
+        android:id="@+id/tvCurrentTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Thời gian hiện tại: 18:00"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:padding="16dp"
+        android:background="@drawable/rounded_background"
+        android:layout_marginBottom="24dp"/>
+
+    <!-- Set Time Button -->
+    <Button
+        android:id="@+id/btnSetTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Chọn thời gian thông báo"
+        android:textColor="@color/white"
+        android:background="@color/red_button"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:padding="12dp"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Reset Default Button -->
+    <Button
+        android:id="@+id/btnResetDefault"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Đặt lại mặc định (18:00)"
+        android:textColor="@color/red_primary"
+        android:background="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:padding="12dp"
+        android:layout_marginBottom="16dp"
+        android:strokeColor="@color/red_primary"
+        android:strokeWidth="2"/>
+
+    <!-- Instructions -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Thông báo sẽ được gửi vào thời gian đã chọn mỗi ngày để nhắc nhở về ngày đặc biệt hôm sau."
+        android:textSize="14sp"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:padding="8dp"/>
+
+</LinearLayout>

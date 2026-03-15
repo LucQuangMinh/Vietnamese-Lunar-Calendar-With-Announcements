@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/white">
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/calendar_title"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/red_primary"
+        android:gravity="center"
+        android:paddingBottom="16dp"/>
+
+    <!-- Month Selection -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingBottom="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/month_label"
+            android:textSize="16sp"
+            android:textColor="@color/red_primary"
+            android:textStyle="bold"
+            android:paddingEnd="8dp"
+            android:paddingRight="8dp"/>
+
+        <Spinner
+            android:id="@+id/spinnerMonth"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:drawable/spinner_background"
+            android:padding="8dp"/>
+    </LinearLayout>
+
+    <!-- Year Selection -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingBottom="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/year_label"
+            android:textSize="16sp"
+            android:textColor="@color/red_primary"
+            android:textStyle="bold"
+            android:paddingEnd="8dp"
+            android:paddingRight="8dp"/>
+
+        <Spinner
+            android:id="@+id/spinnerYear"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:drawable/spinner_background"
+            android:padding="8dp"/>
+    </LinearLayout>
+
+    <!-- View Button -->
+    <Button
+        android:id="@+id/btnViewCalendar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/view_button"
+        android:textColor="@color/white"
+        android:background="@color/red_button"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:padding="12dp"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Special Day List Button -->
+    <Button
+        android:id="@+id/btnSpecialDayList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Danh sách ngày đặc biệt"
+        android:textColor="@color/white"
+        android:background="@color/red_button"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:padding="12dp"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Notification Settings Button -->
+    <Button
+        android:id="@+id/btnNotificationSettings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cài đặt thông báo"
+        android:textColor="@color/white"
+        android:background="@color/red_button"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:padding="12dp"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Calendar Info Text -->
+    <TextView
+        android:id="@+id/tvCalendarInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/view_calendar"
+        android:textSize="14sp"
+        android:textColor="@color/red_primary"
+        android:gravity="center"
+        android:paddingBottom="8dp"/>
+
+    <!-- Days of Week Header -->
+    <GridView
+        android:id="@+id/gridViewHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:numColumns="7"
+        android:stretchMode="columnWidth"
+        android:gravity="center"
+        android:background="@color/header_bg"
+        android:padding="4dp"/>
+
+    <!-- Calendar Grid -->
+    <GridView
+        android:id="@+id/gridViewCalendar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:numColumns="7"
+        android:stretchMode="columnWidth"
+        android:gravity="center"
+        android:verticalSpacing="1dp"
+        android:horizontalSpacing="1dp"/>
+
+</LinearLayout>

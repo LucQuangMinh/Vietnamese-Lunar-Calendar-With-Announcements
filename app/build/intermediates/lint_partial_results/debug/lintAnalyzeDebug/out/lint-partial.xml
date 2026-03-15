@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<incidents format="6" by="lint 8.5.2" type="partial_results">
+    <map id="UnsafeIntentLaunch">
+            <map id="unprotected">
+                <entry
+                    name="com.example.lunarcalendar.MainActivity"
+                    boolean="true"/>
+                <entry
+                    name="com.example.lunarcalendar.SpecialDayNotificationReceiver"
+                    boolean="true"/>
+            </map>
+    </map>
+    <map id="ScheduleExactAlarm">
+        <location id="0"
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/example/lunarcalendar/NotificationHelper.java"
+            line="90"
+            column="21"
+            startOffset="3631"
+            endLine="91"
+            endColumn="79"
+            endOffset="3774"/>
+        <location id="1"
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/example/lunarcalendar/NotificationHelper.java"
+            line="93"
+            column="21"
+            startOffset="3821"
+            endLine="94"
+            endColumn="79"
+            endOffset="3947"/>
+        <location id="2"
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/example/lunarcalendar/NotificationHelper.java"
+            line="180"
+            column="21"
+            startOffset="7830"
+            endLine="181"
+            endColumn="79"
+            endOffset="7973"/>
+        <location id="3"
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/example/lunarcalendar/NotificationHelper.java"
+            line="183"
+            column="21"
+            startOffset="8020"
+            endLine="184"
+            endColumn="79"
+            endOffset="8146"/>
+        <location id="4"
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/example/lunarcalendar/SpecialDayNotificationHelper.java"
+            line="89"
+            column="25"
+            startOffset="3479"
+            endLine="90"
+            endColumn="87"
+            endOffset="3630"/>
+        <location id="5"
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/example/lunarcalendar/SpecialDayNotificationHelper.java"
+            line="92"
+            column="25"
+            startOffset="3685"
+            endLine="93"
+            endColumn="87"
+            endOffset="3819"/>
+        <location id="6"
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/example/lunarcalendar/SpecialDayNotificationHelper.java"
+            line="103"
+            column="21"
+            startOffset="4304"
+            endLine="104"
+            endColumn="83"
+            endOffset="4451"/>
+        <location id="7"
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/example/lunarcalendar/SpecialDayNotificationHelper.java"
+            line="106"
+            column="21"
+            startOffset="4498"
+            endLine="107"
+            endColumn="83"
+            endOffset="4628"/>
+        <entry
+            name="ChecksExactAlarmPermission"
+            boolean="true"/>
+    </map>
+    <map id="NotificationPermission">
+        <entry
+            name="source"
+            boolean="true"/>
+    </map>
+    <map id="UnusedResources">
+        <location id="R.color.teal_700"
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/colors.xml"
+            line="7"
+            column="12"
+            startOffset="248"
+            endLine="7"
+            endColumn="27"
+            endOffset="263"/>
+        <location id="R.color.purple_700"
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/colors.xml"
+            line="5"
+            column="12"
+            startOffset="156"
+            endLine="5"
+            endColumn="29"
+            endOffset="173"/>
+        <location id="R.style.AppTheme"
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/styles.xml"
+            line="3"
+            column="12"
+            startOffset="62"
+            endLine="3"
+            endColumn="27"
+            endOffset="77"/>
+        <location id="R.color.purple_500"
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/colors.xml"
+            line="4"
+            column="12"
+            startOffset="109"
+            endLine="4"
+            endColumn="29"
+            endOffset="126"/>
+        <location id="R.color.weekend_bg"
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/colors.xml"
+            line="16"
+            column="12"
+            startOffset="594"
+            endLine="16"
+            endColumn="29"
+            endOffset="611"/>
+        <location id="R.color.purple_200"
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/colors.xml"
+            line="3"
+            column="12"
+            startOffset="62"
+            endLine="3"
+            endColumn="29"
+            endOffset="79"/>
+        <entry
+            name="model"
+            string="color[white(U),cell_border(U),red_primary(U),black(U),red_button(U),header_bg(U),lunar_text(U),header_text(U),purple_200(D),purple_500(D),purple_700(D),teal_200(D),teal_700(D),current_day_bg(U),weekend_bg(D)],drawable[edittext_background(U),event_type_background(U),ic_delete(U),ic_edit(U),ic_notification(U),rounded_background(U)],id[etEventName(U),spinnerEventType(U),btnDatePicker(U),etSolarDay(U),etSolarMonth(U),etSolarYear(U),tvLunarDay(U),tvLunarMonth(U),tvLunarYear(U),etDescription(U),cbYearly(U),cbNotification(U),btnCancel(U),btnSave(U),btnAddEvent(U),etSearch(U),btnSearch(U),recyclerViewEvents(U),tvTitle(U),spinnerMonth(U),spinnerYear(U),btnViewCalendar(U),btnSpecialDayList(U),btnNotificationSettings(U),tvCalendarInfo(U),gridViewHeader(U),gridViewCalendar(U),tvCurrentTime(U),btnSetTime(U),btnResetDefault(U),btnAddSpecialDay(U),lvSpecialDays(U),tvEmptyMessage(U),tvSolarDate(U),tvLunarDate(U),tvSpecialDayIndicator(U),etSpecialDayName(U),viewEventType(U),tvEventName(U),tvEventDate(U),tvEventDescription(U),tvEventType(U),ivNotification(U),btnEdit(U),btnDelete(U),tvHeaderDay(U),tvSpecialDayName(U),tvSpecialDayDate(U)],layout[activity_add_event(U),activity_event_list(U),activity_main(U),activity_notification_settings(U),activity_special_day_list(U),calendar_cell(U),dialog_special_day(U),event_item(U),header_cell(U),item_special_day(U)],string[app_name(U),calendar_title(U),month_label(U),year_label(U),view_button(U),view_calendar(U),monday(U),tuesday(U),wednesday(U),thursday(U),friday(U),saturday(U),sunday(U)],style[Theme_AppCompat_Light_DarkActionBar(R),AppTheme(D)];f^0^1,10^2,45^0^2^3^f^4,46^0^2^4^f,47^0^50^2^51^52^4^53^54^5,48^0^2^14^3^4,4a^0^3^6^2,4c^2^3^10^0^13^12^11,4d^5^7,5d^5c^2^4;;;"/>
+        <location id="R.color.teal_200"
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/colors.xml"
+            line="6"
+            column="12"
+            startOffset="203"
+            endLine="6"
+            endColumn="27"
+            endOffset="218"/>
+    </map>
+
+</incidents>

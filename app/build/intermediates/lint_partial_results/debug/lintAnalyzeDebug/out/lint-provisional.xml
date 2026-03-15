@@ -1,0 +1,780 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<incidents format="6" by="lint 8.5.2" type="conditional_incidents">
+
+    <incident
+        id="ObsoleteSdkInt"
+        severity="warning"
+        message="Unnecessary; SDK_INT is always >= 31">
+        <fix-replace
+            description="Delete tools:targetApi"
+            replacement=""
+            priority="0">
+            <range
+                file="${:app*debug*MAIN*sourceProvider*0*manifest*0}"
+                startOffset="521"
+                endOffset="541"/>
+        </fix-replace>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*manifest*0}"
+            line="13"
+            column="9"
+            startOffset="521"
+            endLine="13"
+            endColumn="29"
+            endOffset="541"/>
+        <map>
+            <condition minGE="ffffffffc0000000"/>
+        </map>
+    </incident>
+
+    <incident
+        id="RtlHardcoded"
+        severity="warning"
+        message="Redundant attribute `layout_marginRight`; already defining `layout_marginEnd` with `targetSdkVersion` 34">
+        <fix-attribute
+            description="Delete layout_marginRight"
+            robot="true"
+            independent="true"
+            namespace="http://schemas.android.com/apk/res/android"
+            attribute="layout_marginRight"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_add_event.xml"
+            line="85"
+            column="17"
+            startOffset="3087"
+            endLine="85"
+            endColumn="43"
+            endOffset="3113"/>
+        <map>
+            <entry
+                name="applies"
+                int="18"/>
+        </map>
+    </incident>
+
+    <incident
+        id="RtlHardcoded"
+        severity="warning"
+        message="Redundant attribute `layout_marginRight`; already defining `layout_marginEnd` with `targetSdkVersion` 34">
+        <fix-attribute
+            description="Delete layout_marginRight"
+            robot="true"
+            independent="true"
+            namespace="http://schemas.android.com/apk/res/android"
+            attribute="layout_marginRight"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_add_event.xml"
+            line="98"
+            column="17"
+            startOffset="3609"
+            endLine="98"
+            endColumn="43"
+            endOffset="3635"/>
+        <map>
+            <entry
+                name="applies"
+                int="18"/>
+        </map>
+    </incident>
+
+    <incident
+        id="RtlHardcoded"
+        severity="warning"
+        message="Redundant attribute `layout_marginRight`; already defining `layout_marginEnd` with `targetSdkVersion` 34">
+        <fix-attribute
+            description="Delete layout_marginRight"
+            robot="true"
+            independent="true"
+            namespace="http://schemas.android.com/apk/res/android"
+            attribute="layout_marginRight"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_add_event.xml"
+            line="111"
+            column="17"
+            startOffset="4134"
+            endLine="111"
+            endColumn="43"
+            endOffset="4160"/>
+        <map>
+            <entry
+                name="applies"
+                int="18"/>
+        </map>
+    </incident>
+
+    <incident
+        id="RtlHardcoded"
+        severity="warning"
+        message="Redundant attribute `layout_marginRight`; already defining `layout_marginEnd` with `targetSdkVersion` 34">
+        <fix-attribute
+            description="Delete layout_marginRight"
+            robot="true"
+            independent="true"
+            namespace="http://schemas.android.com/apk/res/android"
+            attribute="layout_marginRight"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_add_event.xml"
+            line="152"
+            column="17"
+            startOffset="5656"
+            endLine="152"
+            endColumn="43"
+            endOffset="5682"/>
+        <map>
+            <entry
+                name="applies"
+                int="18"/>
+        </map>
+    </incident>
+
+    <incident
+        id="RtlHardcoded"
+        severity="warning"
+        message="Redundant attribute `layout_marginRight`; already defining `layout_marginEnd` with `targetSdkVersion` 34">
+        <fix-attribute
+            description="Delete layout_marginRight"
+            robot="true"
+            independent="true"
+            namespace="http://schemas.android.com/apk/res/android"
+            attribute="layout_marginRight"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_add_event.xml"
+            line="165"
+            column="17"
+            startOffset="6188"
+            endLine="165"
+            endColumn="43"
+            endOffset="6214"/>
+        <map>
+            <entry
+                name="applies"
+                int="18"/>
+        </map>
+    </incident>
+
+    <incident
+        id="RtlHardcoded"
+        severity="warning"
+        message="Redundant attribute `layout_marginRight`; already defining `layout_marginEnd` with `targetSdkVersion` 34">
+        <fix-attribute
+            description="Delete layout_marginRight"
+            robot="true"
+            independent="true"
+            namespace="http://schemas.android.com/apk/res/android"
+            attribute="layout_marginRight"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_add_event.xml"
+            line="253"
+            column="17"
+            startOffset="9368"
+            endLine="253"
+            endColumn="43"
+            endOffset="9394"/>
+        <map>
+            <entry
+                name="applies"
+                int="18"/>
+        </map>
+    </incident>
+
+    <incident
+        id="RtlHardcoded"
+        severity="warning"
+        message="Redundant attribute `layout_marginLeft`; already defining `layout_marginStart` with `targetSdkVersion` 34">
+        <fix-attribute
+            description="Delete layout_marginLeft"
+            robot="true"
+            independent="true"
+            namespace="http://schemas.android.com/apk/res/android"
+            attribute="layout_marginLeft"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_add_event.xml"
+            line="265"
+            column="17"
+            startOffset="9841"
+            endLine="265"
+            endColumn="42"
+            endOffset="9866"/>
+        <map>
+            <entry
+                name="applies"
+                int="18"/>
+        </map>
+    </incident>
+
+    <incident
+        id="RtlHardcoded"
+        severity="warning"
+        message="Redundant attribute `layout_marginRight`; already defining `layout_marginEnd` with `targetSdkVersion` 34">
+        <fix-attribute
+            description="Delete layout_marginRight"
+            robot="true"
+            independent="true"
+            namespace="http://schemas.android.com/apk/res/android"
+            attribute="layout_marginRight"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_event_list.xml"
+            line="37"
+            column="13"
+            startOffset="1307"
+            endLine="37"
+            endColumn="39"
+            endOffset="1333"/>
+        <map>
+            <entry
+                name="applies"
+                int="18"/>
+        </map>
+    </incident>
+
+    <incident
+        id="RtlHardcoded"
+        severity="warning"
+        message="Redundant attribute `layout_marginLeft`; already defining `layout_marginStart` with `targetSdkVersion` 34">
+        <fix-attribute
+            description="Delete layout_marginLeft"
+            robot="true"
+            independent="true"
+            namespace="http://schemas.android.com/apk/res/android"
+            attribute="layout_marginLeft"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_event_list.xml"
+            line="69"
+            column="13"
+            startOffset="2413"
+            endLine="69"
+            endColumn="38"
+            endOffset="2438"/>
+        <map>
+            <entry
+                name="applies"
+                int="18"/>
+        </map>
+    </incident>
+
+    <incident
+        id="RtlSymmetry"
+        severity="warning"
+        message="When you define `paddingEnd` you should probably also define `paddingStart` for right-to-left symmetry">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_main.xml"
+            line="36"
+            column="13"
+            startOffset="1237"
+            endLine="36"
+            endColumn="31"
+            endOffset="1255"/>
+        <map>
+            <entry
+                name="applies"
+                int="2"/>
+        </map>
+    </incident>
+
+    <incident
+        id="RtlSymmetry"
+        severity="warning"
+        message="When you define `paddingRight` you should probably also define `paddingLeft` for right-to-left symmetry">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_main.xml"
+            line="37"
+            column="13"
+            startOffset="1274"
+            endLine="37"
+            endColumn="33"
+            endOffset="1294"/>
+        <map>
+            <entry
+                name="applies"
+                int="2"/>
+        </map>
+    </incident>
+
+    <incident
+        id="RtlHardcoded"
+        severity="warning"
+        message="Redundant attribute `paddingRight`; already defining `paddingEnd` with `targetSdkVersion` 34">
+        <fix-attribute
+            description="Delete paddingRight"
+            robot="true"
+            independent="true"
+            namespace="http://schemas.android.com/apk/res/android"
+            attribute="paddingRight"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_main.xml"
+            line="37"
+            column="13"
+            startOffset="1274"
+            endLine="37"
+            endColumn="33"
+            endOffset="1294"/>
+        <map>
+            <entry
+                name="applies"
+                int="18"/>
+        </map>
+    </incident>
+
+    <incident
+        id="RtlSymmetry"
+        severity="warning"
+        message="When you define `paddingEnd` you should probably also define `paddingStart` for right-to-left symmetry">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_main.xml"
+            line="63"
+            column="13"
+            startOffset="2171"
+            endLine="63"
+            endColumn="31"
+            endOffset="2189"/>
+        <map>
+            <entry
+                name="applies"
+                int="2"/>
+        </map>
+    </incident>
+
+    <incident
+        id="RtlSymmetry"
+        severity="warning"
+        message="When you define `paddingRight` you should probably also define `paddingLeft` for right-to-left symmetry">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_main.xml"
+            line="64"
+            column="13"
+            startOffset="2208"
+            endLine="64"
+            endColumn="33"
+            endOffset="2228"/>
+        <map>
+            <entry
+                name="applies"
+                int="2"/>
+        </map>
+    </incident>
+
+    <incident
+        id="RtlHardcoded"
+        severity="warning"
+        message="Redundant attribute `paddingRight`; already defining `paddingEnd` with `targetSdkVersion` 34">
+        <fix-attribute
+            description="Delete paddingRight"
+            robot="true"
+            independent="true"
+            namespace="http://schemas.android.com/apk/res/android"
+            attribute="paddingRight"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_main.xml"
+            line="64"
+            column="13"
+            startOffset="2208"
+            endLine="64"
+            endColumn="33"
+            endOffset="2228"/>
+        <map>
+            <entry
+                name="applies"
+                int="18"/>
+        </map>
+    </incident>
+
+    <incident
+        id="RtlHardcoded"
+        severity="warning"
+        message="Redundant attribute `layout_alignParentLeft`; already defining `layout_alignParentStart` with `targetSdkVersion` 34">
+        <fix-attribute
+            description="Delete layout_alignParentLeft"
+            robot="true"
+            independent="true"
+            namespace="http://schemas.android.com/apk/res/android"
+            attribute="layout_alignParentLeft"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/calendar_cell.xml"
+            line="15"
+            column="9"
+            startOffset="526"
+            endLine="15"
+            endColumn="39"
+            endOffset="556"/>
+        <map>
+            <entry
+                name="applies"
+                int="18"/>
+        </map>
+    </incident>
+
+    <incident
+        id="RtlSymmetry"
+        severity="warning"
+        message="When you define `paddingLeft` you should probably also define `paddingRight` for right-to-left symmetry">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/calendar_cell.xml"
+            line="21"
+            column="9"
+            startOffset="738"
+            endLine="21"
+            endColumn="28"
+            endOffset="757"/>
+        <map>
+            <entry
+                name="applies"
+                int="2"/>
+        </map>
+    </incident>
+
+    <incident
+        id="RtlHardcoded"
+        severity="warning"
+        message="Redundant attribute `paddingLeft`; already defining `paddingStart` with `targetSdkVersion` 34">
+        <fix-attribute
+            description="Delete paddingLeft"
+            robot="true"
+            independent="true"
+            namespace="http://schemas.android.com/apk/res/android"
+            attribute="paddingLeft"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/calendar_cell.xml"
+            line="21"
+            column="9"
+            startOffset="738"
+            endLine="21"
+            endColumn="28"
+            endOffset="757"/>
+        <map>
+            <entry
+                name="applies"
+                int="18"/>
+        </map>
+    </incident>
+
+    <incident
+        id="RtlSymmetry"
+        severity="warning"
+        message="When you define `paddingStart` you should probably also define `paddingEnd` for right-to-left symmetry">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/calendar_cell.xml"
+            line="20"
+            column="9"
+            startOffset="703"
+            endLine="20"
+            endColumn="29"
+            endOffset="723"/>
+        <map>
+            <entry
+                name="applies"
+                int="2"/>
+        </map>
+    </incident>
+
+    <incident
+        id="RtlHardcoded"
+        severity="warning"
+        message="Redundant attribute `layout_alignParentRight`; already defining `layout_alignParentEnd` with `targetSdkVersion` 34">
+        <fix-attribute
+            description="Delete layout_alignParentRight"
+            robot="true"
+            independent="true"
+            namespace="http://schemas.android.com/apk/res/android"
+            attribute="layout_alignParentRight"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/calendar_cell.xml"
+            line="30"
+            column="9"
+            startOffset="1046"
+            endLine="30"
+            endColumn="40"
+            endOffset="1077"/>
+        <map>
+            <entry
+                name="applies"
+                int="18"/>
+        </map>
+    </incident>
+
+    <incident
+        id="RtlSymmetry"
+        severity="warning"
+        message="When you define `paddingEnd` you should probably also define `paddingStart` for right-to-left symmetry">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/calendar_cell.xml"
+            line="34"
+            column="9"
+            startOffset="1198"
+            endLine="34"
+            endColumn="27"
+            endOffset="1216"/>
+        <map>
+            <entry
+                name="applies"
+                int="2"/>
+        </map>
+    </incident>
+
+    <incident
+        id="RtlSymmetry"
+        severity="warning"
+        message="When you define `paddingRight` you should probably also define `paddingLeft` for right-to-left symmetry">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/calendar_cell.xml"
+            line="35"
+            column="9"
+            startOffset="1231"
+            endLine="35"
+            endColumn="29"
+            endOffset="1251"/>
+        <map>
+            <entry
+                name="applies"
+                int="2"/>
+        </map>
+    </incident>
+
+    <incident
+        id="RtlHardcoded"
+        severity="warning"
+        message="Redundant attribute `paddingRight`; already defining `paddingEnd` with `targetSdkVersion` 34">
+        <fix-attribute
+            description="Delete paddingRight"
+            robot="true"
+            independent="true"
+            namespace="http://schemas.android.com/apk/res/android"
+            attribute="paddingRight"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/calendar_cell.xml"
+            line="35"
+            column="9"
+            startOffset="1231"
+            endLine="35"
+            endColumn="29"
+            endOffset="1251"/>
+        <map>
+            <entry
+                name="applies"
+                int="18"/>
+        </map>
+    </incident>
+
+    <incident
+        id="RtlHardcoded"
+        severity="warning"
+        message="Redundant attribute `layout_alignParentRight`; already defining `layout_alignParentEnd` with `targetSdkVersion` 34">
+        <fix-attribute
+            description="Delete layout_alignParentRight"
+            robot="true"
+            independent="true"
+            namespace="http://schemas.android.com/apk/res/android"
+            attribute="layout_alignParentRight"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/calendar_cell.xml"
+            line="48"
+            column="9"
+            startOffset="1685"
+            endLine="48"
+            endColumn="40"
+            endOffset="1716"/>
+        <map>
+            <entry
+                name="applies"
+                int="18"/>
+        </map>
+    </incident>
+
+    <incident
+        id="RtlSymmetry"
+        severity="warning"
+        message="When you define `paddingEnd` you should probably also define `paddingStart` for right-to-left symmetry">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/calendar_cell.xml"
+            line="50"
+            column="9"
+            startOffset="1765"
+            endLine="50"
+            endColumn="27"
+            endOffset="1783"/>
+        <map>
+            <entry
+                name="applies"
+                int="2"/>
+        </map>
+    </incident>
+
+    <incident
+        id="RtlSymmetry"
+        severity="warning"
+        message="When you define `paddingRight` you should probably also define `paddingLeft` for right-to-left symmetry">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/calendar_cell.xml"
+            line="51"
+            column="9"
+            startOffset="1798"
+            endLine="51"
+            endColumn="29"
+            endOffset="1818"/>
+        <map>
+            <entry
+                name="applies"
+                int="2"/>
+        </map>
+    </incident>
+
+    <incident
+        id="RtlHardcoded"
+        severity="warning"
+        message="Redundant attribute `paddingRight`; already defining `paddingEnd` with `targetSdkVersion` 34">
+        <fix-attribute
+            description="Delete paddingRight"
+            robot="true"
+            independent="true"
+            namespace="http://schemas.android.com/apk/res/android"
+            attribute="paddingRight"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/calendar_cell.xml"
+            line="51"
+            column="9"
+            startOffset="1798"
+            endLine="51"
+            endColumn="29"
+            endOffset="1818"/>
+        <map>
+            <entry
+                name="applies"
+                int="18"/>
+        </map>
+    </incident>
+
+    <incident
+        id="RtlHardcoded"
+        severity="warning"
+        message="Redundant attribute `layout_marginRight`; already defining `layout_marginEnd` with `targetSdkVersion` 34">
+        <fix-attribute
+            description="Delete layout_marginRight"
+            robot="true"
+            independent="true"
+            namespace="http://schemas.android.com/apk/res/android"
+            attribute="layout_marginRight"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/event_item.xml"
+            line="23"
+            column="13"
+            startOffset="820"
+            endLine="23"
+            endColumn="39"
+            endOffset="846"/>
+        <map>
+            <entry
+                name="applies"
+                int="18"/>
+        </map>
+    </incident>
+
+    <incident
+        id="RtlHardcoded"
+        severity="warning"
+        message="Redundant attribute `layout_marginLeft`; already defining `layout_marginStart` with `targetSdkVersion` 34">
+        <fix-attribute
+            description="Delete layout_marginLeft"
+            robot="true"
+            independent="true"
+            namespace="http://schemas.android.com/apk/res/android"
+            attribute="layout_marginLeft"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/event_item.xml"
+            line="90"
+            column="13"
+            startOffset="3404"
+            endLine="90"
+            endColumn="38"
+            endOffset="3429"/>
+        <map>
+            <entry
+                name="applies"
+                int="18"/>
+        </map>
+    </incident>
+
+    <incident
+        id="RtlHardcoded"
+        severity="warning"
+        message="Redundant attribute `layout_marginLeft`; already defining `layout_marginStart` with `targetSdkVersion` 34">
+        <fix-attribute
+            description="Delete layout_marginLeft"
+            robot="true"
+            independent="true"
+            namespace="http://schemas.android.com/apk/res/android"
+            attribute="layout_marginLeft"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/event_item.xml"
+            line="118"
+            column="17"
+            startOffset="4572"
+            endLine="118"
+            endColumn="42"
+            endOffset="4597"/>
+        <map>
+            <entry
+                name="applies"
+                int="18"/>
+        </map>
+    </incident>
+
+    <incident
+        id="NotificationPermission"
+        severity="error"
+        message="When targeting Android 13 or higher, posting a permission requires holding the `POST_NOTIFICATIONS` permission">
+        <fix-data missing="android.permission.POST_NOTIFICATIONS"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/example/lunarcalendar/NotificationHelper.java"
+            line="139"
+            column="13"
+            startOffset="5722"
+            endLine="139"
+            endColumn="77"
+            endOffset="5786"/>
+    </incident>
+
+    <incident
+        id="NotificationPermission"
+        severity="error"
+        message="When targeting Android 13 or higher, posting a permission requires holding the `POST_NOTIFICATIONS` permission">
+        <fix-data missing="android.permission.POST_NOTIFICATIONS"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/example/lunarcalendar/NotificationReceiver.java"
+            line="62"
+            column="13"
+            startOffset="2719"
+            endLine="62"
+            endColumn="72"
+            endOffset="2778"/>
+    </incident>
+
+    <incident
+        id="NotificationPermission"
+        severity="error"
+        message="When targeting Android 13 or higher, posting a permission requires holding the `POST_NOTIFICATIONS` permission">
+        <fix-data missing="android.permission.POST_NOTIFICATIONS"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/example/lunarcalendar/SpecialDayNotificationHelper.java"
+            line="166"
+            column="13"
+            startOffset="7074"
+            endLine="166"
+            endColumn="73"
+            endOffset="7134"/>
+    </incident>
+
+    <incident
+        id="NotificationPermission"
+        severity="error"
+        message="When targeting Android 13 or higher, posting a permission requires holding the `POST_NOTIFICATIONS` permission">
+        <fix-data missing="android.permission.POST_NOTIFICATIONS"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/example/lunarcalendar/SpecialDayNotificationHelper.java"
+            line="205"
+            column="13"
+            startOffset="8794"
+            endLine="205"
+            endColumn="73"
+            endOffset="8854"/>
+    </incident>
+
+</incidents>

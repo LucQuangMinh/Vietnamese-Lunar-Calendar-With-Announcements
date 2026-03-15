@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Lịch Âm Việt Nam</string>
+    <string name="month_label">Tháng</string>
+    <string name="year_label">Năm</string>
+    <string name="view_button">Xem ngày</string>
+    <string name="calendar_title">Lịch âm dương tháng %1$d/%2$d</string>
+    <string name="view_calendar">Xem lịch âm tháng %1$d năm %2$d</string>
+    
+    <!-- Days of week -->
+    <string name="monday">Thứ 2</string>
+    <string name="tuesday">Thứ 3</string>
+    <string name="wednesday">Thứ 4</string>
+    <string name="thursday">Thứ 5</string>
+    <string name="friday">Thứ 6</string>
+    <string name="saturday">Thứ 7</string>
+    <string name="sunday">C.Nhật</string>
+</resources>

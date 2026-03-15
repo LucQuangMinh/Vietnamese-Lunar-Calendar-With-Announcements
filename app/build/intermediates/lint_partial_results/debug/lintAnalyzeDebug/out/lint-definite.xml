@@ -1,0 +1,1490 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<incidents format="6" by="lint 8.5.2" type="incidents">
+
+    <incident
+        id="ExportedReceiver"
+        severity="warning"
+        message="Exported receiver does not require permission">
+        <fix-attribute
+            description="Set permission"
+            namespace="http://schemas.android.com/apk/res/android"
+            attribute="permission"
+            value="TODO"
+            point="4"
+            mark="0"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*manifest*0}"
+            line="42"
+            column="10"
+            startOffset="1575"
+            endLine="42"
+            endColumn="18"
+            endOffset="1583"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Thêm sự kiện mới&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_add_event.xml"
+            line="17"
+            column="13"
+            startOffset="560"
+            endLine="17"
+            endColumn="44"
+            endOffset="591"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Tên sự kiện&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_add_event.xml"
+            line="28"
+            column="13"
+            startOffset="959"
+            endLine="28"
+            endColumn="39"
+            endOffset="985"/>
+    </incident>
+
+    <incident
+        id="Autofill"
+        severity="warning"
+        message="Missing `autofillHints` attribute">
+        <fix-alternatives>
+            <fix-attribute
+                description="Set autofillHints"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="autofillHints"
+                value=""
+                point="0"
+                mark="0"/>
+            <fix-attribute
+                description="Set importantForAutofill=&quot;no&quot;"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="importantForAutofill"
+                value="no"/>
+        </fix-alternatives>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_add_event.xml"
+            line="33"
+            column="10"
+            startOffset="1126"
+            endLine="33"
+            endColumn="18"
+            endOffset="1134"/>
+    </incident>
+
+    <incident
+        id="TextFields"
+        severity="warning"
+        message="This text field does not specify an `inputType`">
+        <fix-attribute
+            description="Set inputType"
+            namespace="http://schemas.android.com/apk/res/android"
+            attribute="inputType"
+            value="TODO"
+            point="4"
+            mark="0"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_add_event.xml"
+            line="33"
+            column="10"
+            startOffset="1126"
+            endLine="33"
+            endColumn="18"
+            endOffset="1134"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Nhập tên sự kiện&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_add_event.xml"
+            line="37"
+            column="13"
+            startOffset="1278"
+            endLine="37"
+            endColumn="44"
+            endOffset="1309"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Loại sự kiện&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_add_event.xml"
+            line="47"
+            column="13"
+            startOffset="1650"
+            endLine="47"
+            endColumn="40"
+            endOffset="1677"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Ngày dương lịch&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_add_event.xml"
+            line="64"
+            column="13"
+            startOffset="2266"
+            endLine="64"
+            endColumn="43"
+            endOffset="2296"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Chọn ngày&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_add_event.xml"
+            line="80"
+            column="17"
+            startOffset="2855"
+            endLine="80"
+            endColumn="41"
+            endOffset="2879"/>
+    </incident>
+
+    <incident
+        id="Autofill"
+        severity="warning"
+        message="Missing `autofillHints` attribute">
+        <fix-alternatives>
+            <fix-attribute
+                description="Set autofillHints"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="autofillHints"
+                value=""
+                point="0"
+                mark="0"/>
+            <fix-attribute
+                description="Set importantForAutofill=&quot;no&quot;"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="importantForAutofill"
+                value="no"/>
+        </fix-alternatives>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_add_event.xml"
+            line="87"
+            column="14"
+            startOffset="3137"
+            endLine="87"
+            endColumn="22"
+            endOffset="3145"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Ngày&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_add_event.xml"
+            line="92"
+            column="17"
+            startOffset="3337"
+            endLine="92"
+            endColumn="36"
+            endOffset="3356"/>
+    </incident>
+
+    <incident
+        id="Autofill"
+        severity="warning"
+        message="Missing `autofillHints` attribute">
+        <fix-alternatives>
+            <fix-attribute
+                description="Set autofillHints"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="autofillHints"
+                value=""
+                point="0"
+                mark="0"/>
+            <fix-attribute
+                description="Set importantForAutofill=&quot;no&quot;"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="importantForAutofill"
+                value="no"/>
+        </fix-alternatives>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_add_event.xml"
+            line="100"
+            column="14"
+            startOffset="3659"
+            endLine="100"
+            endColumn="22"
+            endOffset="3667"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Tháng&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_add_event.xml"
+            line="105"
+            column="17"
+            startOffset="3861"
+            endLine="105"
+            endColumn="37"
+            endOffset="3881"/>
+    </incident>
+
+    <incident
+        id="Autofill"
+        severity="warning"
+        message="Missing `autofillHints` attribute">
+        <fix-alternatives>
+            <fix-attribute
+                description="Set autofillHints"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="autofillHints"
+                value=""
+                point="0"
+                mark="0"/>
+            <fix-attribute
+                description="Set importantForAutofill=&quot;no&quot;"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="importantForAutofill"
+                value="no"/>
+        </fix-alternatives>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_add_event.xml"
+            line="113"
+            column="14"
+            startOffset="4184"
+            endLine="113"
+            endColumn="22"
+            endOffset="4192"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Năm&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_add_event.xml"
+            line="118"
+            column="17"
+            startOffset="4385"
+            endLine="118"
+            endColumn="35"
+            endOffset="4403"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Ngày âm lịch (tự động tính)&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_add_event.xml"
+            line="130"
+            column="13"
+            startOffset="4777"
+            endLine="130"
+            endColumn="55"
+            endOffset="4819"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Ngày&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_add_event.xml"
+            line="146"
+            column="17"
+            startOffset="5377"
+            endLine="146"
+            endColumn="36"
+            endOffset="5396"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Tháng&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_add_event.xml"
+            line="159"
+            column="17"
+            startOffset="5908"
+            endLine="159"
+            endColumn="37"
+            endOffset="5928"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Năm&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_add_event.xml"
+            line="172"
+            column="17"
+            startOffset="6439"
+            endLine="172"
+            endColumn="35"
+            endOffset="6457"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Mô tả&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_add_event.xml"
+            line="184"
+            column="13"
+            startOffset="6839"
+            endLine="184"
+            endColumn="33"
+            endOffset="6859"/>
+    </incident>
+
+    <incident
+        id="Autofill"
+        severity="warning"
+        message="Missing `autofillHints` attribute">
+        <fix-alternatives>
+            <fix-attribute
+                description="Set autofillHints"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="autofillHints"
+                value=""
+                point="0"
+                mark="0"/>
+            <fix-attribute
+                description="Set importantForAutofill=&quot;no&quot;"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="importantForAutofill"
+                value="no"/>
+        </fix-alternatives>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_add_event.xml"
+            line="189"
+            column="10"
+            startOffset="7000"
+            endLine="189"
+            endColumn="18"
+            endOffset="7008"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Nhập mô tả sự kiện&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_add_event.xml"
+            line="193"
+            column="13"
+            startOffset="7155"
+            endLine="193"
+            endColumn="46"
+            endOffset="7188"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Lặp hàng năm theo lịch âm&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_add_event.xml"
+            line="213"
+            column="17"
+            startOffset="7930"
+            endLine="213"
+            endColumn="57"
+            endOffset="7970"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Thông báo trước 6 giờ&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_add_event.xml"
+            line="231"
+            column="17"
+            startOffset="8579"
+            endLine="231"
+            endColumn="53"
+            endOffset="8615"/>
+    </incident>
+
+    <incident
+        id="ButtonStyle"
+        severity="warning"
+        message="Buttons in button bars should be borderless; use `style=&quot;?android:attr/buttonBarButtonStyle&quot;` (and `?android:attr/buttonBarStyle` on the parent)">
+        <fix-composite
+            description="Make borderless">
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarStyle">
+                <range
+                    file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_add_event.xml"
+                    startOffset="8774"
+                    endOffset="9900"/>
+            </fix-attribute>
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarButtonStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarButtonStyle">
+                <range
+                    file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_add_event.xml"
+                    startOffset="8944"
+                    endOffset="9403"/>
+            </fix-attribute>
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarButtonStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarButtonStyle">
+                <range
+                    file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_add_event.xml"
+                    startOffset="9417"
+                    endOffset="9875"/>
+            </fix-attribute>
+        </fix-composite>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_add_event.xml"
+            line="243"
+            column="14"
+            startOffset="8945"
+            endLine="243"
+            endColumn="20"
+            endOffset="8951"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Hủy&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_add_event.xml"
+            line="248"
+            column="17"
+            startOffset="9142"
+            endLine="248"
+            endColumn="35"
+            endOffset="9160"/>
+    </incident>
+
+    <incident
+        id="ButtonStyle"
+        severity="warning"
+        message="Buttons in button bars should be borderless; use `style=&quot;?android:attr/buttonBarButtonStyle&quot;` (and `?android:attr/buttonBarStyle` on the parent)">
+        <fix-composite
+            description="Make borderless">
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarStyle">
+                <range
+                    file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_add_event.xml"
+                    startOffset="8774"
+                    endOffset="9900"/>
+            </fix-attribute>
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarButtonStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarButtonStyle">
+                <range
+                    file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_add_event.xml"
+                    startOffset="8944"
+                    endOffset="9403"/>
+            </fix-attribute>
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarButtonStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarButtonStyle">
+                <range
+                    file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_add_event.xml"
+                    startOffset="9417"
+                    endOffset="9875"/>
+            </fix-attribute>
+        </fix-composite>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_add_event.xml"
+            line="255"
+            column="14"
+            startOffset="9418"
+            endLine="255"
+            endColumn="20"
+            endOffset="9424"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Lưu&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_add_event.xml"
+            line="260"
+            column="17"
+            startOffset="9613"
+            endLine="260"
+            endColumn="35"
+            endOffset="9631"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Danh sách sự kiện&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_event_list.xml"
+            line="21"
+            column="13"
+            startOffset="708"
+            endLine="21"
+            endColumn="45"
+            endOffset="740"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Thêm&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_event_list.xml"
+            line="30"
+            column="13"
+            startOffset="1022"
+            endLine="30"
+            endColumn="32"
+            endOffset="1041"/>
+    </incident>
+
+    <incident
+        id="Autofill"
+        severity="warning"
+        message="Missing `autofillHints` attribute">
+        <fix-alternatives>
+            <fix-attribute
+                description="Set autofillHints"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="autofillHints"
+                value=""
+                point="0"
+                mark="0"/>
+            <fix-attribute
+                description="Set importantForAutofill=&quot;no&quot;"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="importantForAutofill"
+                value="no"/>
+        </fix-alternatives>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_event_list.xml"
+            line="48"
+            column="10"
+            startOffset="1620"
+            endLine="48"
+            endColumn="18"
+            endOffset="1628"/>
+    </incident>
+
+    <incident
+        id="TextFields"
+        severity="warning"
+        message="This text field does not specify an `inputType`">
+        <fix-attribute
+            description="Set inputType"
+            namespace="http://schemas.android.com/apk/res/android"
+            attribute="inputType"
+            value="TODO"
+            point="4"
+            mark="0"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_event_list.xml"
+            line="48"
+            column="10"
+            startOffset="1620"
+            endLine="48"
+            endColumn="18"
+            endOffset="1628"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Tìm kiếm sự kiện...&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_event_list.xml"
+            line="53"
+            column="13"
+            startOffset="1798"
+            endLine="53"
+            endColumn="47"
+            endOffset="1832"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Tìm&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_event_list.xml"
+            line="62"
+            column="13"
+            startOffset="2127"
+            endLine="62"
+            endColumn="31"
+            endOffset="2145"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Danh sách ngày đặc biệt&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_main.xml"
+            line="93"
+            column="9"
+            startOffset="3181"
+            endLine="93"
+            endColumn="47"
+            endOffset="3219"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Cài đặt thông báo&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_main.xml"
+            line="106"
+            column="9"
+            startOffset="3651"
+            endLine="106"
+            endColumn="41"
+            endOffset="3683"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Cài đặt thông báo&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_notification_settings.xml"
+            line="13"
+            column="9"
+            startOffset="425"
+            endLine="13"
+            endColumn="41"
+            endOffset="457"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Thời gian hiện tại: 18:00&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_notification_settings.xml"
+            line="25"
+            column="9"
+            startOffset="828"
+            endLine="25"
+            endColumn="49"
+            endOffset="868"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Chọn thời gian thông báo&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_notification_settings.xml"
+            line="38"
+            column="9"
+            startOffset="1285"
+            endLine="38"
+            endColumn="48"
+            endOffset="1324"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Đặt lại mặc định (18:00)&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_notification_settings.xml"
+            line="51"
+            column="9"
+            startOffset="1740"
+            endLine="51"
+            endColumn="48"
+            endOffset="1779"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Thông báo sẽ được gửi vào thời gian đã chọn mỗi ngày để nhắc nhở về ngày đặc biệt hôm sau.&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_notification_settings.xml"
+            line="65"
+            column="9"
+            startOffset="2229"
+            endLine="65"
+            endColumn="114"
+            endOffset="2334"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Danh sách ngày đặc biệt&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_special_day_list.xml"
+            line="11"
+            column="9"
+            startOffset="368"
+            endLine="11"
+            endColumn="47"
+            endOffset="406"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Tạo ngày đặc biệt mới&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_special_day_list.xml"
+            line="21"
+            column="9"
+            startOffset="704"
+            endLine="21"
+            endColumn="45"
+            endOffset="740"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Chưa có ngày đặc biệt nào được tạo&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_special_day_list.xml"
+            line="34"
+            column="9"
+            startOffset="1112"
+            endLine="34"
+            endColumn="58"
+            endOffset="1161"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;1&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/calendar_cell.xml"
+            line="16"
+            column="9"
+            startOffset="572"
+            endLine="16"
+            endColumn="25"
+            endOffset="588"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;1/1&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/calendar_cell.xml"
+            line="31"
+            column="9"
+            startOffset="1093"
+            endLine="31"
+            endColumn="27"
+            endOffset="1111"/>
+    </incident>
+
+    <incident
+        id="SmallSp"
+        severity="warning"
+        message="Avoid using sizes smaller than `11sp`: `10sp`">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/calendar_cell.xml"
+            line="32"
+            column="9"
+            startOffset="1120"
+            endLine="32"
+            endColumn="32"
+            endOffset="1143"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;★&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/calendar_cell.xml"
+            line="43"
+            column="9"
+            startOffset="1491"
+            endLine="43"
+            endColumn="25"
+            endOffset="1507"/>
+    </incident>
+
+    <incident
+        id="SmallSp"
+        severity="warning"
+        message="Avoid using sizes smaller than `11sp`: `10sp`">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/calendar_cell.xml"
+            line="44"
+            column="9"
+            startOffset="1516"
+            endLine="44"
+            endColumn="32"
+            endOffset="1539"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Nhập tên cho ngày đặc biệt:&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/dialog_special_day.xml"
+            line="11"
+            column="9"
+            startOffset="368"
+            endLine="11"
+            endColumn="51"
+            endOffset="410"/>
+    </incident>
+
+    <incident
+        id="Autofill"
+        severity="warning"
+        message="Missing `autofillHints` attribute">
+        <fix-alternatives>
+            <fix-attribute
+                description="Set autofillHints"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="autofillHints"
+                value=""
+                point="0"
+                mark="0"/>
+            <fix-attribute
+                description="Set importantForAutofill=&quot;no&quot;"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="importantForAutofill"
+                value="no"/>
+        </fix-alternatives>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/dialog_special_day.xml"
+            line="16"
+            column="6"
+            startOffset="527"
+            endLine="16"
+            endColumn="14"
+            endOffset="535"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Ví dụ: Sinh nhật, Kỷ niệm...&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/dialog_special_day.xml"
+            line="20"
+            column="9"
+            startOffset="676"
+            endLine="20"
+            endColumn="52"
+            endOffset="719"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Sinh nhật&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/event_item.xml"
+            line="37"
+            column="17"
+            startOffset="1324"
+            endLine="37"
+            endColumn="41"
+            endOffset="1348"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;15/03/2024 (16/02 AL)&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/event_item.xml"
+            line="47"
+            column="17"
+            startOffset="1704"
+            endLine="47"
+            endColumn="53"
+            endOffset="1740"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Sinh nhật của mẹ&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/event_item.xml"
+            line="57"
+            column="17"
+            startOffset="2122"
+            endLine="57"
+            endColumn="48"
+            endOffset="2153"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Sinh nhật&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/event_item.xml"
+            line="69"
+            column="17"
+            startOffset="2592"
+            endLine="69"
+            endColumn="41"
+            endOffset="2616"/>
+    </incident>
+
+    <incident
+        id="SmallSp"
+        severity="warning"
+        message="Avoid using sizes smaller than `11sp`: `10sp`">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/event_item.xml"
+            line="70"
+            column="17"
+            startOffset="2633"
+            endLine="70"
+            endColumn="40"
+            endOffset="2656"/>
+    </incident>
+
+    <incident
+        id="ContentDescription"
+        severity="warning"
+        message="Missing `contentDescription` attribute on image">
+        <fix-alternatives>
+            <fix-attribute
+                description="Set contentDescription"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="contentDescription"
+                value="TODO"
+                point="4"
+                mark="0"/>
+            <fix-attribute
+                description="Set importantForAccessibility=&quot;no&quot;"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="importantForAccessibility"
+                value="no"/>
+        </fix-alternatives>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/event_item.xml"
+            line="82"
+            column="10"
+            startOffset="3064"
+            endLine="82"
+            endColumn="19"
+            endOffset="3073"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Sửa&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/event_item.xml"
+            line="107"
+            column="17"
+            startOffset="4081"
+            endLine="107"
+            endColumn="49"
+            endOffset="4113"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Xóa&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/event_item.xml"
+            line="116"
+            column="17"
+            startOffset="4474"
+            endLine="116"
+            endColumn="49"
+            endOffset="4506"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Thứ 2&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/header_cell.xml"
+            line="7"
+            column="5"
+            startOffset="248"
+            endLine="7"
+            endColumn="25"
+            endOffset="268"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Xóa&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/item_special_day.xml"
+            line="36"
+            column="9"
+            startOffset="1186"
+            endLine="36"
+            endColumn="27"
+            endOffset="1204"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/example/lunarcalendar/CalendarAdapter.java"
+            line="72"
+            column="40"
+            startOffset="2243"
+            endLine="72"
+            endColumn="89"
+            endOffset="2292"/>
+    </incident>
+
+    <incident
+        id="DefaultLocale"
+        severity="warning"
+        message="Implicitly using the default locale is a common source of bugs: Use `String.format(Locale, ...)` instead">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/example/lunarcalendar/EventAdapter.java"
+            line="52"
+            column="27"
+            startOffset="1612"
+            endLine="54"
+            endColumn="60"
+            endOffset="1799"/>
+    </incident>
+
+    <incident
+        id="NotifyDataSetChanged"
+        severity="warning"
+        message="It will always be more efficient to use more specific change events if you can. Rely on `notifyDataSetChanged` as a last resort.">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/example/lunarcalendar/EventAdapter.java"
+            line="107"
+            column="13"
+            startOffset="3837"
+            endLine="107"
+            endColumn="35"
+            endOffset="3859"/>
+    </incident>
+
+    <incident
+        id="NotifyDataSetChanged"
+        severity="warning"
+        message="It will always be more efficient to use more specific change events if you can. Rely on `notifyDataSetChanged` as a last resort.">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/example/lunarcalendar/EventListActivity.java"
+            line="82"
+            column="9"
+            startOffset="2655"
+            endLine="82"
+            endColumn="44"
+            endOffset="2690"/>
+    </incident>
+
+    <incident
+        id="DefaultLocale"
+        severity="warning"
+        message="Implicitly using the default locale is a common source of bugs: Use `toLowerCase(Locale)` instead. For strings meant to be internal use `Locale.ROOT`, otherwise `Locale.getDefault()`.">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/example/lunarcalendar/EventListActivity.java"
+            line="95"
+            column="33"
+            startOffset="3092"
+            endLine="95"
+            endColumn="44"
+            endOffset="3103"/>
+    </incident>
+
+    <incident
+        id="DefaultLocale"
+        severity="warning"
+        message="Implicitly using the default locale is a common source of bugs: Use `toLowerCase(Locale)` instead. For strings meant to be internal use `Locale.ROOT`, otherwise `Locale.getDefault()`.">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/example/lunarcalendar/EventListActivity.java"
+            line="95"
+            column="62"
+            startOffset="3121"
+            endLine="95"
+            endColumn="73"
+            endOffset="3132"/>
+    </incident>
+
+    <incident
+        id="NotifyDataSetChanged"
+        severity="warning"
+        message="It will always be more efficient to use more specific change events if you can. Rely on `notifyDataSetChanged` as a last resort.">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/example/lunarcalendar/EventListActivity.java"
+            line="102"
+            column="9"
+            startOffset="3282"
+            endLine="102"
+            endColumn="44"
+            endOffset="3317"/>
+    </incident>
+
+    <incident
+        id="DefaultLocale"
+        severity="warning"
+        message="Implicitly using the default locale is a common source of bugs: Use `String.format(Locale, ...)` instead">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/example/lunarcalendar/NotificationSettingsActivity.java"
+            line="83"
+            column="27"
+            startOffset="2790"
+            endLine="83"
+            endColumn="81"
+            endOffset="2844"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/example/lunarcalendar/NotificationSettingsActivity.java"
+            line="84"
+            column="31"
+            startOffset="2876"
+            endLine="84"
+            endColumn="64"
+            endOffset="2909"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="String literal in `setText` can not be translated. Use Android resources instead.">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/example/lunarcalendar/NotificationSettingsActivity.java"
+            line="84"
+            column="31"
+            startOffset="2876"
+            endLine="84"
+            endColumn="53"
+            endOffset="2898"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/example/lunarcalendar/SpecialDayAdapter.java"
+            line="47"
+            column="34"
+            startOffset="1710"
+            endLine="47"
+            endColumn="125"
+            endOffset="1801"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="String literal in `setText` can not be translated. Use Android resources instead.">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/example/lunarcalendar/SpecialDayAdapter.java"
+            line="47"
+            column="34"
+            startOffset="1710"
+            endLine="47"
+            endColumn="48"
+            endOffset="1724"/>
+    </incident>
+
+    <incident
+        id="OldTargetApi"
+        severity="warning"
+        message="Not targeting the latest versions of Android; compatibility modes apply. Consider testing and updating this version. Consult the `android.os.Build.VERSION_CODES` javadoc for details.">
+        <fix-replace
+            description="Update targetSdkVersion to 36"
+            oldString="34"
+            replacement="36"
+            priority="0"/>
+        <location
+            file="${:app*projectDir}/build.gradle"
+            line="12"
+            column="9"
+            startOffset="213"
+            endLine="12"
+            endColumn="21"
+            endOffset="225"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.appcompat:appcompat than 1.7.0 is available: 1.7.1">
+        <fix-replace
+            description="Change to 1.7.1"
+            family="Update versions"
+            oldString="1.7.0"
+            replacement="1.7.1"
+            priority="0"/>
+        <location
+            file="${:app*projectDir}/build.gradle"
+            line="41"
+            column="20"
+            startOffset="1007"
+            endLine="41"
+            endColumn="56"
+            endOffset="1043"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of com.google.android.material:material than 1.12.0 is available: 1.13.0">
+        <fix-replace
+            description="Change to 1.13.0"
+            family="Update versions"
+            oldString="1.12.0"
+            replacement="1.13.0"
+            priority="0"/>
+        <location
+            file="${:app*projectDir}/build.gradle"
+            line="42"
+            column="20"
+            startOffset="1063"
+            endLine="42"
+            endColumn="65"
+            endOffset="1108"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.constraintlayout:constraintlayout than 2.1.4 is available: 2.2.1">
+        <fix-replace
+            description="Change to 2.2.1"
+            family="Update versions"
+            oldString="2.1.4"
+            replacement="2.2.1"
+            priority="0"/>
+        <location
+            file="${:app*projectDir}/build.gradle"
+            line="43"
+            column="20"
+            startOffset="1128"
+            endLine="43"
+            endColumn="70"
+            endOffset="1178"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.recyclerview:recyclerview than 1.3.2 is available: 1.4.0">
+        <fix-replace
+            description="Change to 1.4.0"
+            family="Update versions"
+            oldString="1.3.2"
+            replacement="1.4.0"
+            priority="0"/>
+        <location
+            file="${:app*projectDir}/build.gradle"
+            line="44"
+            column="20"
+            startOffset="1198"
+            endLine="44"
+            endColumn="62"
+            endOffset="1240"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.core:core-ktx than 1.13.0 is available: 1.18.0">
+        <fix-replace
+            description="Change to 1.18.0"
+            family="Update versions"
+            oldString="1.13.0"
+            replacement="1.18.0"
+            priority="0"/>
+        <location
+            file="${:app*projectDir}/build.gradle"
+            line="46"
+            column="20"
+            startOffset="1314"
+            endLine="46"
+            endColumn="51"
+            endOffset="1345"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.test.ext:junit than 1.1.5 is available: 1.3.0">
+        <fix-replace
+            description="Change to 1.3.0"
+            family="Update versions"
+            oldString="1.1.5"
+            replacement="1.3.0"
+            priority="0"/>
+        <location
+            file="${:app*projectDir}/build.gradle"
+            line="48"
+            column="31"
+            startOffset="1420"
+            endLine="48"
+            endColumn="62"
+            endOffset="1451"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.test.espresso:espresso-core than 3.5.1 is available: 3.7.0">
+        <fix-replace
+            description="Change to 3.7.0"
+            family="Update versions"
+            oldString="3.5.1"
+            replacement="3.7.0"
+            priority="0"/>
+        <location
+            file="${:app*projectDir}/build.gradle"
+            line="49"
+            column="31"
+            startOffset="1482"
+            endLine="49"
+            endColumn="75"
+            endOffset="1526"/>
+    </incident>
+
+    <incident
+        id="Overdraw"
+        severity="warning"
+        message="Possible overdraw: Root element paints background `@color/white` with a theme that also paints a background (inferred theme is `@style/Theme_AppCompat_Light_DarkActionBar`)">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_add_event.xml"
+            line="5"
+            column="5"
+            startOffset="195"
+            endLine="5"
+            endColumn="38"
+            endOffset="228"/>
+    </incident>
+
+    <incident
+        id="Overdraw"
+        severity="warning"
+        message="Possible overdraw: Root element paints background `@color/white` with a theme that also paints a background (inferred theme is `@style/Theme_AppCompat_Light_DarkActionBar`)">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_event_list.xml"
+            line="6"
+            column="5"
+            startOffset="232"
+            endLine="6"
+            endColumn="38"
+            endOffset="265"/>
+    </incident>
+
+    <incident
+        id="Overdraw"
+        severity="warning"
+        message="Possible overdraw: Root element paints background `@color/white` with a theme that also paints a background (inferred theme is `@style/Theme.AppCompat.Light.DarkActionBar`)">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_main.xml"
+            line="7"
+            column="5"
+            startOffset="259"
+            endLine="7"
+            endColumn="38"
+            endOffset="292"/>
+    </incident>
+
+    <incident
+        id="Overdraw"
+        severity="warning"
+        message="Possible overdraw: Root element paints background `@color/white` with a theme that also paints a background (inferred theme is `@style/Theme_AppCompat_Light_DarkActionBar`)">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_notification_settings.xml"
+            line="7"
+            column="5"
+            startOffset="259"
+            endLine="7"
+            endColumn="38"
+            endOffset="292"/>
+    </incident>
+
+    <incident
+        id="Overdraw"
+        severity="warning"
+        message="Possible overdraw: Root element paints background `@color/white` with a theme that also paints a background (inferred theme is `@style/Theme.AppCompat.Light.DarkActionBar`)">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/calendar_cell.xml"
+            line="6"
+            column="5"
+            startOffset="217"
+            endLine="6"
+            endColumn="38"
+            endOffset="250"/>
+    </incident>
+
+    <incident
+        id="Overdraw"
+        severity="warning"
+        message="Possible overdraw: Root element paints background `@color/header_bg` with a theme that also paints a background (inferred theme is `@style/Theme.AppCompat.Light.DarkActionBar`)">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/header_cell.xml"
+            line="11"
+            column="5"
+            startOffset="373"
+            endLine="11"
+            endColumn="42"
+            endOffset="410"/>
+    </incident>
+
+    <incident
+        id="Overdraw"
+        severity="warning"
+        message="Possible overdraw: Root element paints background `?android:attr/selectableItemBackground` with a theme that also paints a background (inferred theme is `@style/Theme.AppCompat.Light.DarkActionBar`)">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/item_special_day.xml"
+            line="7"
+            column="5"
+            startOffset="261"
+            endLine="7"
+            endColumn="64"
+            endOffset="320"/>
+    </incident>
+
+</incidents>

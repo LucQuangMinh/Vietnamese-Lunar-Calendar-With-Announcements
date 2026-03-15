@@ -1,0 +1,4 @@
+#Sun Mar 15 21:11:37 ICT 2026
+base.0=D\:\\test ai\\VietnameseLunarCalendar\\app\\build\\intermediates\\dex\\release\\mergeDexRelease\\classes.dex
+path.0=classes.dex
+renamed.0=classes.dex

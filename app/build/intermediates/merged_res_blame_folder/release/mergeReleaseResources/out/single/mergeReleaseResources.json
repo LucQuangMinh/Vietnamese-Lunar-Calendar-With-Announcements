@@ -1,0 +1,66 @@
+[
+    {
+        "merged": "com.example.lunarcalendar.app-release-32:/layout_item_special_day.xml.flat",
+        "source": "com.example.lunarcalendar.app-main-33:/layout/item_special_day.xml"
+    },
+    {
+        "merged": "com.example.lunarcalendar.app-release-32:/layout_event_item.xml.flat",
+        "source": "com.example.lunarcalendar.app-main-33:/layout/event_item.xml"
+    },
+    {
+        "merged": "com.example.lunarcalendar.app-release-32:/layout_activity_notification_settings.xml.flat",
+        "source": "com.example.lunarcalendar.app-main-33:/layout/activity_notification_settings.xml"
+    },
+    {
+        "merged": "com.example.lunarcalendar.app-release-32:/layout_activity_special_day_list.xml.flat",
+        "source": "com.example.lunarcalendar.app-main-33:/layout/activity_special_day_list.xml"
+    },
+    {
+        "merged": "com.example.lunarcalendar.app-release-32:/layout_activity_event_list.xml.flat",
+        "source": "com.example.lunarcalendar.app-main-33:/layout/activity_event_list.xml"
+    },
+    {
+        "merged": "com.example.lunarcalendar.app-release-32:/drawable_ic_notification.xml.flat",
+        "source": "com.example.lunarcalendar.app-main-33:/drawable/ic_notification.xml"
+    },
+    {
+        "merged": "com.example.lunarcalendar.app-release-32:/layout_activity_main.xml.flat",
+        "source": "com.example.lunarcalendar.app-main-33:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.example.lunarcalendar.app-release-32:/layout_header_cell.xml.flat",
+        "source": "com.example.lunarcalendar.app-main-33:/layout/header_cell.xml"
+    },
+    {
+        "merged": "com.example.lunarcalendar.app-release-32:/layout_activity_add_event.xml.flat",
+        "source": "com.example.lunarcalendar.app-main-33:/layout/activity_add_event.xml"
+    },
+    {
+        "merged": "com.example.lunarcalendar.app-release-32:/drawable_event_type_background.xml.flat",
+        "source": "com.example.lunarcalendar.app-main-33:/drawable/event_type_background.xml"
+    },
+    {
+        "merged": "com.example.lunarcalendar.app-release-32:/drawable_ic_delete.xml.flat",
+        "source": "com.example.lunarcalendar.app-main-33:/drawable/ic_delete.xml"
+    },
+    {
+        "merged": "com.example.lunarcalendar.app-release-32:/layout_calendar_cell.xml.flat",
+        "source": "com.example.lunarcalendar.app-main-33:/layout/calendar_cell.xml"
+    },
+    {
+        "merged": "com.example.lunarcalendar.app-release-32:/drawable_ic_edit.xml.flat",
+        "source": "com.example.lunarcalendar.app-main-33:/drawable/ic_edit.xml"
+    },
+    {
+        "merged": "com.example.lunarcalendar.app-release-32:/drawable_edittext_background.xml.flat",
+        "source": "com.example.lunarcalendar.app-main-33:/drawable/edittext_background.xml"
+    },
+    {
+        "merged": "com.example.lunarcalendar.app-release-32:/drawable_rounded_background.xml.flat",
+        "source": "com.example.lunarcalendar.app-main-33:/drawable/rounded_background.xml"
+    },
+    {
+        "merged": "com.example.lunarcalendar.app-release-32:/layout_dialog_special_day.xml.flat",
+        "source": "com.example.lunarcalendar.app-main-33:/layout/dialog_special_day.xml"
+    }
+]

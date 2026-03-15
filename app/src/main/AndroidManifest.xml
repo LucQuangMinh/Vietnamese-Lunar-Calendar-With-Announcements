@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+
+    <application
+        android:allowBackup="true"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.Light.DarkActionBar"
+        tools:targetApi="31">
+        
+        <!-- Main Activity -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <!-- Event List Activity -->
+        <activity
+            android:name=".EventListActivity"
+            android:label="Danh sách sự kiện"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
+        
+        <!-- Add Event Activity -->
+        <activity
+            android:name=".AddEventActivity"
+            android:label="Thêm/Sửa sự kiện"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
+        
+        <!-- Notification Receiver -->
+        <receiver android:name=".NotificationReceiver"
+            android:exported="false" />
+            
+        <!-- Special Day Notification Receiver -->
+        <receiver android:name=".SpecialDayNotificationReceiver"
+            android:exported="true" />
+            
+        <!-- Special Day List Activity -->
+        <activity
+            android:name=".SpecialDayListActivity"
+            android:label="Danh sách ngày đặc biệt"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
+            
+        <!-- Notification Settings Activity -->
+        <activity
+            android:name=".NotificationSettingsActivity"
+            android:label="Cài đặt thông báo"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
+            
+    </application>
+
+</manifest>
