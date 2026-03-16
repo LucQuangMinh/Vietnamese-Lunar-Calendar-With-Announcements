@@ -51,6 +51,27 @@
     </incident>
 
     <incident
+        id="TextFields"
+        severity="warning"
+        message="This text field does not specify an `inputType`">
+        <fix-attribute
+            description="Set inputType"
+            namespace="http://schemas.android.com/apk/res/android"
+            attribute="inputType"
+            value="TODO"
+            point="4"
+            mark="0"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_add_event.xml"
+            line="33"
+            column="10"
+            startOffset="1126"
+            endLine="33"
+            endColumn="18"
+            endOffset="1134"/>
+    </incident>
+
+    <incident
         id="Autofill"
         severity="warning"
         message="Missing `autofillHints` attribute">
@@ -68,27 +89,6 @@
                 attribute="importantForAutofill"
                 value="no"/>
         </fix-alternatives>
-        <location
-            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_add_event.xml"
-            line="33"
-            column="10"
-            startOffset="1126"
-            endLine="33"
-            endColumn="18"
-            endOffset="1134"/>
-    </incident>
-
-    <incident
-        id="TextFields"
-        severity="warning"
-        message="This text field does not specify an `inputType`">
-        <fix-attribute
-            description="Set inputType"
-            namespace="http://schemas.android.com/apk/res/android"
-            attribute="inputType"
-            value="TODO"
-            point="4"
-            mark="0"/>
         <location
             file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_add_event.xml"
             line="33"
@@ -566,6 +566,27 @@
     </incident>
 
     <incident
+        id="TextFields"
+        severity="warning"
+        message="This text field does not specify an `inputType`">
+        <fix-attribute
+            description="Set inputType"
+            namespace="http://schemas.android.com/apk/res/android"
+            attribute="inputType"
+            value="TODO"
+            point="4"
+            mark="0"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_event_list.xml"
+            line="48"
+            column="10"
+            startOffset="1620"
+            endLine="48"
+            endColumn="18"
+            endOffset="1628"/>
+    </incident>
+
+    <incident
         id="Autofill"
         severity="warning"
         message="Missing `autofillHints` attribute">
@@ -583,27 +604,6 @@
                 attribute="importantForAutofill"
                 value="no"/>
         </fix-alternatives>
-        <location
-            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_event_list.xml"
-            line="48"
-            column="10"
-            startOffset="1620"
-            endLine="48"
-            endColumn="18"
-            endOffset="1628"/>
-    </incident>
-
-    <incident
-        id="TextFields"
-        severity="warning"
-        message="This text field does not specify an `inputType`">
-        <fix-attribute
-            description="Set inputType"
-            namespace="http://schemas.android.com/apk/res/android"
-            attribute="inputType"
-            value="TODO"
-            point="4"
-            mark="0"/>
         <location
             file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_event_list.xml"
             line="48"

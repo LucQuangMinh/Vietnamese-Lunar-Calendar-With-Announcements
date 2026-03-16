@@ -1,3 +1,0 @@
-com.example.lunarcalendar.test
-style WhiteBackgroundDialogTheme
-style WhiteBackgroundTheme

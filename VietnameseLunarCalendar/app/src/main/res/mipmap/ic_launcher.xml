@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    
+    <!-- Background hình tròn màu đỏ -->
+    <path
+        android:fillColor="#C62828"
+        android:pathData="M54,10C29.7,10 10,29.7 10,54s19.7,44 44,44s44,-19.7 44,-44S78.3,10 54,10z"/>
+    
+    <!-- Biểu tượng mặt trăng khuyết màu trắng -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M65,35c-6,0 -10,4 -10,10s4,10 10,10c6,0 10,-4 10,-10S71,35 65,35z"/>
+    
+    <!-- Chi tiết mặt trăng (vân) -->
+    <path
+        android:fillColor="#E57373"
+        android:pathData="M68,48c-2,0 -4,2 -4,4s2,4 4,4c2,0 4,-2 4,-4S70,48 68,48z"/>
+    
+    <!-- Ánh sáng mặt trăng -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:alpha="0.3"
+        android:pathData="M58,42c-2,0 -4,2 -4,4s2,4 4,4c2,0 4,-2 4,-4S60,42 58,42z"/>
+    
+</vector>
