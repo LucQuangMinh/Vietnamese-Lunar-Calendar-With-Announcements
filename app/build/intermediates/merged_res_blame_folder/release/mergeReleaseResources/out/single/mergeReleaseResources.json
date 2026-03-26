@@ -20,6 +20,10 @@
         "source": "com.example.lunarcalendar.app-main-33:/layout/activity_event_list.xml"
     },
     {
+        "merged": "com.example.lunarcalendar.app-release-32:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.example.lunarcalendar.app-main-33:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
         "merged": "com.example.lunarcalendar.app-release-32:/drawable_ic_notification.xml.flat",
         "source": "com.example.lunarcalendar.app-main-33:/drawable/ic_notification.xml"
     },
@@ -30,6 +34,10 @@
     {
         "merged": "com.example.lunarcalendar.app-release-32:/layout_header_cell.xml.flat",
         "source": "com.example.lunarcalendar.app-main-33:/layout/header_cell.xml"
+    },
+    {
+        "merged": "com.example.lunarcalendar.app-release-32:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.example.lunarcalendar.app-main-33:/mipmap-anydpi-v26/ic_launcher_round.xml"
     },
     {
         "merged": "com.example.lunarcalendar.app-release-32:/layout_activity_add_event.xml.flat",
@@ -46,6 +54,10 @@
     {
         "merged": "com.example.lunarcalendar.app-release-32:/layout_calendar_cell.xml.flat",
         "source": "com.example.lunarcalendar.app-main-33:/layout/calendar_cell.xml"
+    },
+    {
+        "merged": "com.example.lunarcalendar.app-release-32:/drawable_anh_chuc_mung_nam_moi_binh_ngo_2026.png.flat",
+        "source": "com.example.lunarcalendar.app-main-33:/drawable/anh_chuc_mung_nam_moi_binh_ngo_2026.png"
     },
     {
         "merged": "com.example.lunarcalendar.app-release-32:/drawable_ic_edit.xml.flat",

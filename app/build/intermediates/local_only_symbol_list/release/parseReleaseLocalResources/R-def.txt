@@ -15,6 +15,7 @@ color teal_200
 color teal_700
 color weekend_bg
 color white
+drawable anh_chuc_mung_nam_moi_binh_ngo_2026
 drawable edittext_background
 drawable event_type_background
 drawable ic_delete
@@ -79,6 +80,8 @@ layout dialog_special_day
 layout event_item
 layout header_cell
 layout item_special_day
+mipmap ic_launcher
+mipmap ic_launcher_round
 string app_name
 string calendar_title
 string friday

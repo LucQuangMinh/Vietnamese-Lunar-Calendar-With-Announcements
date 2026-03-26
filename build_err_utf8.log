@@ -1,0 +1,71 @@
+﻿> Task :app:preBuild UP-TO-DATE
+> Task :app:preDebugBuild UP-TO-DATE
+> Task :app:mergeDebugNativeDebugMetadata NO-SOURCE
+> Task :app:javaPreCompileDebug UP-TO-DATE
+> Task :app:checkDebugAarMetadata UP-TO-DATE
+> Task :app:generateDebugResValues UP-TO-DATE
+> Task :app:mapDebugSourceSetPaths UP-TO-DATE
+> Task :app:generateDebugResources UP-TO-DATE
+
+> Task :app:mergeDebugResources FAILED
+./gradlew : ERROR: 
+D:\test ai\VietnameseLunar
+Calendar\app\src\main\res\
+drawable\Anh-chuc-mung-nam
+-moi-Binh-Ngo-2026 
+(1).png: Resource and 
+asset merger: 'A' is not 
+a valid file-based 
+resource name character: 
+File-based resource names 
+must contain only 
+lowercase a-z, 0-9, or 
+underscore
+At line:1 char:1
++ ./gradlew build > 
+build_err.log 2>&1
++ ~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~
+    + CategoryInfo        
+      : NotSpecified: (E  
+  RROR: D:\test ..., or   
+  underscore:String) [    
+], RemoteException
+    + FullyQualifiedError 
+   Id : NativeCommandErr  
+  or
+ 
+
+FAILURE: Build failed 
+with an exception.
+
+* What went wrong:
+Execution failed for task 
+':app:mergeDebugResources'
+.
+> D:\test ai\VietnameseLun
+arCalendar\app\src\main\re
+s\drawable\Anh-chuc-mung-n
+am-moi-Binh-Ngo-2026 
+(1).png: Error: 'A' is 
+not a valid file-based 
+resource name character: 
+File-based resource names 
+must contain only 
+lowercase a-z, 0-9, or 
+underscore
+
+* Try:
+> Run with --stacktrace 
+option to get the stack 
+trace.
+> Run with --info or 
+--debug option to get 
+more log output.
+> Run with --scan to get 
+full insights.
+> Get more help at 
+https://help.gradle.org.
+
+BUILD FAILED in 3s
+6 actionable tasks: 1 executed, 5 up-to-date

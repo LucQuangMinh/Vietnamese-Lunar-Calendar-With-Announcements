@@ -27,95 +27,96 @@
 18-->[androidx.core:core:1.13.0] C:\Users\Admin\.gradle\caches\8.10\transforms\67ec633a55a314b711e03ac9e3022600\transformed\core-1.13.0\AndroidManifest.xml:26:22-94
 19
 20    <application
-20-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:8:5-57:19
+20-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:8:5-58:19
 21        android:allowBackup="true"
 21-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:9:9-35
 22        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 22-->[androidx.core:core:1.13.0] C:\Users\Admin\.gradle\caches\8.10\transforms\67ec633a55a314b711e03ac9e3022600\transformed\core-1.13.0\AndroidManifest.xml:28:18-86
 23        android:debuggable="true"
 24        android:extractNativeLibs="true"
-25        android:label="@string/app_name"
-25-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:10:9-41
-26        android:supportsRtl="true"
-26-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:11:9-35
-27        android:testOnly="true"
+25        android:icon="@mipmap/ic_launcher"
+25-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:10:9-43
+26        android:label="@string/app_name"
+26-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:11:9-41
+27        android:supportsRtl="true"
+27-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:12:9-35
 28        android:theme="@style/Theme.AppCompat.Light.DarkActionBar" >
-28-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:12:9-67
+28-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:13:9-67
 29
 30        <!-- Main Activity -->
 31        <activity
-31-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:16:9-23:20
+31-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:17:9-24:20
 32            android:name="com.example.lunarcalendar.MainActivity"
-32-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:17:13-41
+32-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:18:13-41
 33            android:exported="true" >
-33-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:18:13-36
+33-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:19:13-36
 34            <intent-filter>
-34-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:19:13-22:29
+34-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:20:13-23:29
 35                <action android:name="android.intent.action.MAIN" />
-35-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:20:17-69
-35-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:20:25-66
+35-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:21:17-69
+35-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:21:25-66
 36
 37                <category android:name="android.intent.category.LAUNCHER" />
-37-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:21:17-77
-37-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:21:27-74
+37-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:22:17-77
+37-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:22:27-74
 38            </intent-filter>
 39        </activity>
 40
 41        <!-- Event List Activity -->
 42        <activity
-42-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:26:9-29:74
+42-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:27:9-30:74
 43            android:name="com.example.lunarcalendar.EventListActivity"
-43-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:27:13-46
+43-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:28:13-46
 44            android:label="Danh sách sự kiện"
-44-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:28:13-46
+44-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:29:13-46
 45            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
-45-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:29:13-71
+45-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:30:13-71
 46
 47        <!-- Add Event Activity -->
 48        <activity
-48-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:32:9-35:74
+48-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:33:9-36:74
 49            android:name="com.example.lunarcalendar.AddEventActivity"
-49-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:33:13-45
+49-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:34:13-45
 50            android:label="Thêm/Sửa sự kiện"
-50-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:34:13-45
+50-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:35:13-45
 51            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
-51-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:35:13-71
+51-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:36:13-71
 52
 53        <!-- Notification Receiver -->
 54        <receiver
-54-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:38:9-39:40
+54-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:39:9-40:40
 55            android:name="com.example.lunarcalendar.NotificationReceiver"
-55-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:38:19-55
+55-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:39:19-55
 56            android:exported="false" />
-56-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:39:13-37
+56-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:40:13-37
 57
 58        <!-- Special Day Notification Receiver -->
 59        <receiver
-59-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:42:9-43:39
+59-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:43:9-44:39
 60            android:name="com.example.lunarcalendar.SpecialDayNotificationReceiver"
-60-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:42:19-65
+60-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:43:19-65
 61            android:exported="true" />
-61-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:43:13-36
+61-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:44:13-36
 62
 63        <!-- Special Day List Activity -->
 64        <activity
-64-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:46:9-49:74
+64-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:47:9-50:74
 65            android:name="com.example.lunarcalendar.SpecialDayListActivity"
-65-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:47:13-51
+65-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:48:13-51
 66            android:label="Danh sách ngày đặc biệt"
-66-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:48:13-52
+66-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:49:13-52
 67            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
-67-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:49:13-71
+67-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:50:13-71
 68
 69        <!-- Notification Settings Activity -->
 70        <activity
-70-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:52:9-55:74
+70-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:53:9-56:74
 71            android:name="com.example.lunarcalendar.NotificationSettingsActivity"
-71-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:53:13-57
+71-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:54:13-57
 72            android:label="Cài đặt thông báo"
-72-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:54:13-46
+72-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:55:13-46
 73            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
-73-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:55:13-71
+73-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:56:13-71
 74
 75        <provider
 75-->[androidx.emoji2:emoji2:1.3.0] C:\Users\Admin\.gradle\caches\8.10\transforms\a56862958cef2ddb8a5967e81a5f38fb\transformed\emoji2-1.3.0\AndroidManifest.xml:24:9-32:20

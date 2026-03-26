@@ -77,7 +77,7 @@ D:\test ai\VietnameseLunarCalendar\app\build.gradle:49: Warning: A newer version
    However, you may simply not be aware that a more recent version is
    available, and that is what this lint check helps find.
 
-D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:42: Warning: Exported receiver does not require permission [ExportedReceiver]
+D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:43: Warning: Exported receiver does not require permission [ExportedReceiver]
         <receiver android:name=".SpecialDayNotificationReceiver"
          ~~~~~~~~
 
@@ -166,6 +166,9 @@ D:\test ai\VietnameseLunarCalendar\app\src\main\res\values\colors.xml:7: Warning
 D:\test ai\VietnameseLunarCalendar\app\src\main\res\values\colors.xml:16: Warning: The resource R.color.weekend_bg appears to be unused [UnusedResources]
     <color name="weekend_bg">#FFF3E0</color>
            ~~~~~~~~~~~~~~~~~
+D:\test ai\VietnameseLunarCalendar\app\src\main\res\mipmap-anydpi-v26\ic_launcher_round.xml:2: Warning: The resource R.mipmap.ic_launcher_round appears to be unused [UnusedResources]
+<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
+^
 D:\test ai\VietnameseLunarCalendar\app\src\main\res\values\styles.xml:3: Warning: The resource R.style.AppTheme appears to be unused [UnusedResources]
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
            ~~~~~~~~~~~~~~~
@@ -184,16 +187,32 @@ D:\test ai\VietnameseLunarCalendar\app\src\main\res\values\styles.xml:3: Warning
    lint.unused-resources.exclude-tests =true.
    ,
 
-D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:8: Warning: Should explicitly set android:icon, there is no default [MissingApplicationIcon]
-    <application
-     ~~~~~~~~~~~
+D:\test ai\VietnameseLunarCalendar\app\src\main\res\mipmap-anydpi-v26\ic_launcher.xml:2: Warning: The application adaptive icon is missing a monochrome tag [MonochromeLauncherIcon]
+<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
+^
 
-   Explanation for issues of type "MissingApplicationIcon":
-   You should set an icon for the application as whole because there is no
-   default. This attribute must be set as a reference to a drawable resource
-   containing the image (for example @drawable/icon).
+   Explanation for issues of type "MonochromeLauncherIcon":
+   If android:roundIcon and android:icon are both in your manifest, you must
+   either remove the reference to android:roundIcon if it is not needed; or,
+   supply the monochrome icon in the drawable defined by the android:roundIcon
+   and android:icon attribute.
 
-   https://developer.android.com/studio/publish/preparing#publishing-configure
+   For example, if android:roundIcon and android:icon are both in the
+   manifest, a launcher might choose to use android:roundIcon over
+   android:icon to display the adaptive app icon. Therefore, your themed
+   application iconwill not show if your monochrome attribute is not also
+   specified in android:roundIcon.
+
+D:\test ai\VietnameseLunarCalendar\app\src\main\res\drawable\anh_chuc_mung_nam_moi_binh_ngo_2026.png: Warning: Found bitmap drawable res/drawable/anh_chuc_mung_nam_moi_binh_ngo_2026.png in densityless folder [IconLocation]
+
+   Explanation for issues of type "IconLocation":
+   The res/drawable folder is intended for density-independent graphics such
+   as shapes defined in XML. For bitmaps, move it to drawable-mdpi and
+   consider providing higher and lower resolution versions in drawable-ldpi,
+   drawable-hdpi and drawable-xhdpi. If the icon really is density independent
+   (for example a solid color) you can place it in drawable-nodpi.
+
+   https://developer.android.com/guide/practices/screens_support.html
 
 D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\activity_add_event.xml:243: Warning: Buttons in button bars should be borderless; use style="?android:attr/buttonBarButtonStyle" (and ?android:attr/buttonBarStyle on the parent) [ButtonStyle]
             <Button
@@ -605,4 +624,4 @@ D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\event_item.xml:118: W
    the left bitmask. Therefore, you can use gravity="start" rather than
    gravity="left|start".)
 
-0 errors, 127 warnings
+0 errors, 129 warnings

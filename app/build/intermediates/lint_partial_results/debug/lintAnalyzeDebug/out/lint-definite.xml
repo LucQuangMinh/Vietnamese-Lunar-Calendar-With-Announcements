@@ -14,12 +14,12 @@
             mark="0"/>
         <location
             file="${:app*debug*MAIN*sourceProvider*0*manifest*0}"
-            line="42"
+            line="43"
             column="10"
-            startOffset="1575"
-            endLine="42"
+            startOffset="1618"
+            endLine="43"
             endColumn="18"
-            endOffset="1583"/>
+            endOffset="1626"/>
     </incident>
 
     <incident
@@ -51,27 +51,6 @@
     </incident>
 
     <incident
-        id="TextFields"
-        severity="warning"
-        message="This text field does not specify an `inputType`">
-        <fix-attribute
-            description="Set inputType"
-            namespace="http://schemas.android.com/apk/res/android"
-            attribute="inputType"
-            value="TODO"
-            point="4"
-            mark="0"/>
-        <location
-            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_add_event.xml"
-            line="33"
-            column="10"
-            startOffset="1126"
-            endLine="33"
-            endColumn="18"
-            endOffset="1134"/>
-    </incident>
-
-    <incident
         id="Autofill"
         severity="warning"
         message="Missing `autofillHints` attribute">
@@ -89,6 +68,27 @@
                 attribute="importantForAutofill"
                 value="no"/>
         </fix-alternatives>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_add_event.xml"
+            line="33"
+            column="10"
+            startOffset="1126"
+            endLine="33"
+            endColumn="18"
+            endOffset="1134"/>
+    </incident>
+
+    <incident
+        id="TextFields"
+        severity="warning"
+        message="This text field does not specify an `inputType`">
+        <fix-attribute
+            description="Set inputType"
+            namespace="http://schemas.android.com/apk/res/android"
+            attribute="inputType"
+            value="TODO"
+            point="4"
+            mark="0"/>
         <location
             file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_add_event.xml"
             line="33"
@@ -566,27 +566,6 @@
     </incident>
 
     <incident
-        id="TextFields"
-        severity="warning"
-        message="This text field does not specify an `inputType`">
-        <fix-attribute
-            description="Set inputType"
-            namespace="http://schemas.android.com/apk/res/android"
-            attribute="inputType"
-            value="TODO"
-            point="4"
-            mark="0"/>
-        <location
-            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_event_list.xml"
-            line="48"
-            column="10"
-            startOffset="1620"
-            endLine="48"
-            endColumn="18"
-            endOffset="1628"/>
-    </incident>
-
-    <incident
         id="Autofill"
         severity="warning"
         message="Missing `autofillHints` attribute">
@@ -604,6 +583,27 @@
                 attribute="importantForAutofill"
                 value="no"/>
         </fix-alternatives>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_event_list.xml"
+            line="48"
+            column="10"
+            startOffset="1620"
+            endLine="48"
+            endColumn="18"
+            endOffset="1628"/>
+    </incident>
+
+    <incident
+        id="TextFields"
+        severity="warning"
+        message="This text field does not specify an `inputType`">
+        <fix-attribute
+            description="Set inputType"
+            namespace="http://schemas.android.com/apk/res/android"
+            attribute="inputType"
+            value="TODO"
+            point="4"
+            mark="0"/>
         <location
             file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_event_list.xml"
             line="48"
@@ -1063,6 +1063,20 @@
     </incident>
 
     <incident
+        id="MonochromeLauncherIcon"
+        severity="warning"
+        message="The application adaptive icon is missing a monochrome tag">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/mipmap-anydpi-v26/ic_launcher.xml"
+            line="2"
+            column="1"
+            startOffset="39"
+            endLine="5"
+            endColumn="17"
+            endOffset="277"/>
+    </incident>
+
+    <incident
         id="SetTextI18n"
         severity="warning"
         message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
@@ -1387,6 +1401,14 @@
             endLine="49"
             endColumn="75"
             endOffset="1526"/>
+    </incident>
+
+    <incident
+        id="IconLocation"
+        severity="warning"
+        message="Found bitmap drawable `res/drawable/anh_chuc_mung_nam_moi_binh_ngo_2026.png` in densityless folder">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/drawable/anh_chuc_mung_nam_moi_binh_ngo_2026.png"/>
     </incident>
 
     <incident
