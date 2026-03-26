@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="purple_200">#FFBB86FC</color>
-    <color name="purple_500">#FF6200EE</color>
-    <color name="purple_700">#FF3700B3</color>
-    <color name="teal_200">#FF03DAC5</color>
-    <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="text_main">#212121</color>
+    <color name="text_secondary">#757575</color>
+    <color name="transparent">#00000000</color>
     
-    <!-- Custom colors -->
-    <color name="red_primary">#C62828</color>
-    <color name="red_button">#D32F2F</color>
-    <color name="lunar_text">#D32F2F</color>
-    <color name="current_day_bg">#FF4081</color>
-    <color name="weekend_bg">#FFF3E0</color>
-    <color name="cell_border">#E0E0E0</color>
-    <color name="header_bg">#FFEBEE</color>
-    <color name="header_text">#C62828</color>
+    <!-- Custom Premium Colors -->
+    <color name="red_primary">#BA112A</color> <!-- Ruby Red -->
+    <color name="red_dark">#8B0000</color>   
+    <color name="red_button">#A30F25</color>
+    <color name="gold_accent">#D4AF37</color> <!-- Metallic Gold -->
+    <color name="surface_bg">#FDFBF7</color> <!-- Porcelain White -->
+    <color name="card_bg">#FFFFFF</color>
+    <color name="lunar_text">#A30F25</color>
+    
+    <!-- Grid Colors -->
+    <color name="current_day_bg">#BA112A</color>
+    <color name="weekend_bg">#FFF8ED</color>
+    <color name="cell_border">#F2EDD7</color>
+    <color name="header_bg">#FDFBF7</color>
+    <color name="header_text">#757575</color>
 </resources>

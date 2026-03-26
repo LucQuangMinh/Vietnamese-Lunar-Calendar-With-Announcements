@@ -77,13 +77,15 @@ public class CalendarAdapter extends BaseAdapter {
 
         // Highlight current day
         if (cell.isCurrentDay()) {
-            convertView.setBackgroundColor(context.getResources().getColor(R.color.current_day_bg));
+            // convertView.setBackgroundColor(context.getResources().getColor(R.color.current_day_bg));
+            holder.tvSolarDate.setBackgroundResource(R.drawable.bg_circle_today);
             holder.tvSolarDate.setTextColor(Color.WHITE);
-            holder.tvLunarDate.setTextColor(Color.WHITE);
+            holder.tvLunarDate.setTextColor(context.getResources().getColor(R.color.red_primary));
         } else {
-            convertView.setBackgroundColor(Color.WHITE);
-            holder.tvSolarDate.setTextColor(Color.BLACK);
-            holder.tvLunarDate.setTextColor(context.getResources().getColor(R.color.lunar_text));
+            // convertView.setBackgroundColor(Color.WHITE);
+            holder.tvSolarDate.setBackgroundResource(android.R.color.transparent);
+            holder.tvSolarDate.setTextColor(context.getResources().getColor(R.color.text_main));
+            holder.tvLunarDate.setTextColor(context.getResources().getColor(R.color.text_secondary));
         }
 
         // Dim dates not in current month
@@ -146,7 +148,7 @@ public class CalendarAdapter extends BaseAdapter {
     static class ViewHolder {
         TextView tvSolarDate;
         TextView tvLunarDate;
-        TextView tvSpecialDayIndicator;
+        View tvSpecialDayIndicator;
     }
 
     public void updateData(List<CalendarCell> newCalendarCells) {

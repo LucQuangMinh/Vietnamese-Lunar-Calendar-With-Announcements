@@ -68,12 +68,10 @@ public class EventListActivity extends AppCompatActivity {
     }
 
     @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == 1 && resultCode == RESULT_OK) {
-            // Refresh the list after adding/editing an event
-            loadEvents();
-        }
+    protected void onResume() {
+        super.onResume();
+        // Refresh the list when returning to activity
+        loadEvents();
     }
 
     private void loadEvents() {

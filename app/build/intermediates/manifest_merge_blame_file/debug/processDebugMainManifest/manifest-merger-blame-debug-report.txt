@@ -40,149 +40,150 @@
 26-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:11:9-41
 27        android:supportsRtl="true"
 27-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:12:9-35
-28        android:theme="@style/Theme.AppCompat.Light.DarkActionBar" >
-28-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:13:9-67
-29
-30        <!-- Main Activity -->
-31        <activity
-31-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:17:9-24:20
-32            android:name="com.example.lunarcalendar.MainActivity"
-32-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:18:13-41
-33            android:exported="true" >
-33-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:19:13-36
-34            <intent-filter>
-34-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:20:13-23:29
-35                <action android:name="android.intent.action.MAIN" />
-35-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:21:17-69
-35-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:21:25-66
-36
-37                <category android:name="android.intent.category.LAUNCHER" />
-37-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:22:17-77
-37-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:22:27-74
-38            </intent-filter>
-39        </activity>
-40
-41        <!-- Event List Activity -->
-42        <activity
-42-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:27:9-30:74
-43            android:name="com.example.lunarcalendar.EventListActivity"
-43-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:28:13-46
-44            android:label="Danh sách sự kiện"
-44-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:29:13-46
-45            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
-45-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:30:13-71
-46
-47        <!-- Add Event Activity -->
-48        <activity
-48-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:33:9-36:74
-49            android:name="com.example.lunarcalendar.AddEventActivity"
-49-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:34:13-45
-50            android:label="Thêm/Sửa sự kiện"
-50-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:35:13-45
-51            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
-51-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:36:13-71
-52
-53        <!-- Notification Receiver -->
-54        <receiver
-54-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:39:9-40:40
-55            android:name="com.example.lunarcalendar.NotificationReceiver"
-55-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:39:19-55
-56            android:exported="false" />
-56-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:40:13-37
-57
-58        <!-- Special Day Notification Receiver -->
-59        <receiver
-59-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:43:9-44:39
-60            android:name="com.example.lunarcalendar.SpecialDayNotificationReceiver"
-60-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:43:19-65
-61            android:exported="true" />
-61-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:44:13-36
-62
-63        <!-- Special Day List Activity -->
-64        <activity
-64-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:47:9-50:74
-65            android:name="com.example.lunarcalendar.SpecialDayListActivity"
-65-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:48:13-51
-66            android:label="Danh sách ngày đặc biệt"
-66-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:49:13-52
-67            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
-67-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:50:13-71
-68
-69        <!-- Notification Settings Activity -->
-70        <activity
-70-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:53:9-56:74
-71            android:name="com.example.lunarcalendar.NotificationSettingsActivity"
-71-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:54:13-57
-72            android:label="Cài đặt thông báo"
-72-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:55:13-46
-73            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
-73-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:56:13-71
-74
-75        <provider
-75-->[androidx.emoji2:emoji2:1.3.0] C:\Users\Admin\.gradle\caches\8.10\transforms\a56862958cef2ddb8a5967e81a5f38fb\transformed\emoji2-1.3.0\AndroidManifest.xml:24:9-32:20
-76            android:name="androidx.startup.InitializationProvider"
-76-->[androidx.emoji2:emoji2:1.3.0] C:\Users\Admin\.gradle\caches\8.10\transforms\a56862958cef2ddb8a5967e81a5f38fb\transformed\emoji2-1.3.0\AndroidManifest.xml:25:13-67
-77            android:authorities="com.example.lunarcalendar.androidx-startup"
-77-->[androidx.emoji2:emoji2:1.3.0] C:\Users\Admin\.gradle\caches\8.10\transforms\a56862958cef2ddb8a5967e81a5f38fb\transformed\emoji2-1.3.0\AndroidManifest.xml:26:13-68
-78            android:exported="false" >
-78-->[androidx.emoji2:emoji2:1.3.0] C:\Users\Admin\.gradle\caches\8.10\transforms\a56862958cef2ddb8a5967e81a5f38fb\transformed\emoji2-1.3.0\AndroidManifest.xml:27:13-37
-79            <meta-data
-79-->[androidx.emoji2:emoji2:1.3.0] C:\Users\Admin\.gradle\caches\8.10\transforms\a56862958cef2ddb8a5967e81a5f38fb\transformed\emoji2-1.3.0\AndroidManifest.xml:29:13-31:52
-80                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-80-->[androidx.emoji2:emoji2:1.3.0] C:\Users\Admin\.gradle\caches\8.10\transforms\a56862958cef2ddb8a5967e81a5f38fb\transformed\emoji2-1.3.0\AndroidManifest.xml:30:17-75
-81                android:value="androidx.startup" />
-81-->[androidx.emoji2:emoji2:1.3.0] C:\Users\Admin\.gradle\caches\8.10\transforms\a56862958cef2ddb8a5967e81a5f38fb\transformed\emoji2-1.3.0\AndroidManifest.xml:31:17-49
-82            <meta-data
-82-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\Admin\.gradle\caches\8.10\transforms\84d15c418a7779e6d0d131e0b6b7de1a\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:29:13-31:52
-83                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-83-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\Admin\.gradle\caches\8.10\transforms\84d15c418a7779e6d0d131e0b6b7de1a\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:30:17-78
-84                android:value="androidx.startup" />
-84-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\Admin\.gradle\caches\8.10\transforms\84d15c418a7779e6d0d131e0b6b7de1a\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:31:17-49
-85            <meta-data
-85-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Admin\.gradle\caches\8.10\transforms\5110231eee67ada6c89af96e97e948f0\transformed\profileinstaller-1.3.1\AndroidManifest.xml:29:13-31:52
-86                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
-86-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Admin\.gradle\caches\8.10\transforms\5110231eee67ada6c89af96e97e948f0\transformed\profileinstaller-1.3.1\AndroidManifest.xml:30:17-85
-87                android:value="androidx.startup" />
-87-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Admin\.gradle\caches\8.10\transforms\5110231eee67ada6c89af96e97e948f0\transformed\profileinstaller-1.3.1\AndroidManifest.xml:31:17-49
-88        </provider>
-89
-90        <receiver
-90-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Admin\.gradle\caches\8.10\transforms\5110231eee67ada6c89af96e97e948f0\transformed\profileinstaller-1.3.1\AndroidManifest.xml:34:9-52:20
-91            android:name="androidx.profileinstaller.ProfileInstallReceiver"
-91-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Admin\.gradle\caches\8.10\transforms\5110231eee67ada6c89af96e97e948f0\transformed\profileinstaller-1.3.1\AndroidManifest.xml:35:13-76
-92            android:directBootAware="false"
-92-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Admin\.gradle\caches\8.10\transforms\5110231eee67ada6c89af96e97e948f0\transformed\profileinstaller-1.3.1\AndroidManifest.xml:36:13-44
-93            android:enabled="true"
-93-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Admin\.gradle\caches\8.10\transforms\5110231eee67ada6c89af96e97e948f0\transformed\profileinstaller-1.3.1\AndroidManifest.xml:37:13-35
-94            android:exported="true"
-94-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Admin\.gradle\caches\8.10\transforms\5110231eee67ada6c89af96e97e948f0\transformed\profileinstaller-1.3.1\AndroidManifest.xml:38:13-36
-95            android:permission="android.permission.DUMP" >
-95-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Admin\.gradle\caches\8.10\transforms\5110231eee67ada6c89af96e97e948f0\transformed\profileinstaller-1.3.1\AndroidManifest.xml:39:13-57
-96            <intent-filter>
-96-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Admin\.gradle\caches\8.10\transforms\5110231eee67ada6c89af96e97e948f0\transformed\profileinstaller-1.3.1\AndroidManifest.xml:40:13-42:29
-97                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
-97-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Admin\.gradle\caches\8.10\transforms\5110231eee67ada6c89af96e97e948f0\transformed\profileinstaller-1.3.1\AndroidManifest.xml:41:17-91
-97-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Admin\.gradle\caches\8.10\transforms\5110231eee67ada6c89af96e97e948f0\transformed\profileinstaller-1.3.1\AndroidManifest.xml:41:25-88
-98            </intent-filter>
-99            <intent-filter>
-99-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Admin\.gradle\caches\8.10\transforms\5110231eee67ada6c89af96e97e948f0\transformed\profileinstaller-1.3.1\AndroidManifest.xml:43:13-45:29
-100                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
-100-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Admin\.gradle\caches\8.10\transforms\5110231eee67ada6c89af96e97e948f0\transformed\profileinstaller-1.3.1\AndroidManifest.xml:44:17-85
-100-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Admin\.gradle\caches\8.10\transforms\5110231eee67ada6c89af96e97e948f0\transformed\profileinstaller-1.3.1\AndroidManifest.xml:44:25-82
-101            </intent-filter>
-102            <intent-filter>
-102-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Admin\.gradle\caches\8.10\transforms\5110231eee67ada6c89af96e97e948f0\transformed\profileinstaller-1.3.1\AndroidManifest.xml:46:13-48:29
-103                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
-103-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Admin\.gradle\caches\8.10\transforms\5110231eee67ada6c89af96e97e948f0\transformed\profileinstaller-1.3.1\AndroidManifest.xml:47:17-88
-103-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Admin\.gradle\caches\8.10\transforms\5110231eee67ada6c89af96e97e948f0\transformed\profileinstaller-1.3.1\AndroidManifest.xml:47:25-85
-104            </intent-filter>
-105            <intent-filter>
-105-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Admin\.gradle\caches\8.10\transforms\5110231eee67ada6c89af96e97e948f0\transformed\profileinstaller-1.3.1\AndroidManifest.xml:49:13-51:29
-106                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
-106-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Admin\.gradle\caches\8.10\transforms\5110231eee67ada6c89af96e97e948f0\transformed\profileinstaller-1.3.1\AndroidManifest.xml:50:17-95
-106-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Admin\.gradle\caches\8.10\transforms\5110231eee67ada6c89af96e97e948f0\transformed\profileinstaller-1.3.1\AndroidManifest.xml:50:25-92
-107            </intent-filter>
-108        </receiver>
-109    </application>
-110
-111</manifest>
+28        android:testOnly="true"
+29        android:theme="@style/AppTheme" >
+29-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:13:9-40
+30
+31        <!-- Main Activity -->
+32        <activity
+32-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:17:9-24:20
+33            android:name="com.example.lunarcalendar.MainActivity"
+33-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:18:13-41
+34            android:exported="true" >
+34-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:19:13-36
+35            <intent-filter>
+35-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:20:13-23:29
+36                <action android:name="android.intent.action.MAIN" />
+36-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:21:17-69
+36-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:21:25-66
+37
+38                <category android:name="android.intent.category.LAUNCHER" />
+38-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:22:17-77
+38-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:22:27-74
+39            </intent-filter>
+40        </activity>
+41
+42        <!-- Event List Activity -->
+43        <activity
+43-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:27:9-30:47
+44            android:name="com.example.lunarcalendar.EventListActivity"
+44-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:28:13-46
+45            android:label="Danh sách sự kiện"
+45-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:29:13-46
+46            android:theme="@style/AppTheme" />
+46-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:30:13-44
+47
+48        <!-- Add Event Activity -->
+49        <activity
+49-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:33:9-36:47
+50            android:name="com.example.lunarcalendar.AddEventActivity"
+50-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:34:13-45
+51            android:label="Thêm/Sửa sự kiện"
+51-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:35:13-45
+52            android:theme="@style/AppTheme" />
+52-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:36:13-44
+53
+54        <!-- Notification Receiver -->
+55        <receiver
+55-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:39:9-40:40
+56            android:name="com.example.lunarcalendar.NotificationReceiver"
+56-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:39:19-55
+57            android:exported="false" />
+57-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:40:13-37
+58
+59        <!-- Special Day Notification Receiver -->
+60        <receiver
+60-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:43:9-44:39
+61            android:name="com.example.lunarcalendar.SpecialDayNotificationReceiver"
+61-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:43:19-65
+62            android:exported="true" />
+62-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:44:13-36
+63
+64        <!-- Special Day List Activity -->
+65        <activity
+65-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:47:9-50:47
+66            android:name="com.example.lunarcalendar.SpecialDayListActivity"
+66-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:48:13-51
+67            android:label="Danh sách ngày đặc biệt"
+67-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:49:13-52
+68            android:theme="@style/AppTheme" />
+68-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:50:13-44
+69
+70        <!-- Notification Settings Activity -->
+71        <activity
+71-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:53:9-56:47
+72            android:name="com.example.lunarcalendar.NotificationSettingsActivity"
+72-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:54:13-57
+73            android:label="Cài đặt thông báo"
+73-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:55:13-46
+74            android:theme="@style/AppTheme" />
+74-->D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:56:13-44
+75
+76        <provider
+76-->[androidx.emoji2:emoji2:1.3.0] C:\Users\Admin\.gradle\caches\8.10\transforms\a56862958cef2ddb8a5967e81a5f38fb\transformed\emoji2-1.3.0\AndroidManifest.xml:24:9-32:20
+77            android:name="androidx.startup.InitializationProvider"
+77-->[androidx.emoji2:emoji2:1.3.0] C:\Users\Admin\.gradle\caches\8.10\transforms\a56862958cef2ddb8a5967e81a5f38fb\transformed\emoji2-1.3.0\AndroidManifest.xml:25:13-67
+78            android:authorities="com.example.lunarcalendar.androidx-startup"
+78-->[androidx.emoji2:emoji2:1.3.0] C:\Users\Admin\.gradle\caches\8.10\transforms\a56862958cef2ddb8a5967e81a5f38fb\transformed\emoji2-1.3.0\AndroidManifest.xml:26:13-68
+79            android:exported="false" >
+79-->[androidx.emoji2:emoji2:1.3.0] C:\Users\Admin\.gradle\caches\8.10\transforms\a56862958cef2ddb8a5967e81a5f38fb\transformed\emoji2-1.3.0\AndroidManifest.xml:27:13-37
+80            <meta-data
+80-->[androidx.emoji2:emoji2:1.3.0] C:\Users\Admin\.gradle\caches\8.10\transforms\a56862958cef2ddb8a5967e81a5f38fb\transformed\emoji2-1.3.0\AndroidManifest.xml:29:13-31:52
+81                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+81-->[androidx.emoji2:emoji2:1.3.0] C:\Users\Admin\.gradle\caches\8.10\transforms\a56862958cef2ddb8a5967e81a5f38fb\transformed\emoji2-1.3.0\AndroidManifest.xml:30:17-75
+82                android:value="androidx.startup" />
+82-->[androidx.emoji2:emoji2:1.3.0] C:\Users\Admin\.gradle\caches\8.10\transforms\a56862958cef2ddb8a5967e81a5f38fb\transformed\emoji2-1.3.0\AndroidManifest.xml:31:17-49
+83            <meta-data
+83-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\Admin\.gradle\caches\8.10\transforms\84d15c418a7779e6d0d131e0b6b7de1a\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:29:13-31:52
+84                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+84-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\Admin\.gradle\caches\8.10\transforms\84d15c418a7779e6d0d131e0b6b7de1a\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:30:17-78
+85                android:value="androidx.startup" />
+85-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\Admin\.gradle\caches\8.10\transforms\84d15c418a7779e6d0d131e0b6b7de1a\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:31:17-49
+86            <meta-data
+86-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Admin\.gradle\caches\8.10\transforms\5110231eee67ada6c89af96e97e948f0\transformed\profileinstaller-1.3.1\AndroidManifest.xml:29:13-31:52
+87                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+87-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Admin\.gradle\caches\8.10\transforms\5110231eee67ada6c89af96e97e948f0\transformed\profileinstaller-1.3.1\AndroidManifest.xml:30:17-85
+88                android:value="androidx.startup" />
+88-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Admin\.gradle\caches\8.10\transforms\5110231eee67ada6c89af96e97e948f0\transformed\profileinstaller-1.3.1\AndroidManifest.xml:31:17-49
+89        </provider>
+90
+91        <receiver
+91-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Admin\.gradle\caches\8.10\transforms\5110231eee67ada6c89af96e97e948f0\transformed\profileinstaller-1.3.1\AndroidManifest.xml:34:9-52:20
+92            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+92-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Admin\.gradle\caches\8.10\transforms\5110231eee67ada6c89af96e97e948f0\transformed\profileinstaller-1.3.1\AndroidManifest.xml:35:13-76
+93            android:directBootAware="false"
+93-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Admin\.gradle\caches\8.10\transforms\5110231eee67ada6c89af96e97e948f0\transformed\profileinstaller-1.3.1\AndroidManifest.xml:36:13-44
+94            android:enabled="true"
+94-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Admin\.gradle\caches\8.10\transforms\5110231eee67ada6c89af96e97e948f0\transformed\profileinstaller-1.3.1\AndroidManifest.xml:37:13-35
+95            android:exported="true"
+95-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Admin\.gradle\caches\8.10\transforms\5110231eee67ada6c89af96e97e948f0\transformed\profileinstaller-1.3.1\AndroidManifest.xml:38:13-36
+96            android:permission="android.permission.DUMP" >
+96-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Admin\.gradle\caches\8.10\transforms\5110231eee67ada6c89af96e97e948f0\transformed\profileinstaller-1.3.1\AndroidManifest.xml:39:13-57
+97            <intent-filter>
+97-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Admin\.gradle\caches\8.10\transforms\5110231eee67ada6c89af96e97e948f0\transformed\profileinstaller-1.3.1\AndroidManifest.xml:40:13-42:29
+98                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+98-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Admin\.gradle\caches\8.10\transforms\5110231eee67ada6c89af96e97e948f0\transformed\profileinstaller-1.3.1\AndroidManifest.xml:41:17-91
+98-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Admin\.gradle\caches\8.10\transforms\5110231eee67ada6c89af96e97e948f0\transformed\profileinstaller-1.3.1\AndroidManifest.xml:41:25-88
+99            </intent-filter>
+100            <intent-filter>
+100-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Admin\.gradle\caches\8.10\transforms\5110231eee67ada6c89af96e97e948f0\transformed\profileinstaller-1.3.1\AndroidManifest.xml:43:13-45:29
+101                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+101-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Admin\.gradle\caches\8.10\transforms\5110231eee67ada6c89af96e97e948f0\transformed\profileinstaller-1.3.1\AndroidManifest.xml:44:17-85
+101-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Admin\.gradle\caches\8.10\transforms\5110231eee67ada6c89af96e97e948f0\transformed\profileinstaller-1.3.1\AndroidManifest.xml:44:25-82
+102            </intent-filter>
+103            <intent-filter>
+103-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Admin\.gradle\caches\8.10\transforms\5110231eee67ada6c89af96e97e948f0\transformed\profileinstaller-1.3.1\AndroidManifest.xml:46:13-48:29
+104                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+104-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Admin\.gradle\caches\8.10\transforms\5110231eee67ada6c89af96e97e948f0\transformed\profileinstaller-1.3.1\AndroidManifest.xml:47:17-88
+104-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Admin\.gradle\caches\8.10\transforms\5110231eee67ada6c89af96e97e948f0\transformed\profileinstaller-1.3.1\AndroidManifest.xml:47:25-85
+105            </intent-filter>
+106            <intent-filter>
+106-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Admin\.gradle\caches\8.10\transforms\5110231eee67ada6c89af96e97e948f0\transformed\profileinstaller-1.3.1\AndroidManifest.xml:49:13-51:29
+107                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+107-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Admin\.gradle\caches\8.10\transforms\5110231eee67ada6c89af96e97e948f0\transformed\profileinstaller-1.3.1\AndroidManifest.xml:50:17-95
+107-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Admin\.gradle\caches\8.10\transforms\5110231eee67ada6c89af96e97e948f0\transformed\profileinstaller-1.3.1\AndroidManifest.xml:50:25-92
+108            </intent-filter>
+109        </receiver>
+110    </application>
+111
+112</manifest>

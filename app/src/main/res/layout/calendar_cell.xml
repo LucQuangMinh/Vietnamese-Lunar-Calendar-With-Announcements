@@ -1,54 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="60dp"
-    android:padding="4dp"
-    android:background="@color/white">
+    android:layout_height="68dp"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@android:color/transparent"
+    android:padding="2dp">
 
-    <!-- Solar Date (Large) -->
     <TextView
         android:id="@+id/tvSolarDate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:gravity="center"
         android:text="1"
-        android:textSize="18sp"
+        android:textSize="16sp"
         android:textStyle="bold"
-        android:textColor="@color/black"
-        android:paddingStart="2dp"
-        android:paddingLeft="2dp"/>
+        android:textColor="@color/text_main" />
 
-    <!-- Lunar Date (Small, Red) -->
-    <TextView
-        android:id="@+id/tvLunarDate"
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:text="1/1"
-        android:textSize="10sp"
-        android:textColor="@color/lunar_text"
-        android:paddingEnd="2dp"
-        android:paddingRight="2dp"
-        android:paddingBottom="2dp"/>
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="2dp">
 
-    <!-- Special Day Indicator -->
-    <TextView
-        android:id="@+id/tvSpecialDayIndicator"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="★"
-        android:textSize="10sp"
-        android:textColor="@color/red_primary"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:paddingTop="1dp"
-        android:paddingEnd="1dp"
-        android:paddingRight="1dp"
-        android:visibility="gone"/>
+        <TextView
+            android:id="@+id/tvLunarDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1/1"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            android:textColor="@color/lunar_text" />
 
-</RelativeLayout>
+        <View
+            android:id="@+id/tvSpecialDayIndicator"
+            android:layout_width="5dp"
+            android:layout_height="5dp"
+            android:layout_marginStart="3dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginBottom="1dp"
+            android:background="@drawable/bg_circle_today"
+            android:visibility="gone"/>
+    </LinearLayout>
+
+</LinearLayout>

@@ -24,7 +24,7 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/Theme.AppCompat.Light.DarkActionBar" >
+        android:theme="@style/AppTheme" >
 
         <!-- Main Activity -->
         <activity
@@ -41,13 +41,13 @@
         <activity
             android:name="com.example.lunarcalendar.EventListActivity"
             android:label="Danh sách sự kiện"
-            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
+            android:theme="@style/AppTheme" />
 
         <!-- Add Event Activity -->
         <activity
             android:name="com.example.lunarcalendar.AddEventActivity"
             android:label="Thêm/Sửa sự kiện"
-            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
+            android:theme="@style/AppTheme" />
 
         <!-- Notification Receiver -->
         <receiver
@@ -63,13 +63,13 @@
         <activity
             android:name="com.example.lunarcalendar.SpecialDayListActivity"
             android:label="Danh sách ngày đặc biệt"
-            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
+            android:theme="@style/AppTheme" />
 
         <!-- Notification Settings Activity -->
         <activity
             android:name="com.example.lunarcalendar.NotificationSettingsActivity"
             android:label="Cài đặt thông báo"
-            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
+            android:theme="@style/AppTheme" />
 
         <provider
             android:name="androidx.startup.InitializationProvider"

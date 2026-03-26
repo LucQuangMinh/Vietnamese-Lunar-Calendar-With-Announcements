@@ -1,148 +1,187 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp"
-    android:background="@color/white">
+    android:background="@color/surface_bg">
 
-    <!-- Title -->
+    <!-- Top Header Accent -->
+    <View
+        android:id="@+id/headerBg"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:background="@drawable/bg_rounded_primary"
+        android:layout_marginTop="-24dp"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/tvTitle"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/calendar_title"
-        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:textSize="22sp"
         android:textStyle="bold"
-        android:textColor="@color/red_primary"
-        android:gravity="center"
-        android:paddingBottom="16dp"/>
+        android:layout_marginTop="40dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
-    <!-- Month Selection -->
+    <!-- Container for Spinners -->
     <LinearLayout
-        android:layout_width="match_parent"
+        android:id="@+id/llSpinners"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/bg_rounded_primary"
+        android:backgroundTint="#26FFFFFF"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="4dp"
         android:gravity="center_vertical"
-        android:paddingBottom="8dp">
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/month_label"
-            android:textSize="16sp"
-            android:textColor="@color/red_primary"
-            android:textStyle="bold"
-            android:paddingEnd="8dp"
-            android:paddingRight="8dp"/>
+            android:textColor="@color/white"
+            android:textStyle="bold" />
 
         <Spinner
             android:id="@+id/spinnerMonth"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@android:drawable/spinner_background"
-            android:padding="8dp"/>
-    </LinearLayout>
-
-    <!-- Year Selection -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center_vertical"
-        android:paddingBottom="16dp">
+            android:backgroundTint="@color/white" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/year_label"
-            android:textSize="16sp"
-            android:textColor="@color/red_primary"
+            android:textColor="@color/white"
             android:textStyle="bold"
-            android:paddingEnd="8dp"
-            android:paddingRight="8dp"/>
+            android:layout_marginStart="16dp" />
 
         <Spinner
             android:id="@+id/spinnerYear"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@android:drawable/spinner_background"
-            android:padding="8dp"/>
+            android:backgroundTint="@color/white" />
     </LinearLayout>
 
-    <!-- View Button -->
-    <Button
-        android:id="@+id/btnViewCalendar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/view_button"
-        android:textColor="@color/white"
-        android:background="@color/red_button"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:padding="12dp"
-        android:layout_marginBottom="16dp"/>
-
-    <!-- Special Day List Button -->
-    <Button
-        android:id="@+id/btnSpecialDayList"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Danh sách ngày đặc biệt"
-        android:textColor="@color/white"
-        android:background="@color/red_button"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:padding="12dp"
-        android:layout_marginBottom="16dp"/>
-
-    <!-- Notification Settings Button -->
-    <Button
-        android:id="@+id/btnNotificationSettings"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Cài đặt thông báo"
-        android:textColor="@color/white"
-        android:background="@color/red_button"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:padding="12dp"
-        android:layout_marginBottom="16dp"/>
-
-    <!-- Calendar Info Text -->
-    <TextView
-        android:id="@+id/tvCalendarInfo"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/view_calendar"
-        android:textSize="14sp"
-        android:textColor="@color/red_primary"
-        android:gravity="center"
-        android:paddingBottom="8dp"/>
-
-    <!-- Days of Week Header -->
-    <GridView
-        android:id="@+id/gridViewHeader"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:numColumns="7"
-        android:stretchMode="columnWidth"
-        android:gravity="center"
-        android:background="@color/header_bg"
-        android:padding="4dp"/>
-
-    <!-- Calendar Grid -->
-    <GridView
-        android:id="@+id/gridViewCalendar"
+    <!-- The Calendar Card -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardCalendar"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
-        android:numColumns="7"
-        android:stretchMode="columnWidth"
-        android:gravity="center"
-        android:verticalSpacing="1dp"
-        android:horizontalSpacing="1dp"/>
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        app:cardCornerRadius="24dp"
+        app:cardElevation="12dp"
+        app:cardBackgroundColor="@color/card_bg"
+        app:layout_constraintTop_toBottomOf="@id/llSpinners"
+        app:layout_constraintBottom_toTopOf="@id/llActionButtons"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
 
-</LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvCalendarInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="16dp"
+                android:paddingBottom="8dp"
+                android:text="@string/view_calendar"
+                android:textColor="@color/red_dark"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:gravity="center" />
+
+            <GridView
+                android:id="@+id/gridViewHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/card_bg"
+                android:gravity="center"
+                android:numColumns="7"
+                android:stretchMode="columnWidth" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginHorizontal="16dp"
+                android:background="@color/cell_border" />
+
+            <GridView
+                android:id="@+id/gridViewCalendar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:horizontalSpacing="0dp"
+                android:verticalSpacing="0dp"
+                android:gravity="center"
+                android:numColumns="7"
+                android:stretchMode="columnWidth"
+                android:background="@color/card_bg"/>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Action Buttons at the Bottom -->
+    <LinearLayout
+        android:id="@+id/llActionButtons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="16dp"
+        android:paddingBottom="24dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <Button
+            android:id="@+id/btnViewCalendar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/view_button"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/red_button"
+            android:layout_marginBottom="8dp"
+            app:cornerRadius="12dp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnSpecialDayList"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Ngày Đặc Biệt"
+                android:textColor="@color/red_primary"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_marginEnd="6dp"
+                app:cornerRadius="12dp"
+                app:strokeColor="@color/red_primary" />
+
+            <Button
+                android:id="@+id/btnNotificationSettings"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Thông báo"
+                android:textColor="@color/red_primary"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_marginStart="6dp"
+                app:cornerRadius="12dp"
+                app:strokeColor="@color/red_primary" />
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

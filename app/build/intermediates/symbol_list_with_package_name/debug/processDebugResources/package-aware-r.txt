@@ -1372,6 +1372,7 @@ color button_material_dark
 color button_material_light
 color call_notification_answer_color
 color call_notification_decline_color
+color card_bg
 color cardview_dark_background
 color cardview_light_background
 color cardview_shadow_end_color
@@ -1424,6 +1425,7 @@ color error_color_material_dark
 color error_color_material_light
 color foreground_material_dark
 color foreground_material_light
+color gold_accent
 color header_bg
 color header_text
 color highlighted_text_material_dark
@@ -2093,10 +2095,8 @@ color primary_text_default_material_dark
 color primary_text_default_material_light
 color primary_text_disabled_material_dark
 color primary_text_disabled_material_light
-color purple_200
-color purple_500
-color purple_700
 color red_button
+color red_dark
 color red_primary
 color ripple_material_dark
 color ripple_material_light
@@ -2104,16 +2104,18 @@ color secondary_text_default_material_dark
 color secondary_text_default_material_light
 color secondary_text_disabled_material_dark
 color secondary_text_disabled_material_light
+color surface_bg
 color switch_thumb_disabled_material_dark
 color switch_thumb_disabled_material_light
 color switch_thumb_material_dark
 color switch_thumb_material_light
 color switch_thumb_normal_material_dark
 color switch_thumb_normal_material_light
-color teal_200
-color teal_700
+color text_main
+color text_secondary
 color tooltip_background_dark
 color tooltip_background_light
+color transparent
 color weekend_bg
 color white
 dimen abc_action_bar_content_inset_material
@@ -3001,6 +3003,8 @@ drawable abc_vector_test
 drawable anh_chuc_mung_nam_moi_binh_ngo_2026
 drawable avd_hide_password
 drawable avd_show_password
+drawable bg_circle_today
+drawable bg_rounded_primary
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
 drawable btn_checkbox_unchecked_mtrl
@@ -3230,6 +3234,7 @@ id buttonPanel
 id cache_measures
 id callMeasure
 id cancel_button
+id cardCalendar
 id carryVelocity
 id cbNotification
 id cbYearly
@@ -3347,6 +3352,7 @@ id gridViewHeader
 id group_divider
 id grouping
 id groups
+id headerBg
 id header_title
 id hide_ime_id
 id hideable
@@ -3382,6 +3388,8 @@ id line3
 id linear
 id listMode
 id list_item
+id llActionButtons
+id llSpinners
 id lvSpecialDays
 id m3_side_sheet
 id marquee

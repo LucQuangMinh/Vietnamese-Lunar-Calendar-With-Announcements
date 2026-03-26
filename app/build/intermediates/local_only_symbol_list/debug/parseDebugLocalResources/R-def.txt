@@ -1,21 +1,25 @@
 R_DEF: Internal format may change without notice
 local
 color black
+color card_bg
 color cell_border
 color current_day_bg
+color gold_accent
 color header_bg
 color header_text
 color lunar_text
-color purple_200
-color purple_500
-color purple_700
 color red_button
+color red_dark
 color red_primary
-color teal_200
-color teal_700
+color surface_bg
+color text_main
+color text_secondary
+color transparent
 color weekend_bg
 color white
 drawable anh_chuc_mung_nam_moi_binh_ngo_2026
+drawable bg_circle_today
+drawable bg_rounded_primary
 drawable edittext_background
 drawable event_type_background
 drawable ic_delete
@@ -36,6 +40,7 @@ id btnSearch
 id btnSetTime
 id btnSpecialDayList
 id btnViewCalendar
+id cardCalendar
 id cbNotification
 id cbYearly
 id etDescription
@@ -47,7 +52,10 @@ id etSolarYear
 id etSpecialDayName
 id gridViewCalendar
 id gridViewHeader
+id headerBg
 id ivNotification
+id llActionButtons
+id llSpinners
 id lvSpecialDays
 id recyclerViewEvents
 id spinnerEventType

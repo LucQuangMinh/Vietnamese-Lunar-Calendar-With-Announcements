@@ -109,6 +109,13 @@ public class MainActivity extends AppCompatActivity implements SpecialDayDialog.
         });
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        // Refresh calendar when returning from other activities
+        displayCalendar(selectedMonth, selectedYear);
+    }
+
     public void showSpecialDayDialog(int day, int month, int year) {
         // Convert solar date to lunar date for display
         int[] lunarDate = LunarCalendar.convertSolarToLunar(day, month, year);
@@ -132,6 +139,9 @@ public class MainActivity extends AppCompatActivity implements SpecialDayDialog.
         
         dbHelper.addSpecialDay(specialDay);
         Toast.makeText(this, "Đã tạo ngày đặc biệt: " + name, Toast.LENGTH_SHORT).show();
+        
+        // Cập nhật lại giao diện ngay lập tức thay vì phải bấm nút
+        displayCalendar(selectedMonth, selectedYear);
     }
 
     private void setupMonthSpinner() {

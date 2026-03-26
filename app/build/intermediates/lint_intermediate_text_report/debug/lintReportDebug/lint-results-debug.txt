@@ -1,10 +1,10 @@
 D:\test ai\VietnameseLunarCalendar\app\src\main\java\com\example\lunarcalendar\EventAdapter.java:52: Warning: Implicitly using the default locale is a common source of bugs: Use String.format(Locale, ...) instead [DefaultLocale]
         String dateText = String.format("%02d/%02d/%d (%02d/%02d AL)", 
                           ^
-D:\test ai\VietnameseLunarCalendar\app\src\main\java\com\example\lunarcalendar\EventListActivity.java:95: Warning: Implicitly using the default locale is a common source of bugs: Use toLowerCase(Locale) instead. For strings meant to be internal use Locale.ROOT, otherwise Locale.getDefault(). [DefaultLocale]
+D:\test ai\VietnameseLunarCalendar\app\src\main\java\com\example\lunarcalendar\EventListActivity.java:93: Warning: Implicitly using the default locale is a common source of bugs: Use toLowerCase(Locale) instead. For strings meant to be internal use Locale.ROOT, otherwise Locale.getDefault(). [DefaultLocale]
             if (event.getName().toLowerCase().contains(query.toLowerCase())) {
                                 ~~~~~~~~~~~
-D:\test ai\VietnameseLunarCalendar\app\src\main\java\com\example\lunarcalendar\EventListActivity.java:95: Warning: Implicitly using the default locale is a common source of bugs: Use toLowerCase(Locale) instead. For strings meant to be internal use Locale.ROOT, otherwise Locale.getDefault(). [DefaultLocale]
+D:\test ai\VietnameseLunarCalendar\app\src\main\java\com\example\lunarcalendar\EventListActivity.java:93: Warning: Implicitly using the default locale is a common source of bugs: Use toLowerCase(Locale) instead. For strings meant to be internal use Locale.ROOT, otherwise Locale.getDefault(). [DefaultLocale]
             if (event.getName().toLowerCase().contains(query.toLowerCase())) {
                                                              ~~~~~~~~~~~
 D:\test ai\VietnameseLunarCalendar\app\src\main\java\com\example\lunarcalendar\NotificationSettingsActivity.java:83: Warning: Implicitly using the default locale is a common source of bugs: Use String.format(Locale, ...) instead [DefaultLocale]
@@ -92,10 +92,10 @@ D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:43: Warning:
 D:\test ai\VietnameseLunarCalendar\app\src\main\java\com\example\lunarcalendar\EventAdapter.java:107: Warning: It will always be more efficient to use more specific change events if you can. Rely on notifyDataSetChanged as a last resort. [NotifyDataSetChanged]
             notifyDataSetChanged();
             ~~~~~~~~~~~~~~~~~~~~~~
-D:\test ai\VietnameseLunarCalendar\app\src\main\java\com\example\lunarcalendar\EventListActivity.java:82: Warning: It will always be more efficient to use more specific change events if you can. Rely on notifyDataSetChanged as a last resort. [NotifyDataSetChanged]
+D:\test ai\VietnameseLunarCalendar\app\src\main\java\com\example\lunarcalendar\EventListActivity.java:80: Warning: It will always be more efficient to use more specific change events if you can. Rely on notifyDataSetChanged as a last resort. [NotifyDataSetChanged]
         eventAdapter.notifyDataSetChanged();
         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\test ai\VietnameseLunarCalendar\app\src\main\java\com\example\lunarcalendar\EventListActivity.java:102: Warning: It will always be more efficient to use more specific change events if you can. Rely on notifyDataSetChanged as a last resort. [NotifyDataSetChanged]
+D:\test ai\VietnameseLunarCalendar\app\src\main\java\com\example\lunarcalendar\EventListActivity.java:100: Warning: It will always be more efficient to use more specific change events if you can. Rely on notifyDataSetChanged as a last resort. [NotifyDataSetChanged]
         eventAdapter.notifyDataSetChanged();
         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -105,25 +105,22 @@ D:\test ai\VietnameseLunarCalendar\app\src\main\java\com\example\lunarcalendar\E
    all existing items and structure may no longer be valid. `LayoutManager`s
    will be forced to fully rebind and relayout all visible views.
 
-D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\activity_add_event.xml:5: Warning: Possible overdraw: Root element paints background @color/white with a theme that also paints a background (inferred theme is @style/Theme_AppCompat_Light_DarkActionBar) [Overdraw]
+D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\activity_add_event.xml:5: Warning: Possible overdraw: Root element paints background @color/white with a theme that also paints a background (inferred theme is @style/AppTheme) [Overdraw]
     android:background="@color/white">
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\activity_event_list.xml:6: Warning: Possible overdraw: Root element paints background @color/white with a theme that also paints a background (inferred theme is @style/Theme_AppCompat_Light_DarkActionBar) [Overdraw]
+D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\activity_event_list.xml:6: Warning: Possible overdraw: Root element paints background @color/white with a theme that also paints a background (inferred theme is @style/AppTheme) [Overdraw]
     android:background="@color/white">
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\activity_main.xml:7: Warning: Possible overdraw: Root element paints background @color/white with a theme that also paints a background (inferred theme is @style/Theme.AppCompat.Light.DarkActionBar) [Overdraw]
+D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\activity_main.xml:6: Warning: Possible overdraw: Root element paints background @color/surface_bg with a theme that also paints a background (inferred theme is @style/AppTheme) [Overdraw]
+    android:background="@color/surface_bg">
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\activity_notification_settings.xml:7: Warning: Possible overdraw: Root element paints background @color/white with a theme that also paints a background (inferred theme is @style/AppTheme) [Overdraw]
     android:background="@color/white">
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\activity_notification_settings.xml:7: Warning: Possible overdraw: Root element paints background @color/white with a theme that also paints a background (inferred theme is @style/Theme_AppCompat_Light_DarkActionBar) [Overdraw]
-    android:background="@color/white">
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\calendar_cell.xml:6: Warning: Possible overdraw: Root element paints background @color/white with a theme that also paints a background (inferred theme is @style/Theme.AppCompat.Light.DarkActionBar) [Overdraw]
-    android:background="@color/white">
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\header_cell.xml:11: Warning: Possible overdraw: Root element paints background @color/header_bg with a theme that also paints a background (inferred theme is @style/Theme.AppCompat.Light.DarkActionBar) [Overdraw]
+D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\header_cell.xml:12: Warning: Possible overdraw: Root element paints background @color/header_bg with a theme that also paints a background (inferred theme is @style/AppTheme) [Overdraw]
     android:background="@color/header_bg"
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\item_special_day.xml:7: Warning: Possible overdraw: Root element paints background ?android:attr/selectableItemBackground with a theme that also paints a background (inferred theme is @style/Theme.AppCompat.Light.DarkActionBar) [Overdraw]
+D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\item_special_day.xml:7: Warning: Possible overdraw: Root element paints background ?android:attr/selectableItemBackground with a theme that also paints a background (inferred theme is @style/AppTheme) [Overdraw]
     android:background="?android:attr/selectableItemBackground">
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -148,30 +145,14 @@ D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\item_special_day.xml:
    performance if you pre-mix the background with your drawable and use that
    resulting image or color as a custom theme background instead.
 
-D:\test ai\VietnameseLunarCalendar\app\src\main\res\values\colors.xml:3: Warning: The resource R.color.purple_200 appears to be unused [UnusedResources]
-    <color name="purple_200">#FFBB86FC</color>
+D:\test ai\VietnameseLunarCalendar\app\src\main\res\drawable\anh_chuc_mung_nam_moi_binh_ngo_2026.png: Warning: The resource R.drawable.anh_chuc_mung_nam_moi_binh_ngo_2026 appears to be unused [UnusedResources]
+D:\test ai\VietnameseLunarCalendar\app\src\main\res\values\colors.xml:7: Warning: The resource R.color.transparent appears to be unused [UnusedResources]
+    <color name="transparent">#00000000</color>
+           ~~~~~~~~~~~~~~~~~~
+D:\test ai\VietnameseLunarCalendar\app\src\main\res\values\colors.xml:20: Warning: The resource R.color.weekend_bg appears to be unused [UnusedResources]
+    <color name="weekend_bg">#FFF8ED</color>
            ~~~~~~~~~~~~~~~~~
-D:\test ai\VietnameseLunarCalendar\app\src\main\res\values\colors.xml:4: Warning: The resource R.color.purple_500 appears to be unused [UnusedResources]
-    <color name="purple_500">#FF6200EE</color>
-           ~~~~~~~~~~~~~~~~~
-D:\test ai\VietnameseLunarCalendar\app\src\main\res\values\colors.xml:5: Warning: The resource R.color.purple_700 appears to be unused [UnusedResources]
-    <color name="purple_700">#FF3700B3</color>
-           ~~~~~~~~~~~~~~~~~
-D:\test ai\VietnameseLunarCalendar\app\src\main\res\values\colors.xml:6: Warning: The resource R.color.teal_200 appears to be unused [UnusedResources]
-    <color name="teal_200">#FF03DAC5</color>
-           ~~~~~~~~~~~~~~~
-D:\test ai\VietnameseLunarCalendar\app\src\main\res\values\colors.xml:7: Warning: The resource R.color.teal_700 appears to be unused [UnusedResources]
-    <color name="teal_700">#FF018786</color>
-           ~~~~~~~~~~~~~~~
-D:\test ai\VietnameseLunarCalendar\app\src\main\res\values\colors.xml:16: Warning: The resource R.color.weekend_bg appears to be unused [UnusedResources]
-    <color name="weekend_bg">#FFF3E0</color>
-           ~~~~~~~~~~~~~~~~~
-D:\test ai\VietnameseLunarCalendar\app\src\main\res\mipmap-anydpi-v26\ic_launcher_round.xml:2: Warning: The resource R.mipmap.ic_launcher_round appears to be unused [UnusedResources]
-<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
-^
-D:\test ai\VietnameseLunarCalendar\app\src\main\res\values\styles.xml:3: Warning: The resource R.style.AppTheme appears to be unused [UnusedResources]
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-           ~~~~~~~~~~~~~~~
+D:\test ai\VietnameseLunarCalendar\app\src\main\res\mipmap-hdpi\ic_launcher_round.webp: Warning: The resource R.mipmap.ic_launcher_round appears to be unused [UnusedResources]
 
    Explanation for issues of type "UnusedResources":
    Unused resources make applications larger and slow down builds.
@@ -249,11 +230,8 @@ D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\activity_event_list.x
    warning by setting inputType="text".
 
 D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\calendar_cell.xml:32: Warning: Avoid using sizes smaller than 11sp: 10sp [SmallSp]
-        android:textSize="10sp"
-        ~~~~~~~~~~~~~~~~~~~~~~~
-D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\calendar_cell.xml:44: Warning: Avoid using sizes smaller than 11sp: 10sp [SmallSp]
-        android:textSize="10sp"
-        ~~~~~~~~~~~~~~~~~~~~~~~
+            android:textSize="10sp"
+            ~~~~~~~~~~~~~~~~~~~~~~~
 D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\event_item.xml:70: Warning: Avoid using sizes smaller than 11sp: 10sp [SmallSp]
                 android:textSize="10sp"
                 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -424,12 +402,12 @@ D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\activity_event_list.x
 D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\activity_event_list.xml:62: Warning: Hardcoded string "Tìm", should use @string resource [HardcodedText]
             android:text="Tìm"
             ~~~~~~~~~~~~~~~~~~
-D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\activity_main.xml:93: Warning: Hardcoded string "Danh sách ngày đặc biệt", should use @string resource [HardcodedText]
-        android:text="Danh sách ngày đặc biệt"
-        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\activity_main.xml:106: Warning: Hardcoded string "Cài đặt thông báo", should use @string resource [HardcodedText]
-        android:text="Cài đặt thông báo"
-        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\activity_main.xml:166: Warning: Hardcoded string "Ngày Đặc Biệt", should use @string resource [HardcodedText]
+                android:text="Ngày Đặc Biệt"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\activity_main.xml:178: Warning: Hardcoded string "Thông báo", should use @string resource [HardcodedText]
+                android:text="Thông báo"
+                ~~~~~~~~~~~~~~~~~~~~~~~~
 D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\activity_notification_settings.xml:13: Warning: Hardcoded string "Cài đặt thông báo", should use @string resource [HardcodedText]
         android:text="Cài đặt thông báo"
         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -454,15 +432,12 @@ D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\activity_special_day_
 D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\activity_special_day_list.xml:34: Warning: Hardcoded string "Chưa có ngày đặc biệt nào được tạo", should use @string resource [HardcodedText]
         android:text="Chưa có ngày đặc biệt nào được tạo"
         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\calendar_cell.xml:16: Warning: Hardcoded string "1", should use @string resource [HardcodedText]
+D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\calendar_cell.xml:15: Warning: Hardcoded string "1", should use @string resource [HardcodedText]
         android:text="1"
         ~~~~~~~~~~~~~~~~
 D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\calendar_cell.xml:31: Warning: Hardcoded string "1/1", should use @string resource [HardcodedText]
-        android:text="1/1"
-        ~~~~~~~~~~~~~~~~~~
-D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\calendar_cell.xml:43: Warning: Hardcoded string "★", should use @string resource [HardcodedText]
-        android:text="★"
-        ~~~~~~~~~~~~~~~~
+            android:text="1/1"
+            ~~~~~~~~~~~~~~~~~~
 D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\dialog_special_day.xml:11: Warning: Hardcoded string "Nhập tên cho ngày đặc biệt:", should use @string resource [HardcodedText]
         android:text="Nhập tên cho ngày đặc biệt:"
         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -508,42 +483,6 @@ D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\item_special_day.xml:
    There are quickfixes to automatically extract this hardcoded string into a
    resource lookup.
 
-D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\activity_main.xml:36: Warning: When you define paddingEnd you should probably also define paddingStart for right-to-left symmetry [RtlSymmetry]
-            android:paddingEnd="8dp"
-            ~~~~~~~~~~~~~~~~~~
-D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\activity_main.xml:37: Warning: When you define paddingRight you should probably also define paddingLeft for right-to-left symmetry [RtlSymmetry]
-            android:paddingRight="8dp"/>
-            ~~~~~~~~~~~~~~~~~~~~
-D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\activity_main.xml:63: Warning: When you define paddingEnd you should probably also define paddingStart for right-to-left symmetry [RtlSymmetry]
-            android:paddingEnd="8dp"
-            ~~~~~~~~~~~~~~~~~~
-D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\activity_main.xml:64: Warning: When you define paddingRight you should probably also define paddingLeft for right-to-left symmetry [RtlSymmetry]
-            android:paddingRight="8dp"/>
-            ~~~~~~~~~~~~~~~~~~~~
-D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\calendar_cell.xml:20: Warning: When you define paddingStart you should probably also define paddingEnd for right-to-left symmetry [RtlSymmetry]
-        android:paddingStart="2dp"
-        ~~~~~~~~~~~~~~~~~~~~
-D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\calendar_cell.xml:21: Warning: When you define paddingLeft you should probably also define paddingRight for right-to-left symmetry [RtlSymmetry]
-        android:paddingLeft="2dp"/>
-        ~~~~~~~~~~~~~~~~~~~
-D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\calendar_cell.xml:34: Warning: When you define paddingEnd you should probably also define paddingStart for right-to-left symmetry [RtlSymmetry]
-        android:paddingEnd="2dp"
-        ~~~~~~~~~~~~~~~~~~
-D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\calendar_cell.xml:35: Warning: When you define paddingRight you should probably also define paddingLeft for right-to-left symmetry [RtlSymmetry]
-        android:paddingRight="2dp"
-        ~~~~~~~~~~~~~~~~~~~~
-D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\calendar_cell.xml:50: Warning: When you define paddingEnd you should probably also define paddingStart for right-to-left symmetry [RtlSymmetry]
-        android:paddingEnd="1dp"
-        ~~~~~~~~~~~~~~~~~~
-D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\calendar_cell.xml:51: Warning: When you define paddingRight you should probably also define paddingLeft for right-to-left symmetry [RtlSymmetry]
-        android:paddingRight="1dp"
-        ~~~~~~~~~~~~~~~~~~~~
-
-   Explanation for issues of type "RtlSymmetry":
-   If you specify padding or margin on the left side of a layout, you should
-   probably also specify padding on the right side (and vice versa) for
-   right-to-left layout symmetry.
-
 D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\activity_add_event.xml:85: Warning: Redundant attribute layout_marginRight; already defining layout_marginEnd with targetSdkVersion 34 [RtlHardcoded]
                 android:layout_marginRight="8dp" />
                 ~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -571,30 +510,9 @@ D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\activity_event_list.x
 D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\activity_event_list.xml:69: Warning: Redundant attribute layout_marginLeft; already defining layout_marginStart with targetSdkVersion 34 [RtlHardcoded]
             android:layout_marginLeft="8dp" />
             ~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\activity_main.xml:37: Warning: Redundant attribute paddingRight; already defining paddingEnd with targetSdkVersion 34 [RtlHardcoded]
-            android:paddingRight="8dp"/>
-            ~~~~~~~~~~~~~~~~~~~~
-D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\activity_main.xml:64: Warning: Redundant attribute paddingRight; already defining paddingEnd with targetSdkVersion 34 [RtlHardcoded]
-            android:paddingRight="8dp"/>
-            ~~~~~~~~~~~~~~~~~~~~
-D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\calendar_cell.xml:15: Warning: Redundant attribute layout_alignParentLeft; already defining layout_alignParentStart with targetSdkVersion 34 [RtlHardcoded]
-        android:layout_alignParentLeft="true"
-        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\calendar_cell.xml:21: Warning: Redundant attribute paddingLeft; already defining paddingStart with targetSdkVersion 34 [RtlHardcoded]
-        android:paddingLeft="2dp"/>
-        ~~~~~~~~~~~~~~~~~~~
-D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\calendar_cell.xml:30: Warning: Redundant attribute layout_alignParentRight; already defining layout_alignParentEnd with targetSdkVersion 34 [RtlHardcoded]
-        android:layout_alignParentRight="true"
-        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\calendar_cell.xml:35: Warning: Redundant attribute paddingRight; already defining paddingEnd with targetSdkVersion 34 [RtlHardcoded]
-        android:paddingRight="2dp"
-        ~~~~~~~~~~~~~~~~~~~~
-D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\calendar_cell.xml:48: Warning: Redundant attribute layout_alignParentRight; already defining layout_alignParentEnd with targetSdkVersion 34 [RtlHardcoded]
-        android:layout_alignParentRight="true"
-        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\calendar_cell.xml:51: Warning: Redundant attribute paddingRight; already defining paddingEnd with targetSdkVersion 34 [RtlHardcoded]
-        android:paddingRight="1dp"
-        ~~~~~~~~~~~~~~~~~~~~
+D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\calendar_cell.xml:41: Warning: Redundant attribute layout_marginLeft; already defining layout_marginStart with targetSdkVersion 34 [RtlHardcoded]
+            android:layout_marginLeft="3dp"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~
 D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\event_item.xml:23: Warning: Redundant attribute layout_marginRight; already defining layout_marginEnd with targetSdkVersion 34 [RtlHardcoded]
             android:layout_marginRight="12dp"
             ~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -624,4 +542,4 @@ D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\event_item.xml:118: W
    the left bitmask. Therefore, you can use gravity="start" rather than
    gravity="left|start".)
 
-0 errors, 129 warnings
+0 errors, 105 warnings

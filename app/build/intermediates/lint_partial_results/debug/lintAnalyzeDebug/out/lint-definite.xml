@@ -16,10 +16,10 @@
             file="${:app*debug*MAIN*sourceProvider*0*manifest*0}"
             line="43"
             column="10"
-            startOffset="1618"
+            startOffset="1537"
             endLine="43"
             endColumn="18"
-            endOffset="1626"/>
+            endOffset="1545"/>
     </incident>
 
     <incident
@@ -51,6 +51,27 @@
     </incident>
 
     <incident
+        id="TextFields"
+        severity="warning"
+        message="This text field does not specify an `inputType`">
+        <fix-attribute
+            description="Set inputType"
+            namespace="http://schemas.android.com/apk/res/android"
+            attribute="inputType"
+            value="TODO"
+            point="4"
+            mark="0"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_add_event.xml"
+            line="33"
+            column="10"
+            startOffset="1126"
+            endLine="33"
+            endColumn="18"
+            endOffset="1134"/>
+    </incident>
+
+    <incident
         id="Autofill"
         severity="warning"
         message="Missing `autofillHints` attribute">
@@ -68,27 +89,6 @@
                 attribute="importantForAutofill"
                 value="no"/>
         </fix-alternatives>
-        <location
-            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_add_event.xml"
-            line="33"
-            column="10"
-            startOffset="1126"
-            endLine="33"
-            endColumn="18"
-            endOffset="1134"/>
-    </incident>
-
-    <incident
-        id="TextFields"
-        severity="warning"
-        message="This text field does not specify an `inputType`">
-        <fix-attribute
-            description="Set inputType"
-            namespace="http://schemas.android.com/apk/res/android"
-            attribute="inputType"
-            value="TODO"
-            point="4"
-            mark="0"/>
         <location
             file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_add_event.xml"
             line="33"
@@ -566,6 +566,27 @@
     </incident>
 
     <incident
+        id="TextFields"
+        severity="warning"
+        message="This text field does not specify an `inputType`">
+        <fix-attribute
+            description="Set inputType"
+            namespace="http://schemas.android.com/apk/res/android"
+            attribute="inputType"
+            value="TODO"
+            point="4"
+            mark="0"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_event_list.xml"
+            line="48"
+            column="10"
+            startOffset="1620"
+            endLine="48"
+            endColumn="18"
+            endOffset="1628"/>
+    </incident>
+
+    <incident
         id="Autofill"
         severity="warning"
         message="Missing `autofillHints` attribute">
@@ -583,27 +604,6 @@
                 attribute="importantForAutofill"
                 value="no"/>
         </fix-alternatives>
-        <location
-            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_event_list.xml"
-            line="48"
-            column="10"
-            startOffset="1620"
-            endLine="48"
-            endColumn="18"
-            endOffset="1628"/>
-    </incident>
-
-    <incident
-        id="TextFields"
-        severity="warning"
-        message="This text field does not specify an `inputType`">
-        <fix-attribute
-            description="Set inputType"
-            namespace="http://schemas.android.com/apk/res/android"
-            attribute="inputType"
-            value="TODO"
-            point="4"
-            mark="0"/>
         <location
             file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_event_list.xml"
             line="48"
@@ -645,29 +645,29 @@
     <incident
         id="HardcodedText"
         severity="warning"
-        message="Hardcoded string &quot;Danh sách ngày đặc biệt&quot;, should use `@string` resource">
+        message="Hardcoded string &quot;Ngày Đặc Biệt&quot;, should use `@string` resource">
         <location
             file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_main.xml"
-            line="93"
-            column="9"
-            startOffset="3181"
-            endLine="93"
-            endColumn="47"
-            endOffset="3219"/>
+            line="166"
+            column="17"
+            startOffset="6417"
+            endLine="166"
+            endColumn="45"
+            endOffset="6445"/>
     </incident>
 
     <incident
         id="HardcodedText"
         severity="warning"
-        message="Hardcoded string &quot;Cài đặt thông báo&quot;, should use `@string` resource">
+        message="Hardcoded string &quot;Thông báo&quot;, should use `@string` resource">
         <location
             file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_main.xml"
-            line="106"
-            column="9"
-            startOffset="3651"
-            endLine="106"
+            line="178"
+            column="17"
+            startOffset="6947"
+            endLine="178"
             endColumn="41"
-            endOffset="3683"/>
+            endOffset="6971"/>
     </incident>
 
     <incident
@@ -788,12 +788,12 @@
         message="Hardcoded string &quot;1&quot;, should use `@string` resource">
         <location
             file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/calendar_cell.xml"
-            line="16"
+            line="15"
             column="9"
-            startOffset="572"
-            endLine="16"
+            startOffset="495"
+            endLine="15"
             endColumn="25"
-            endOffset="588"/>
+            endOffset="511"/>
     </incident>
 
     <incident
@@ -803,11 +803,11 @@
         <location
             file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/calendar_cell.xml"
             line="31"
-            column="9"
-            startOffset="1093"
+            column="13"
+            startOffset="1017"
             endLine="31"
-            endColumn="27"
-            endOffset="1111"/>
+            endColumn="31"
+            endOffset="1035"/>
     </incident>
 
     <incident
@@ -817,39 +817,11 @@
         <location
             file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/calendar_cell.xml"
             line="32"
-            column="9"
-            startOffset="1120"
+            column="13"
+            startOffset="1048"
             endLine="32"
-            endColumn="32"
-            endOffset="1143"/>
-    </incident>
-
-    <incident
-        id="HardcodedText"
-        severity="warning"
-        message="Hardcoded string &quot;★&quot;, should use `@string` resource">
-        <location
-            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/calendar_cell.xml"
-            line="43"
-            column="9"
-            startOffset="1491"
-            endLine="43"
-            endColumn="25"
-            endOffset="1507"/>
-    </incident>
-
-    <incident
-        id="SmallSp"
-        severity="warning"
-        message="Avoid using sizes smaller than `11sp`: `10sp`">
-        <location
-            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/calendar_cell.xml"
-            line="44"
-            column="9"
-            startOffset="1516"
-            endLine="44"
-            endColumn="32"
-            endOffset="1539"/>
+            endColumn="36"
+            endOffset="1071"/>
     </incident>
 
     <incident
@@ -1070,10 +1042,10 @@
             file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/mipmap-anydpi-v26/ic_launcher.xml"
             line="2"
             column="1"
-            startOffset="39"
+            startOffset="40"
             endLine="5"
             endColumn="17"
-            endOffset="277"/>
+            endOffset="272"/>
     </incident>
 
     <incident
@@ -1124,12 +1096,12 @@
         message="It will always be more efficient to use more specific change events if you can. Rely on `notifyDataSetChanged` as a last resort.">
         <location
             file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/example/lunarcalendar/EventListActivity.java"
-            line="82"
+            line="80"
             column="9"
-            startOffset="2655"
-            endLine="82"
+            startOffset="2486"
+            endLine="80"
             endColumn="44"
-            endOffset="2690"/>
+            endOffset="2521"/>
     </incident>
 
     <incident
@@ -1138,12 +1110,12 @@
         message="Implicitly using the default locale is a common source of bugs: Use `toLowerCase(Locale)` instead. For strings meant to be internal use `Locale.ROOT`, otherwise `Locale.getDefault()`.">
         <location
             file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/example/lunarcalendar/EventListActivity.java"
-            line="95"
+            line="93"
             column="33"
-            startOffset="3092"
-            endLine="95"
+            startOffset="2923"
+            endLine="93"
             endColumn="44"
-            endOffset="3103"/>
+            endOffset="2934"/>
     </incident>
 
     <incident
@@ -1152,12 +1124,12 @@
         message="Implicitly using the default locale is a common source of bugs: Use `toLowerCase(Locale)` instead. For strings meant to be internal use `Locale.ROOT`, otherwise `Locale.getDefault()`.">
         <location
             file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/example/lunarcalendar/EventListActivity.java"
-            line="95"
+            line="93"
             column="62"
-            startOffset="3121"
-            endLine="95"
+            startOffset="2952"
+            endLine="93"
             endColumn="73"
-            endOffset="3132"/>
+            endOffset="2963"/>
     </incident>
 
     <incident
@@ -1166,12 +1138,12 @@
         message="It will always be more efficient to use more specific change events if you can. Rely on `notifyDataSetChanged` as a last resort.">
         <location
             file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/example/lunarcalendar/EventListActivity.java"
-            line="102"
+            line="100"
             column="9"
-            startOffset="3282"
-            endLine="102"
+            startOffset="3113"
+            endLine="100"
             endColumn="44"
-            endOffset="3317"/>
+            endOffset="3148"/>
     </incident>
 
     <incident
@@ -1404,17 +1376,9 @@
     </incident>
 
     <incident
-        id="IconLocation"
-        severity="warning"
-        message="Found bitmap drawable `res/drawable/anh_chuc_mung_nam_moi_binh_ngo_2026.png` in densityless folder">
-        <location
-            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/drawable/anh_chuc_mung_nam_moi_binh_ngo_2026.png"/>
-    </incident>
-
-    <incident
         id="Overdraw"
         severity="warning"
-        message="Possible overdraw: Root element paints background `@color/white` with a theme that also paints a background (inferred theme is `@style/Theme_AppCompat_Light_DarkActionBar`)">
+        message="Possible overdraw: Root element paints background `@color/white` with a theme that also paints a background (inferred theme is `@style/AppTheme`)">
         <location
             file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_add_event.xml"
             line="5"
@@ -1428,7 +1392,7 @@
     <incident
         id="Overdraw"
         severity="warning"
-        message="Possible overdraw: Root element paints background `@color/white` with a theme that also paints a background (inferred theme is `@style/Theme_AppCompat_Light_DarkActionBar`)">
+        message="Possible overdraw: Root element paints background `@color/white` with a theme that also paints a background (inferred theme is `@style/AppTheme`)">
         <location
             file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_event_list.xml"
             line="6"
@@ -1442,21 +1406,21 @@
     <incident
         id="Overdraw"
         severity="warning"
-        message="Possible overdraw: Root element paints background `@color/white` with a theme that also paints a background (inferred theme is `@style/Theme.AppCompat.Light.DarkActionBar`)">
+        message="Possible overdraw: Root element paints background `@color/surface_bg` with a theme that also paints a background (inferred theme is `@style/AppTheme`)">
         <location
             file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_main.xml"
-            line="7"
+            line="6"
             column="5"
-            startOffset="259"
-            endLine="7"
-            endColumn="38"
-            endOffset="292"/>
+            startOffset="290"
+            endLine="6"
+            endColumn="43"
+            endOffset="328"/>
     </incident>
 
     <incident
         id="Overdraw"
         severity="warning"
-        message="Possible overdraw: Root element paints background `@color/white` with a theme that also paints a background (inferred theme is `@style/Theme_AppCompat_Light_DarkActionBar`)">
+        message="Possible overdraw: Root element paints background `@color/white` with a theme that also paints a background (inferred theme is `@style/AppTheme`)">
         <location
             file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_notification_settings.xml"
             line="7"
@@ -1470,35 +1434,21 @@
     <incident
         id="Overdraw"
         severity="warning"
-        message="Possible overdraw: Root element paints background `@color/white` with a theme that also paints a background (inferred theme is `@style/Theme.AppCompat.Light.DarkActionBar`)">
-        <location
-            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/calendar_cell.xml"
-            line="6"
-            column="5"
-            startOffset="217"
-            endLine="6"
-            endColumn="38"
-            endOffset="250"/>
-    </incident>
-
-    <incident
-        id="Overdraw"
-        severity="warning"
-        message="Possible overdraw: Root element paints background `@color/header_bg` with a theme that also paints a background (inferred theme is `@style/Theme.AppCompat.Light.DarkActionBar`)">
+        message="Possible overdraw: Root element paints background `@color/header_bg` with a theme that also paints a background (inferred theme is `@style/AppTheme`)">
         <location
             file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/header_cell.xml"
-            line="11"
+            line="12"
             column="5"
-            startOffset="373"
-            endLine="11"
+            startOffset="404"
+            endLine="12"
             endColumn="42"
-            endOffset="410"/>
+            endOffset="441"/>
     </incident>
 
     <incident
         id="Overdraw"
         severity="warning"
-        message="Possible overdraw: Root element paints background `?android:attr/selectableItemBackground` with a theme that also paints a background (inferred theme is `@style/Theme.AppCompat.Light.DarkActionBar`)">
+        message="Possible overdraw: Root element paints background `?android:attr/selectableItemBackground` with a theme that also paints a background (inferred theme is `@style/AppTheme`)">
         <location
             file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/item_special_day.xml"
             line="7"
@@ -1507,6 +1457,14 @@
             endLine="7"
             endColumn="64"
             endOffset="320"/>
+    </incident>
+
+    <incident
+        id="IconLocation"
+        severity="warning"
+        message="Found bitmap drawable `res/drawable/anh_chuc_mung_nam_moi_binh_ngo_2026.png` in densityless folder">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/drawable/anh_chuc_mung_nam_moi_binh_ngo_2026.png"/>
     </incident>
 
 </incidents>
