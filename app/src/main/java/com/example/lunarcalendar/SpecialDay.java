@@ -6,19 +6,22 @@ public class SpecialDay {
     private int day;
     private int month;
     private String createdAt;
+    private String notes;
 
     public SpecialDay() {}
 
-    public SpecialDay(String name, int day, int month, String createdAt) {
+    public SpecialDay(String name, String notes, int day, int month, String createdAt) {
         this.name = name;
+        this.notes = notes;
         this.day = day;
         this.month = month;
         this.createdAt = createdAt;
     }
 
-    public SpecialDay(int id, String name, int day, int month, String createdAt) {
+    public SpecialDay(int id, String name, String notes, int day, int month, String createdAt) {
         this.id = id;
         this.name = name;
+        this.notes = notes;
         this.day = day;
         this.month = month;
         this.createdAt = createdAt;
@@ -63,6 +66,14 @@ public class SpecialDay {
 
     public void setCreatedAt(String createdAt) {
         this.createdAt = createdAt;
+    }
+
+    public String getNotes() {
+        return notes;
+    }
+
+    public void setNotes(String notes) {
+        this.notes = notes;
     }
 
     @Override

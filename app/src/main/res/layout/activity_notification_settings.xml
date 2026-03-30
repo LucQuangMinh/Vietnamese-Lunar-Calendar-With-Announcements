@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -37,7 +38,7 @@
         android:layout_height="wrap_content"
         android:text="Chọn thời gian thông báo"
         android:textColor="@color/white"
-        android:background="@color/red_button"
+        app:backgroundTint="@color/red_button"
         android:textSize="18sp"
         android:textStyle="bold"
         android:padding="12dp"
@@ -46,17 +47,17 @@
     <!-- Reset Default Button -->
     <Button
         android:id="@+id/btnResetDefault"
+        style="?attr/materialButtonOutlinedStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Đặt lại mặc định (18:00)"
         android:textColor="@color/red_primary"
-        android:background="@color/white"
+        app:strokeColor="@color/red_primary"
+        app:strokeWidth="2dp"
         android:textSize="16sp"
         android:textStyle="bold"
         android:padding="12dp"
-        android:layout_marginBottom="16dp"
-        android:strokeColor="@color/red_primary"
-        android:strokeWidth="2"/>
+        android:layout_marginBottom="16dp"/>
 
     <!-- Instructions -->
     <TextView

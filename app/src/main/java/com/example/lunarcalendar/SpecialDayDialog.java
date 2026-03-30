@@ -9,6 +9,7 @@ import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -18,19 +19,32 @@ import androidx.fragment.app.DialogFragment;
 public class SpecialDayDialog extends DialogFragment {
     
     private EditText etSpecialDayName;
+    private EditText etSpecialDayNotes;
     private int day, month, year;
-    private OnSpecialDayCreatedListener listener;
+    private int specialDayId = -1;
+    private String specialDayName = "";
+    private String specialDayNotes = "";
+    private OnSpecialDayActionListener listener;
     
-    public interface OnSpecialDayCreatedListener {
-        void onSpecialDayCreated(String name, int day, int month, int year);
+    public interface OnSpecialDayActionListener {
+        void onSpecialDayCreated(String name, String notes, int day, int month, int year);
+        void onSpecialDayUpdated(int id, String newName, String newNotes);
+        void onSpecialDayDeleted(int id);
     }
     
     public static SpecialDayDialog newInstance(int day, int month, int year) {
+        return newInstance(day, month, year, -1, "", "");
+    }
+    
+    public static SpecialDayDialog newInstance(int day, int month, int year, int specialDayId, String specialDayName, String specialDayNotes) {
         SpecialDayDialog dialog = new SpecialDayDialog();
         Bundle args = new Bundle();
         args.putInt("day", day);
         args.putInt("month", month);
         args.putInt("year", year);
+        args.putInt("specialDayId", specialDayId);
+        args.putString("specialDayName", specialDayName);
+        args.putString("specialDayNotes", specialDayNotes);
         dialog.setArguments(args);
         return dialog;
     }
@@ -39,13 +53,12 @@ public class SpecialDayDialog extends DialogFragment {
     public void onAttach(@NonNull Context context) {
         super.onAttach(context);
         try {
-            listener = (OnSpecialDayCreatedListener) context;
+            listener = (OnSpecialDayActionListener) context;
         } catch (ClassCastException e) {
-            throw new ClassCastException(context.toString() + " must implement OnSpecialDayCreatedListener");
+            throw new ClassCastException(context.toString() + " must implement OnSpecialDayActionListener");
         }
     }
 
-    
     @NonNull
     @Override
     public Dialog onCreateDialog(@Nullable Bundle savedInstanceState) {
@@ -53,53 +66,85 @@ public class SpecialDayDialog extends DialogFragment {
             day = getArguments().getInt("day");
             month = getArguments().getInt("month");
             year = getArguments().getInt("year");
+            specialDayId = getArguments().getInt("specialDayId", -1);
+            specialDayName = getArguments().getString("specialDayName", "");
+            specialDayNotes = getArguments().getString("specialDayNotes", "");
         }
         
-        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+        AlertDialog.Builder builder = new AlertDialog.Builder(requireActivity());
         LayoutInflater inflater = requireActivity().getLayoutInflater();
         View view = inflater.inflate(R.layout.dialog_special_day, null);
         
         etSpecialDayName = view.findViewById(R.id.etSpecialDayName);
+        etSpecialDayNotes = view.findViewById(R.id.etSpecialDayNotes);
+        TextView tvDialogTitle = view.findViewById(R.id.tvDialogTitle);
+        TextView tvDialogDate = view.findViewById(R.id.tvDialogDate);
+        View btnDeleteSpecialDay = view.findViewById(R.id.btnDeleteSpecialDay);
+        View btnCancelSpecialDay = view.findViewById(R.id.btnCancelSpecialDay);
+        View btnSaveSpecialDay = view.findViewById(R.id.btnSaveSpecialDay);
         
-        builder.setView(view)
-                .setTitle("Tạo ngày đặc biệt")
-                .setMessage("Ngày: " + day + "/" + month + "/" + year)
-                .setPositiveButton("Tạo", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        String name = etSpecialDayName.getText().toString().trim();
-                        if (!TextUtils.isEmpty(name)) {
-                            listener.onSpecialDayCreated(name, day, month, year);
-                        }
-                    }
-                })
-                .setNegativeButton("Hủy", null);
+        boolean isEditMode = (specialDayId != -1);
+        tvDialogTitle.setText(isEditMode ? "Thông tin ngày đặc biệt" : "Tạo ngày đặc biệt");
+        tvDialogDate.setText("Ngày: " + day + "/" + month + "/" + year);
         
-        return builder.create();
-    }
-
-    public void onSpecialDayCreated(String name, int day, int month, int year) {
-        // Convert solar date to lunar date for storage
-        int[] lunarDate = LunarCalendar.convertSolarToLunar(day, month, year);
-        int lunarDay = lunarDate[0];
-        int lunarMonth = lunarDate[1];
-        int lunarYear = lunarDate[2];
-        boolean isLeapMonth = lunarDate[3] == 1;
-
-        // Save as yearly recurring event (lunar-based only)
-        DatabaseHelper dbHelper = new DatabaseHelper(getActivity());
-        EventManager eventManager = new EventManager(getActivity());
-        
-        // Sửa: Lưu cả solar date và lunar date đầy đủ để có thể tìm kiếm theo cả hai cách
-        Event event = new Event(day, month, year, lunarDay, lunarMonth, lunarYear,
-                name, "", "Ngày đặc biệt", false, isLeapMonth);
-        event.setYearly(true);
-        
-        long result = eventManager.addEvent(event);
-        if (result > 0) {
-            Toast.makeText(getActivity(), "Đã tạo ngày đặc biệt: " + name, Toast.LENGTH_SHORT).show();
-        } else {
-            Toast.makeText(getActivity(), "Tạo thất bại", Toast.LENGTH_SHORT).show();
+        if (isEditMode) {
+            etSpecialDayName.setText(specialDayName);
+            etSpecialDayNotes.setText(specialDayNotes);
+            btnDeleteSpecialDay.setVisibility(View.VISIBLE);
         }
+        
+        AlertDialog dialog = builder.setView(view).create();
+        
+        // Transparent background so card corner radius shows properly
+        if (dialog.getWindow() != null) {
+            dialog.getWindow().setBackgroundDrawableResource(android.R.color.transparent);
+        }
+
+        if (isEditMode) {
+            btnDeleteSpecialDay.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    new AlertDialog.Builder(requireContext())
+                        .setTitle("Xác nhận xóa")
+                        .setMessage("Bạn có chắc chắn muốn xóa ngày đặc biệt này không?")
+                        .setPositiveButton("Xóa", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface d, int w) {
+                                listener.onSpecialDayDeleted(specialDayId);
+                                dialog.dismiss();
+                            }
+                        })
+                        .setNegativeButton("Hủy", null)
+                        .show();
+                }
+            });
+        }
+        
+        btnCancelSpecialDay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+
+        btnSaveSpecialDay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String name = etSpecialDayName.getText().toString().trim();
+                String notes = etSpecialDayNotes.getText().toString().trim();
+                if (!TextUtils.isEmpty(name)) {
+                    if (isEditMode) {
+                        listener.onSpecialDayUpdated(specialDayId, name, notes);
+                    } else {
+                        listener.onSpecialDayCreated(name, notes, day, month, year);
+                    }
+                    dialog.dismiss();
+                } else {
+                    Toast.makeText(requireContext(), "Vui lòng nhập tên", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+        
+        return dialog;
     }
 }

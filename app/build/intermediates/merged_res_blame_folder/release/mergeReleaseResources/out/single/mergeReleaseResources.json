@@ -12,6 +12,10 @@
         "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.10\\com.example.lunarcalendar.app-main-33:\\drawable\\ic_launcher_background.xml"
     },
     {
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.10\\com.example.lunarcalendar.app-release-32:\\drawable_bg_rounded_primary.xml.flat",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.10\\com.example.lunarcalendar.app-main-33:\\drawable\\bg_rounded_primary.xml"
+    },
+    {
         "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.10\\com.example.lunarcalendar.app-release-32:\\layout_calendar_cell.xml.flat",
         "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.10\\com.example.lunarcalendar.app-main-33:\\layout\\calendar_cell.xml"
     },
@@ -60,12 +64,12 @@
         "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.10\\com.example.lunarcalendar.app-main-33:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
     },
     {
-        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.10\\com.example.lunarcalendar.app-release-32:\\mipmap-mdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.10\\com.example.lunarcalendar.app-main-33:\\mipmap-mdpi\\ic_launcher_round.webp"
-    },
-    {
         "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.10\\com.example.lunarcalendar.app-release-32:\\layout_dialog_special_day.xml.flat",
         "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.10\\com.example.lunarcalendar.app-main-33:\\layout\\dialog_special_day.xml"
+    },
+    {
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.10\\com.example.lunarcalendar.app-release-32:\\mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.10\\com.example.lunarcalendar.app-main-33:\\mipmap-mdpi\\ic_launcher_round.webp"
     },
     {
         "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.10\\com.example.lunarcalendar.app-release-32:\\mipmap-hdpi_ic_launcher_foreground.webp.flat",
@@ -88,10 +92,6 @@
         "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.10\\com.example.lunarcalendar.app-main-33:\\mipmap-xxhdpi\\ic_launcher.webp"
     },
     {
-        "merged": "com.example.lunarcalendar.app-release-32:/drawable_bg_circle_today.xml.flat",
-        "source": "com.example.lunarcalendar.app-main-33:/drawable/bg_circle_today.xml"
-    },
-    {
         "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.10\\com.example.lunarcalendar.app-release-32:\\layout_header_cell.xml.flat",
         "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.10\\com.example.lunarcalendar.app-main-33:\\layout\\header_cell.xml"
     },
@@ -112,14 +112,6 @@
         "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.10\\com.example.lunarcalendar.app-main-33:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "com.example.lunarcalendar.app-release-32:/layout_activity_main.xml.flat",
-        "source": "com.example.lunarcalendar.app-main-33:/layout/activity_main.xml"
-    },
-    {
-        "merged": "com.example.lunarcalendar.app-release-32:/layout_header_cell.xml.flat",
-        "source": "com.example.lunarcalendar.app-main-33:/layout/header_cell.xml"
-    },
-    {
         "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.10\\com.example.lunarcalendar.app-release-32:\\layout_activity_main.xml.flat",
         "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.10\\com.example.lunarcalendar.app-main-33:\\layout\\activity_main.xml"
     },
@@ -136,20 +128,20 @@
         "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.10\\com.example.lunarcalendar.app-main-33:\\drawable\\ic_edit.xml"
     },
     {
-        "merged": "com.example.lunarcalendar.app-release-32:/layout_calendar_cell.xml.flat",
-        "source": "com.example.lunarcalendar.app-main-33:/layout/calendar_cell.xml"
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.10\\com.example.lunarcalendar.app-release-32:\\drawable_bg_circle_today.xml.flat",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.10\\com.example.lunarcalendar.app-main-33:\\drawable\\bg_circle_today.xml"
     },
     {
         "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.10\\com.example.lunarcalendar.app-release-32:\\drawable_edittext_background.xml.flat",
         "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.10\\com.example.lunarcalendar.app-main-33:\\drawable\\edittext_background.xml"
     },
     {
-        "merged": "com.example.lunarcalendar.app-release-32:/drawable_bg_rounded_primary.xml.flat",
-        "source": "com.example.lunarcalendar.app-main-33:/drawable/bg_rounded_primary.xml"
-    },
-    {
         "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.10\\com.example.lunarcalendar.app-release-32:\\mipmap-mdpi_ic_launcher.webp.flat",
         "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.10\\com.example.lunarcalendar.app-main-33:\\mipmap-mdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.lunarcalendar.app-release-32:/layout_dialog_special_day.xml.flat",
+        "source": "com.example.lunarcalendar.app-main-33:/layout/dialog_special_day.xml"
     },
     {
         "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.10\\com.example.lunarcalendar.app-release-32:\\layout_item_special_day.xml.flat",

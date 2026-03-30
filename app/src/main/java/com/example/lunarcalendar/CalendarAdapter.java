@@ -98,9 +98,26 @@ public class CalendarAdapter extends BaseAdapter {
         }
 
         // Check if this day is a special day based on lunar date (for yearly recurring)
-        int[] lunarDate = LunarCalendar.convertSolarToLunar(cell.getSolarDay(), 
-                ((MainActivity) context).selectedMonth, 
-                ((MainActivity) context).selectedYear);
+        int cellMonth = ((MainActivity) context).selectedMonth;
+        int cellYear = ((MainActivity) context).selectedYear;
+        
+        if (!cell.isCurrentMonth()) {
+            if (cell.getSolarDay() > 15) {
+                cellMonth--;
+                if (cellMonth < 1) {
+                    cellMonth = 12;
+                    cellYear--;
+                }
+            } else {
+                cellMonth++;
+                if (cellMonth > 12) {
+                    cellMonth = 1;
+                    cellYear++;
+                }
+            }
+        }
+
+        int[] lunarDate = LunarCalendar.convertSolarToLunar(cell.getSolarDay(), cellMonth, cellYear);
         int lunarDay = lunarDate[0];
         int lunarMonth = lunarDate[1];
         boolean isLeapMonth = lunarDate[3] == 1;
@@ -127,6 +144,8 @@ public class CalendarAdapter extends BaseAdapter {
             holder.tvSpecialDayIndicator.setVisibility(View.GONE);
         }
 
+        final SpecialDay finalSpecialDay = specialDay;
+        
         // Handle click event
         convertView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -134,9 +153,16 @@ public class CalendarAdapter extends BaseAdapter {
                 if (cell.isCurrentMonth() && cell.getSolarDay() > 0) {
                     // Open special day dialog
                     if (context instanceof MainActivity) {
-                        ((MainActivity) context).showSpecialDayDialog(cell.getSolarDay(), 
-                                ((MainActivity) context).selectedMonth, 
-                                ((MainActivity) context).selectedYear);
+                        if (finalSpecialDay != null) {
+                            ((MainActivity) context).showSpecialDayDialog(cell.getSolarDay(), 
+                                    ((MainActivity) context).selectedMonth, 
+                                    ((MainActivity) context).selectedYear,
+                                    finalSpecialDay.getId(), finalSpecialDay.getName(), finalSpecialDay.getNotes());
+                        } else {
+                            ((MainActivity) context).showSpecialDayDialog(cell.getSolarDay(), 
+                                    ((MainActivity) context).selectedMonth, 
+                                    ((MainActivity) context).selectedYear);
+                        }
                     }
                 }
             }

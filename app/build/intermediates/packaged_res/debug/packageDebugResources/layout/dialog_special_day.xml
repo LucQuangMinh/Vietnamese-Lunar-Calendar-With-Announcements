@@ -1,25 +1,122 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:background="@color/card_bg"
+    android:padding="0dp">
 
-    <TextView
+    <!-- Header area -->
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Nhập tên cho ngày đặc biệt:"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        android:layout_marginBottom="8dp" />
+        android:background="@color/red_primary"
+        android:padding="16dp"
+        android:orientation="vertical">
+        
+        <TextView
+            android:id="@+id/tvDialogTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ngày đặc biệt"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+            
+        <TextView
+            android:id="@+id/tvDialogDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ngày: --/--"
+            android:textColor="#FDFBF7"
+            android:textSize="14sp"
+            android:layout_marginTop="4dp" />
+    </LinearLayout>
 
-    <EditText
-        android:id="@+id/etSpecialDayName"
+    <!-- Content area -->
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Ví dụ: Sinh nhật, Kỷ niệm..."
-        android:inputType="text"
-        android:maxLines="1"
-        android:layout_marginBottom="16dp" />
+        android:orientation="vertical"
+        android:padding="24dp">
 
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Tên ngày đặc biệt"
+            app:boxBackgroundColor="@color/surface_bg"
+            app:boxStrokeColor="@color/red_primary"
+            app:hintTextColor="@color/red_primary">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etSpecialDayName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:maxLines="1"
+                android:textColor="@color/text_main" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="Ghi chú (Tùy chọn)"
+            app:boxBackgroundColor="@color/surface_bg"
+            app:boxStrokeColor="@color/red_primary"
+            app:hintTextColor="@color/red_primary">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etSpecialDayNotes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"
+                android:minLines="3"
+                android:maxLines="15"
+                android:scrollbars="vertical"
+                android:gravity="top|start"
+                android:textColor="@color/text_main" />
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+
+    <!-- Action Buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <Button
+            android:id="@+id/btnDeleteSpecialDay"
+            style="@style/Widget.Material3.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="XÓA"
+            android:textColor="@color/red_button"
+            android:visibility="gone" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/btnCancelSpecialDay"
+            style="@style/Widget.Material3.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="HỦY"
+            android:textColor="@color/text_secondary"
+            android:layout_marginEnd="8dp" />
+
+        <Button
+            android:id="@+id/btnSaveSpecialDay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LƯU"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/red_primary"
+            app:cornerRadius="8dp" />
+    </LinearLayout>
 </LinearLayout>

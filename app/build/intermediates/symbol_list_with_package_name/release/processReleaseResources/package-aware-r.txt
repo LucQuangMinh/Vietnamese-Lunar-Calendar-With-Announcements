@@ -3222,6 +3222,7 @@ id btnAddSpecialDay
 id btnCancel
 id btnDatePicker
 id btnDelete
+id btnDeleteSpecialDay
 id btnEdit
 id btnNotificationSettings
 id btnResetDefault
@@ -3649,6 +3650,7 @@ id tvSpecialDayDate
 id tvSpecialDayIndicator
 id tvSpecialDayName
 id tvTitle
+id tvTitleDialog
 id unchecked
 id uniform
 id unlabeled

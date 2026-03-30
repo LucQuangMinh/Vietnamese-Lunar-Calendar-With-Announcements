@@ -12,7 +12,7 @@ import java.util.List;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String DATABASE_NAME = "lunar_calendar.db";
-    private static final int DATABASE_VERSION = 2;
+    private static final int DATABASE_VERSION = 3;
     
     // Table name
     private static final String TABLE_EVENTS = "events";
@@ -55,13 +55,15 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String COLUMN_SPECIAL_DAY_DAY = "day";
     private static final String COLUMN_SPECIAL_DAY_MONTH = "month";
     private static final String COLUMN_SPECIAL_DAY_CREATED_AT = "created_at";
+    private static final String COLUMN_SPECIAL_DAY_NOTES = "notes";
 
     private static final String CREATE_TABLE_SPECIAL_DAYS = "CREATE TABLE " + TABLE_SPECIAL_DAYS + "("
             + COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
             + COLUMN_SPECIAL_DAY_NAME + " TEXT,"
             + COLUMN_SPECIAL_DAY_DAY + " INTEGER,"
             + COLUMN_SPECIAL_DAY_MONTH + " INTEGER,"
-            + COLUMN_SPECIAL_DAY_CREATED_AT + " TEXT"
+            + COLUMN_SPECIAL_DAY_CREATED_AT + " TEXT,"
+            + COLUMN_SPECIAL_DAY_NOTES + " TEXT"
             + ")";
 
     public DatabaseHelper(Context context) {
@@ -79,6 +81,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         if (oldVersion < 2) {
             // Add is_yearly column for version 2
             db.execSQL("ALTER TABLE " + TABLE_EVENTS + " ADD COLUMN " + COLUMN_IS_YEARLY + " INTEGER DEFAULT 0");
+        }
+        if (oldVersion < 3) {
+            db.execSQL("ALTER TABLE " + TABLE_SPECIAL_DAYS + " ADD COLUMN " + COLUMN_SPECIAL_DAY_NOTES + " TEXT");
         }
     }
 
@@ -321,10 +326,26 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         values.put(COLUMN_SPECIAL_DAY_DAY, specialDay.getDay());
         values.put(COLUMN_SPECIAL_DAY_MONTH, specialDay.getMonth());
         values.put(COLUMN_SPECIAL_DAY_CREATED_AT, specialDay.getCreatedAt());
+        values.put(COLUMN_SPECIAL_DAY_NOTES, specialDay.getNotes());
 
         long id = db.insert(TABLE_SPECIAL_DAYS, null, values);
         db.close();
         return id;
+    }
+
+    public int updateSpecialDay(SpecialDay specialDay) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        
+        values.put(COLUMN_SPECIAL_DAY_NAME, specialDay.getName());
+        values.put(COLUMN_SPECIAL_DAY_DAY, specialDay.getDay());
+        values.put(COLUMN_SPECIAL_DAY_MONTH, specialDay.getMonth());
+        values.put(COLUMN_SPECIAL_DAY_NOTES, specialDay.getNotes());
+
+        int res = db.update(TABLE_SPECIAL_DAYS, values, COLUMN_ID + " = ?",
+                new String[]{String.valueOf(specialDay.getId())});
+        db.close();
+        return res;
     }
 
     public List<SpecialDay> getAllSpecialDays() {
@@ -342,6 +363,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 specialDay.setDay(cursor.getInt(2));
                 specialDay.setMonth(cursor.getInt(3));
                 specialDay.setCreatedAt(cursor.getString(4));
+                int notesIdx = cursor.getColumnIndex(COLUMN_SPECIAL_DAY_NOTES);
+                if (notesIdx != -1) {
+                    specialDay.setNotes(cursor.getString(notesIdx));
+                }
                 
                 specialDayList.add(specialDay);
             } while (cursor.moveToNext());
@@ -358,7 +383,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         
         try {
             cursor = db.query(TABLE_SPECIAL_DAYS, new String[]{COLUMN_ID, COLUMN_SPECIAL_DAY_NAME,
-                            COLUMN_SPECIAL_DAY_DAY, COLUMN_SPECIAL_DAY_MONTH, COLUMN_SPECIAL_DAY_CREATED_AT}, 
+                            COLUMN_SPECIAL_DAY_DAY, COLUMN_SPECIAL_DAY_MONTH, COLUMN_SPECIAL_DAY_CREATED_AT, COLUMN_SPECIAL_DAY_NOTES}, 
                     COLUMN_SPECIAL_DAY_DAY + "=? AND " + COLUMN_SPECIAL_DAY_MONTH + "=?",
                     new String[]{String.valueOf(day), String.valueOf(month)}, null, null, null, null);
             
@@ -366,6 +391,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 specialDay = new SpecialDay(
                         cursor.getInt(0),
                         cursor.getString(1),
+                        cursor.getString(5),
                         cursor.getInt(2),
                         cursor.getInt(3),
                         cursor.getString(4)
@@ -409,9 +435,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                     
                     // Check if matches the target lunar date
                     if (storedLunarDay == lunarDay && storedLunarMonth == lunarMonth && storedIsLeapMonth == isLeapMonth) {
+                        int notesIdx = cursor.getColumnIndex(COLUMN_SPECIAL_DAY_NOTES);
+                        String notes = notesIdx != -1 ? cursor.getString(notesIdx) : "";
                         specialDay = new SpecialDay(
                                 cursor.getInt(0),
                                 cursor.getString(1),
+                                notes,
                                 cursor.getInt(2),
                                 cursor.getInt(3),
                                 cursor.getString(4)

@@ -1,25 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
     android:padding="16dp">
 
     <TextView
-        android:layout_width="match_parent"
+        android:id="@+id/tvTitleDialog"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Nhập tên cho ngày đặc biệt:"
+        android:text="Tên ngày đặc biệt:"
         android:textSize="16sp"
         android:textStyle="bold"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_toStartOf="@+id/btnDeleteSpecialDay"
+        android:layout_toLeftOf="@+id/btnDeleteSpecialDay"
         android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:id="@+id/btnDeleteSpecialDay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="XÓA"
+        android:textColor="@color/red_button"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        android:padding="4dp"
+        android:visibility="gone"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true" />
 
     <EditText
         android:id="@+id/etSpecialDayName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@id/tvTitleDialog"
         android:hint="Ví dụ: Sinh nhật, Kỷ niệm..."
         android:inputType="text"
         android:maxLines="1"
-        android:layout_marginBottom="16dp" />
+        android:layout_marginTop="8dp" />
 
-</LinearLayout>
+</RelativeLayout>

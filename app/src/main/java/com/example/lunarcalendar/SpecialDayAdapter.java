@@ -50,7 +50,17 @@ public class SpecialDayAdapter extends ArrayAdapter<SpecialDay> {
             @Override
             public void onClick(View v) {
                 if (listener != null) {
-                    listener.onDeleteClick(specialDay);
+                    new android.app.AlertDialog.Builder(getContext())
+                        .setTitle("Xác nhận xóa")
+                        .setMessage("Bạn có chắc chắn muốn xóa ngày đặc biệt này không?")
+                        .setPositiveButton("Xóa", new android.content.DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(android.content.DialogInterface dialog, int which) {
+                                listener.onDeleteClick(specialDay);
+                            }
+                        })
+                        .setNegativeButton("Hủy", null)
+                        .show();
                 }
             }
         });

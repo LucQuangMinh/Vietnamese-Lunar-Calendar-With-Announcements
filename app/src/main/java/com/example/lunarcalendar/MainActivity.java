@@ -23,7 +23,7 @@ import com.example.lunarcalendar.SpecialDayDialog;
 import com.example.lunarcalendar.SpecialDayListActivity;
 import com.example.lunarcalendar.NotificationSettingsActivity;
 
-public class MainActivity extends AppCompatActivity implements SpecialDayDialog.OnSpecialDayCreatedListener {
+public class MainActivity extends AppCompatActivity implements SpecialDayDialog.OnSpecialDayActionListener {
 
     private Spinner spinnerMonth, spinnerYear;
     private Button btnViewCalendar;
@@ -117,22 +117,21 @@ public class MainActivity extends AppCompatActivity implements SpecialDayDialog.
     }
 
     public void showSpecialDayDialog(int day, int month, int year) {
-        // Convert solar date to lunar date for display
-        int[] lunarDate = LunarCalendar.convertSolarToLunar(day, month, year);
-        int lunarDay = lunarDate[0];
-        int lunarMonth = lunarDate[1];
-        boolean isLeapMonth = lunarDate[3] == 1;
+        showSpecialDayDialog(day, month, year, -1, "", "");
+    }
 
-        SpecialDayDialog dialog = SpecialDayDialog.newInstance(day, month, year);
+    public void showSpecialDayDialog(int day, int month, int year, int specialDayId, String specialDayName, String specialDayNotes) {
+        SpecialDayDialog dialog = SpecialDayDialog.newInstance(day, month, year, specialDayId, specialDayName, specialDayNotes);
         dialog.show(getSupportFragmentManager(), "SpecialDayDialog");
     }
 
     @Override
-    public void onSpecialDayCreated(String name, int day, int month, int year) {
+    public void onSpecialDayCreated(String name, String notes, int day, int month, int year) {
         // Save special day to database
         DatabaseHelper dbHelper = new DatabaseHelper(this);
         SpecialDay specialDay = new SpecialDay();
         specialDay.setName(name);
+        specialDay.setNotes(notes);
         specialDay.setDay(day);
         specialDay.setMonth(month);
         specialDay.setCreatedAt(java.text.DateFormat.getDateTimeInstance().format(new java.util.Date()));
@@ -141,6 +140,38 @@ public class MainActivity extends AppCompatActivity implements SpecialDayDialog.
         Toast.makeText(this, "Đã tạo ngày đặc biệt: " + name, Toast.LENGTH_SHORT).show();
         
         // Cập nhật lại giao diện ngay lập tức thay vì phải bấm nút
+        displayCalendar(selectedMonth, selectedYear);
+    }
+
+    @Override
+    public void onSpecialDayUpdated(int id, String newName, String newNotes) {
+        DatabaseHelper dbHelper = new DatabaseHelper(this);
+        SpecialDay specialDay = new SpecialDay();
+        specialDay.setId(id);
+        specialDay.setName(newName);
+        specialDay.setNotes(newNotes);
+        // We need day and month, let's fetch it first before update
+        // Or we can just create a method that updates name only
+        // Wait, updateSpecialDay needs day/month. Let's fetch the existing one first.
+        // Actually, dbHelper.getSpecialDayByDate requires date. Wait, we can get by id.
+        // It's better to add getSpecialDayById to DB Helper, or I can just update the name using a direct query.
+        // Actually I'll use raw db.execSQL to simplify unless I add getSpecialDayById.
+        android.database.sqlite.SQLiteDatabase db = dbHelper.getWritableDatabase();
+        android.content.ContentValues values = new android.content.ContentValues();
+        values.put("name", newName);
+        values.put("notes", newNotes);
+        db.update("special_days", values, "id = ?", new String[]{String.valueOf(id)});
+        db.close();
+
+        Toast.makeText(this, "Đã cập nhật: " + newName, Toast.LENGTH_SHORT).show();
+        displayCalendar(selectedMonth, selectedYear);
+    }
+
+    @Override
+    public void onSpecialDayDeleted(int id) {
+        DatabaseHelper dbHelper = new DatabaseHelper(this);
+        dbHelper.deleteSpecialDay(id);
+        Toast.makeText(this, "Đã xóa ngày đặc biệt", Toast.LENGTH_SHORT).show();
         displayCalendar(selectedMonth, selectedYear);
     }
 

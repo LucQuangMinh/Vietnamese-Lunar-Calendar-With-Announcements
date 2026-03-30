@@ -3220,12 +3220,15 @@ id bounceStart
 id btnAddEvent
 id btnAddSpecialDay
 id btnCancel
+id btnCancelSpecialDay
 id btnDatePicker
 id btnDelete
+id btnDeleteSpecialDay
 id btnEdit
 id btnNotificationSettings
 id btnResetDefault
 id btnSave
+id btnSaveSpecialDay
 id btnSearch
 id btnSetTime
 id btnSpecialDayList
@@ -3322,6 +3325,7 @@ id etSolarDay
 id etSolarMonth
 id etSolarYear
 id etSpecialDayName
+id etSpecialDayNotes
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
@@ -3634,6 +3638,8 @@ id transition_transform
 id triangle
 id tvCalendarInfo
 id tvCurrentTime
+id tvDialogDate
+id tvDialogTitle
 id tvEmptyMessage
 id tvEventDate
 id tvEventDescription

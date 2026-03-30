@@ -32,6 +32,7 @@ id btnAddSpecialDay
 id btnCancel
 id btnDatePicker
 id btnDelete
+id btnDeleteSpecialDay
 id btnEdit
 id btnNotificationSettings
 id btnResetDefault
@@ -78,6 +79,7 @@ id tvSpecialDayDate
 id tvSpecialDayIndicator
 id tvSpecialDayName
 id tvTitle
+id tvTitleDialog
 id viewEventType
 layout activity_add_event
 layout activity_event_list
