@@ -1,6 +1,0 @@
-com.example.lunarcalendar.test.app-annotation-experimental-1.4.0-0 C:\Users\Admin\.gradle\caches\8.10\transforms\0c6d41f02e3bab7da82df6155565031e\transformed\annotation-experimental-1.4.0\res
-com.example.lunarcalendar.test.app-core-1.5.0-1 C:\Users\Admin\.gradle\caches\8.10\transforms\ef8150202e0d69b0be9a68b05f77986b\transformed\core-1.5.0\res
-com.example.lunarcalendar.test.app-androidTest-2 D:\test ai\VietnameseLunarCalendar\app\build\generated\res\resValues\androidTest\debug
-com.example.lunarcalendar.test.app-mergeDebugAndroidTestResources-3 D:\test ai\VietnameseLunarCalendar\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
-com.example.lunarcalendar.test.app-mergeDebugAndroidTestResources-4 D:\test ai\VietnameseLunarCalendar\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir
-com.example.lunarcalendar.test.app-debugAndroidTest-5 D:\test ai\VietnameseLunarCalendar\app\build\intermediates\merged_res\debugAndroidTest\mergeDebugAndroidTestResources

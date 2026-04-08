@@ -1,0 +1,40 @@
+# Android
+*.iml
+.gradle
+/local.properties
+/.idea/caches
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
+.DS_Store
+/build
+/app/build
+*.class
+
+# Log files
+build_log.txt
+build_log_cmd.txt
+
+# Captures
+/captures
+
+# External native build folder
+.externalNativeBuild
+.cxx
+
+# Google Services
+# google-services.json
+
+# Signing files
+*.jks
+*.keystore
+
+# Built APKs
+*.apk
+*.aar
+
+# Metadata
+.antigravity
+.gemini
