@@ -77,12 +77,10 @@ public class CalendarAdapter extends BaseAdapter {
 
         // Highlight current day
         if (cell.isCurrentDay()) {
-            // convertView.setBackgroundColor(context.getResources().getColor(R.color.current_day_bg));
             holder.tvSolarDate.setBackgroundResource(R.drawable.bg_circle_today);
             holder.tvSolarDate.setTextColor(Color.WHITE);
             holder.tvLunarDate.setTextColor(context.getResources().getColor(R.color.red_primary));
         } else {
-            // convertView.setBackgroundColor(Color.WHITE);
             holder.tvSolarDate.setBackgroundResource(android.R.color.transparent);
             holder.tvSolarDate.setTextColor(context.getResources().getColor(R.color.text_main));
             holder.tvLunarDate.setTextColor(context.getResources().getColor(R.color.text_secondary));
@@ -97,7 +95,7 @@ public class CalendarAdapter extends BaseAdapter {
             holder.tvLunarDate.setAlpha(1.0f);
         }
 
-        // Check if this day is a special day based on lunar date (for yearly recurring)
+        // Calculate actual month/year for this cell
         int cellMonth = ((MainActivity) context).selectedMonth;
         int cellYear = ((MainActivity) context).selectedYear;
         
@@ -130,14 +128,6 @@ public class CalendarAdapter extends BaseAdapter {
             hasSpecialDay = true;
         }
 
-        // Check for yearly recurring events (lunar-based only)
-        List<Event> yearlyEvents = dbHelper.getEventsByLunarDate(lunarDay, lunarMonth, 
-                ((MainActivity) context).selectedYear, isLeapMonth);
-        
-        if (yearlyEvents != null && !yearlyEvents.isEmpty()) {
-            hasSpecialDay = true;
-        }
-
         if (hasSpecialDay) {
             holder.tvSpecialDayIndicator.setVisibility(View.VISIBLE);
         } else {
@@ -157,7 +147,7 @@ public class CalendarAdapter extends BaseAdapter {
                             ((MainActivity) context).showSpecialDayDialog(cell.getSolarDay(), 
                                     ((MainActivity) context).selectedMonth, 
                                     ((MainActivity) context).selectedYear,
-                                    finalSpecialDay.getId(), finalSpecialDay.getName(), finalSpecialDay.getNotes());
+                                    finalSpecialDay.getId(), finalSpecialDay.getName(), finalSpecialDay.getNotes(), finalSpecialDay.getNotificationTime());
                         } else {
                             ((MainActivity) context).showSpecialDayDialog(cell.getSolarDay(), 
                                     ((MainActivity) context).selectedMonth, 

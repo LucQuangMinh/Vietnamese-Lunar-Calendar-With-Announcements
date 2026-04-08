@@ -7,24 +7,27 @@ public class SpecialDay {
     private int month;
     private String createdAt;
     private String notes;
+    private String notificationTime = "18:00"; // Mặc định là 18:00
 
     public SpecialDay() {}
 
-    public SpecialDay(String name, String notes, int day, int month, String createdAt) {
+    public SpecialDay(String name, String notes, int day, int month, String createdAt, String notificationTime) {
         this.name = name;
         this.notes = notes;
         this.day = day;
         this.month = month;
         this.createdAt = createdAt;
+        this.notificationTime = notificationTime != null ? notificationTime : "18:00";
     }
 
-    public SpecialDay(int id, String name, String notes, int day, int month, String createdAt) {
+    public SpecialDay(int id, String name, String notes, int day, int month, String createdAt, String notificationTime) {
         this.id = id;
         this.name = name;
         this.notes = notes;
         this.day = day;
         this.month = month;
         this.createdAt = createdAt;
+        this.notificationTime = notificationTime != null ? notificationTime : "18:00";
     }
 
     // Getters and setters
@@ -74,6 +77,14 @@ public class SpecialDay {
 
     public void setNotes(String notes) {
         this.notes = notes;
+    }
+
+    public String getNotificationTime() {
+        return notificationTime;
+    }
+
+    public void setNotificationTime(String notificationTime) {
+        this.notificationTime = notificationTime;
     }
 
     @Override

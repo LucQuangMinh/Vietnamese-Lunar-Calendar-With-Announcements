@@ -51,27 +51,6 @@
     </incident>
 
     <incident
-        id="TextFields"
-        severity="warning"
-        message="This text field does not specify an `inputType`">
-        <fix-attribute
-            description="Set inputType"
-            namespace="http://schemas.android.com/apk/res/android"
-            attribute="inputType"
-            value="TODO"
-            point="4"
-            mark="0"/>
-        <location
-            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_add_event.xml"
-            line="33"
-            column="10"
-            startOffset="1126"
-            endLine="33"
-            endColumn="18"
-            endOffset="1134"/>
-    </incident>
-
-    <incident
         id="Autofill"
         severity="warning"
         message="Missing `autofillHints` attribute">
@@ -89,6 +68,27 @@
                 attribute="importantForAutofill"
                 value="no"/>
         </fix-alternatives>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_add_event.xml"
+            line="33"
+            column="10"
+            startOffset="1126"
+            endLine="33"
+            endColumn="18"
+            endOffset="1134"/>
+    </incident>
+
+    <incident
+        id="TextFields"
+        severity="warning"
+        message="This text field does not specify an `inputType`">
+        <fix-attribute
+            description="Set inputType"
+            namespace="http://schemas.android.com/apk/res/android"
+            attribute="inputType"
+            value="TODO"
+            point="4"
+            mark="0"/>
         <location
             file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_add_event.xml"
             line="33"
@@ -566,27 +566,6 @@
     </incident>
 
     <incident
-        id="TextFields"
-        severity="warning"
-        message="This text field does not specify an `inputType`">
-        <fix-attribute
-            description="Set inputType"
-            namespace="http://schemas.android.com/apk/res/android"
-            attribute="inputType"
-            value="TODO"
-            point="4"
-            mark="0"/>
-        <location
-            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_event_list.xml"
-            line="48"
-            column="10"
-            startOffset="1620"
-            endLine="48"
-            endColumn="18"
-            endOffset="1628"/>
-    </incident>
-
-    <incident
         id="Autofill"
         severity="warning"
         message="Missing `autofillHints` attribute">
@@ -604,6 +583,27 @@
                 attribute="importantForAutofill"
                 value="no"/>
         </fix-alternatives>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_event_list.xml"
+            line="48"
+            column="10"
+            startOffset="1620"
+            endLine="48"
+            endColumn="18"
+            endOffset="1628"/>
+    </incident>
+
+    <incident
+        id="TextFields"
+        severity="warning"
+        message="This text field does not specify an `inputType`">
+        <fix-attribute
+            description="Set inputType"
+            namespace="http://schemas.android.com/apk/res/android"
+            attribute="inputType"
+            value="TODO"
+            point="4"
+            mark="0"/>
         <location
             file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_event_list.xml"
             line="48"
@@ -648,96 +648,12 @@
         message="Hardcoded string &quot;Ngày Đặc Biệt&quot;, should use `@string` resource">
         <location
             file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_main.xml"
-            line="166"
+            line="165"
             column="17"
-            startOffset="6417"
-            endLine="166"
+            startOffset="6384"
+            endLine="165"
             endColumn="45"
-            endOffset="6445"/>
-    </incident>
-
-    <incident
-        id="HardcodedText"
-        severity="warning"
-        message="Hardcoded string &quot;Thông báo&quot;, should use `@string` resource">
-        <location
-            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_main.xml"
-            line="178"
-            column="17"
-            startOffset="6947"
-            endLine="178"
-            endColumn="41"
-            endOffset="6971"/>
-    </incident>
-
-    <incident
-        id="HardcodedText"
-        severity="warning"
-        message="Hardcoded string &quot;Cài đặt thông báo&quot;, should use `@string` resource">
-        <location
-            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_notification_settings.xml"
-            line="13"
-            column="9"
-            startOffset="425"
-            endLine="13"
-            endColumn="41"
-            endOffset="457"/>
-    </incident>
-
-    <incident
-        id="HardcodedText"
-        severity="warning"
-        message="Hardcoded string &quot;Thời gian hiện tại: 18:00&quot;, should use `@string` resource">
-        <location
-            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_notification_settings.xml"
-            line="25"
-            column="9"
-            startOffset="828"
-            endLine="25"
-            endColumn="49"
-            endOffset="868"/>
-    </incident>
-
-    <incident
-        id="HardcodedText"
-        severity="warning"
-        message="Hardcoded string &quot;Chọn thời gian thông báo&quot;, should use `@string` resource">
-        <location
-            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_notification_settings.xml"
-            line="38"
-            column="9"
-            startOffset="1285"
-            endLine="38"
-            endColumn="48"
-            endOffset="1324"/>
-    </incident>
-
-    <incident
-        id="HardcodedText"
-        severity="warning"
-        message="Hardcoded string &quot;Đặt lại mặc định (18:00)&quot;, should use `@string` resource">
-        <location
-            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_notification_settings.xml"
-            line="51"
-            column="9"
-            startOffset="1740"
-            endLine="51"
-            endColumn="48"
-            endOffset="1779"/>
-    </incident>
-
-    <incident
-        id="HardcodedText"
-        severity="warning"
-        message="Hardcoded string &quot;Thông báo sẽ được gửi vào thời gian đã chọn mỗi ngày để nhắc nhở về ngày đặc biệt hôm sau.&quot;, should use `@string` resource">
-        <location
-            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_notification_settings.xml"
-            line="65"
-            column="9"
-            startOffset="2229"
-            endLine="65"
-            endColumn="114"
-            endOffset="2334"/>
+            endOffset="6412"/>
     </incident>
 
     <incident
@@ -774,12 +690,12 @@
         message="Hardcoded string &quot;Chưa có ngày đặc biệt nào được tạo&quot;, should use `@string` resource">
         <location
             file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_special_day_list.xml"
-            line="34"
+            line="38"
             column="9"
-            startOffset="1112"
-            endLine="34"
+            startOffset="1251"
+            endLine="38"
             endColumn="58"
-            endOffset="1161"/>
+            endOffset="1300"/>
     </incident>
 
     <incident
@@ -827,57 +743,155 @@
     <incident
         id="HardcodedText"
         severity="warning"
-        message="Hardcoded string &quot;Nhập tên cho ngày đặc biệt:&quot;, should use `@string` resource">
+        message="Hardcoded string &quot;Ngày đặc biệt&quot;, should use `@string` resource">
         <location
             file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/dialog_special_day.xml"
-            line="11"
-            column="9"
-            startOffset="368"
-            endLine="11"
-            endColumn="51"
-            endOffset="410"/>
-    </incident>
-
-    <incident
-        id="Autofill"
-        severity="warning"
-        message="Missing `autofillHints` attribute">
-        <fix-alternatives>
-            <fix-attribute
-                description="Set autofillHints"
-                namespace="http://schemas.android.com/apk/res/android"
-                attribute="autofillHints"
-                value=""
-                point="0"
-                mark="0"/>
-            <fix-attribute
-                description="Set importantForAutofill=&quot;no&quot;"
-                namespace="http://schemas.android.com/apk/res/android"
-                attribute="importantForAutofill"
-                value="no"/>
-        </fix-alternatives>
-        <location
-            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/dialog_special_day.xml"
-            line="16"
-            column="6"
-            startOffset="527"
-            endLine="16"
-            endColumn="14"
-            endOffset="535"/>
+            line="22"
+            column="13"
+            startOffset="783"
+            endLine="22"
+            endColumn="41"
+            endOffset="811"/>
     </incident>
 
     <incident
         id="HardcodedText"
         severity="warning"
-        message="Hardcoded string &quot;Ví dụ: Sinh nhật, Kỷ niệm...&quot;, should use `@string` resource">
+        message="Hardcoded string &quot;Ngày: --/--&quot;, should use `@string` resource">
         <location
             file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/dialog_special_day.xml"
-            line="20"
-            column="9"
-            startOffset="676"
-            endLine="20"
-            endColumn="52"
-            endOffset="719"/>
+            line="31"
+            column="13"
+            startOffset="1116"
+            endLine="31"
+            endColumn="39"
+            endOffset="1142"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Tên ngày đặc biệt&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/dialog_special_day.xml"
+            line="47"
+            column="13"
+            startOffset="1663"
+            endLine="47"
+            endColumn="45"
+            endOffset="1695"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Ghi chú (Tùy chọn)&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/dialog_special_day.xml"
+            line="65"
+            column="13"
+            startOffset="2497"
+            endLine="65"
+            endColumn="46"
+            endOffset="2530"/>
+    </incident>
+
+    <incident
+        id="ContentDescription"
+        severity="warning"
+        message="Missing `contentDescription` attribute on image">
+        <fix-alternatives>
+            <fix-attribute
+                description="Set contentDescription"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="contentDescription"
+                value="TODO"
+                point="4"
+                mark="0"/>
+            <fix-attribute
+                description="Set importantForAccessibility=&quot;no&quot;"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="importantForAccessibility"
+                value="no"/>
+        </fix-alternatives>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/dialog_special_day.xml"
+            line="96"
+            column="14"
+            startOffset="3842"
+            endLine="96"
+            endColumn="23"
+            endOffset="3851"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Giờ thông báo (trước 1 ngày):&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/dialog_special_day.xml"
+            line="106"
+            column="17"
+            startOffset="4255"
+            endLine="106"
+            endColumn="61"
+            endOffset="4299"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;18:00&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/dialog_special_day.xml"
+            line="119"
+            column="17"
+            startOffset="4754"
+            endLine="119"
+            endColumn="37"
+            endOffset="4774"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;XÓA&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/dialog_special_day.xml"
+            line="138"
+            column="13"
+            startOffset="5405"
+            endLine="138"
+            endColumn="31"
+            endOffset="5423"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;HỦY&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/dialog_special_day.xml"
+            line="152"
+            column="13"
+            startOffset="5898"
+            endLine="152"
+            endColumn="31"
+            endOffset="5916"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;LƯU&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/dialog_special_day.xml"
+            line="160"
+            column="13"
+            startOffset="6191"
+            endLine="160"
+            endColumn="31"
+            endOffset="6209"/>
     </incident>
 
     <incident
@@ -1021,17 +1035,87 @@
     </incident>
 
     <incident
-        id="HardcodedText"
+        id="UseCompoundDrawables"
         severity="warning"
-        message="Hardcoded string &quot;Xóa&quot;, should use `@string` resource">
+        message="This tag and its children can be replaced by one `&lt;TextView/>` and a compound drawable">
         <location
             file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/item_special_day.xml"
-            line="36"
-            column="9"
-            startOffset="1186"
-            endLine="36"
-            endColumn="27"
-            endOffset="1204"/>
+            line="30"
+            column="10"
+            startOffset="1095"
+            endLine="30"
+            endColumn="22"
+            endOffset="1107"/>
+    </incident>
+
+    <incident
+        id="ContentDescription"
+        severity="warning"
+        message="Missing `contentDescription` attribute on image">
+        <fix-alternatives>
+            <fix-attribute
+                description="Set contentDescription"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="contentDescription"
+                value="TODO"
+                point="4"
+                mark="0"/>
+            <fix-attribute
+                description="Set importantForAccessibility=&quot;no&quot;"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="importantForAccessibility"
+                value="no"/>
+        </fix-alternatives>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/item_special_day.xml"
+            line="37"
+            column="14"
+            startOffset="1354"
+            endLine="37"
+            endColumn="23"
+            endOffset="1363"/>
+    </incident>
+
+    <incident
+        id="UseCompoundDrawables"
+        severity="warning"
+        message="This tag and its children can be replaced by one `&lt;TextView/>` and a compound drawable">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/item_special_day.xml"
+            line="53"
+            column="10"
+            startOffset="1969"
+            endLine="53"
+            endColumn="22"
+            endOffset="1981"/>
+    </incident>
+
+    <incident
+        id="ContentDescription"
+        severity="warning"
+        message="Missing `contentDescription` attribute on image">
+        <fix-alternatives>
+            <fix-attribute
+                description="Set contentDescription"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="contentDescription"
+                value="TODO"
+                point="4"
+                mark="0"/>
+            <fix-attribute
+                description="Set importantForAccessibility=&quot;no&quot;"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="importantForAccessibility"
+                value="no"/>
+        </fix-alternatives>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/item_special_day.xml"
+            line="60"
+            column="14"
+            startOffset="2228"
+            endLine="60"
+            endColumn="23"
+            endOffset="2237"/>
     </incident>
 
     <incident
@@ -1147,73 +1231,115 @@
     </incident>
 
     <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/example/lunarcalendar/SpecialDayAdapter.java"
+            line="40"
+            column="34"
+            startOffset="1505"
+            endLine="40"
+            endColumn="122"
+            endOffset="1593"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="String literal in `setText` can not be translated. Use Android resources instead.">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/example/lunarcalendar/SpecialDayAdapter.java"
+            line="40"
+            column="34"
+            startOffset="1505"
+            endLine="40"
+            endColumn="42"
+            endOffset="1513"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/example/lunarcalendar/SpecialDayAdapter.java"
+            line="41"
+            column="34"
+            startOffset="1629"
+            endLine="41"
+            endColumn="103"
+            endOffset="1698"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="String literal in `setText` can not be translated. Use Android resources instead.">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/example/lunarcalendar/SpecialDayAdapter.java"
+            line="41"
+            column="34"
+            startOffset="1629"
+            endLine="41"
+            endColumn="49"
+            endOffset="1644"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="String literal in `setText` can not be translated. Use Android resources instead.">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/example/lunarcalendar/SpecialDayAdapter.java"
+            line="41"
+            column="87"
+            startOffset="1682"
+            endLine="41"
+            endColumn="103"
+            endOffset="1698"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/example/lunarcalendar/SpecialDayDialog.java"
+            line="97"
+            column="30"
+            startOffset="4237"
+            endLine="97"
+            endColumn="71"
+            endOffset="4278"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="String literal in `setText` can not be translated. Use Android resources instead.">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/example/lunarcalendar/SpecialDayDialog.java"
+            line="97"
+            column="30"
+            startOffset="4237"
+            endLine="97"
+            endColumn="38"
+            endOffset="4245"/>
+    </incident>
+
+    <incident
         id="DefaultLocale"
         severity="warning"
         message="Implicitly using the default locale is a common source of bugs: Use `String.format(Locale, ...)` instead">
         <location
-            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/example/lunarcalendar/NotificationSettingsActivity.java"
-            line="83"
-            column="27"
-            startOffset="2790"
-            endLine="83"
-            endColumn="81"
-            endOffset="2844"/>
-    </incident>
-
-    <incident
-        id="SetTextI18n"
-        severity="warning"
-        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
-        <location
-            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/example/lunarcalendar/NotificationSettingsActivity.java"
-            line="84"
-            column="31"
-            startOffset="2876"
-            endLine="84"
-            endColumn="64"
-            endOffset="2909"/>
-    </incident>
-
-    <incident
-        id="SetTextI18n"
-        severity="warning"
-        message="String literal in `setText` can not be translated. Use Android resources instead.">
-        <location
-            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/example/lunarcalendar/NotificationSettingsActivity.java"
-            line="84"
-            column="31"
-            startOffset="2876"
-            endLine="84"
-            endColumn="53"
-            endOffset="2898"/>
-    </incident>
-
-    <incident
-        id="SetTextI18n"
-        severity="warning"
-        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
-        <location
-            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/example/lunarcalendar/SpecialDayAdapter.java"
-            line="47"
-            column="34"
-            startOffset="1710"
-            endLine="47"
-            endColumn="125"
-            endOffset="1801"/>
-    </incident>
-
-    <incident
-        id="SetTextI18n"
-        severity="warning"
-        message="String literal in `setText` can not be translated. Use Android resources instead.">
-        <location
-            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/example/lunarcalendar/SpecialDayAdapter.java"
-            line="47"
-            column="34"
-            startOffset="1710"
-            endLine="47"
-            endColumn="48"
-            endOffset="1724"/>
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/example/lunarcalendar/SpecialDayDialog.java"
+            line="112"
+            column="52"
+            startOffset="5101"
+            endLine="112"
+            endColumn="103"
+            endOffset="5152"/>
     </incident>
 
     <incident
@@ -1376,6 +1502,14 @@
     </incident>
 
     <incident
+        id="IconLocation"
+        severity="warning"
+        message="Found bitmap drawable `res/drawable/anh_chuc_mung_nam_moi_binh_ngo_2026.png` in densityless folder">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/drawable/anh_chuc_mung_nam_moi_binh_ngo_2026.png"/>
+    </incident>
+
+    <incident
         id="Overdraw"
         severity="warning"
         message="Possible overdraw: Root element paints background `@color/white` with a theme that also paints a background (inferred theme is `@style/AppTheme`)">
@@ -1420,15 +1554,15 @@
     <incident
         id="Overdraw"
         severity="warning"
-        message="Possible overdraw: Root element paints background `@color/white` with a theme that also paints a background (inferred theme is `@style/AppTheme`)">
+        message="Possible overdraw: Root element paints background `@color/card_bg` with a theme that also paints a background (inferred theme is `@style/AppTheme`)">
         <location
-            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_notification_settings.xml"
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/dialog_special_day.xml"
             line="7"
             column="5"
-            startOffset="259"
+            startOffset="288"
             endLine="7"
-            endColumn="38"
-            endOffset="292"/>
+            endColumn="40"
+            endOffset="323"/>
     </incident>
 
     <incident
@@ -1443,28 +1577,6 @@
             endLine="12"
             endColumn="42"
             endOffset="441"/>
-    </incident>
-
-    <incident
-        id="Overdraw"
-        severity="warning"
-        message="Possible overdraw: Root element paints background `?android:attr/selectableItemBackground` with a theme that also paints a background (inferred theme is `@style/AppTheme`)">
-        <location
-            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/item_special_day.xml"
-            line="7"
-            column="5"
-            startOffset="261"
-            endLine="7"
-            endColumn="64"
-            endOffset="320"/>
-    </incident>
-
-    <incident
-        id="IconLocation"
-        severity="warning"
-        message="Found bitmap drawable `res/drawable/anh_chuc_mung_nam_moi_binh_ngo_2026.png` in densityless folder">
-        <location
-            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/drawable/anh_chuc_mung_nam_moi_binh_ngo_2026.png"/>
     </incident>
 
 </incidents>

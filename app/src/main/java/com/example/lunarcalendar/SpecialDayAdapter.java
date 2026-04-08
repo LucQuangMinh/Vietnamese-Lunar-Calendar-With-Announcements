@@ -12,15 +12,8 @@ import java.util.List;
 
 public class SpecialDayAdapter extends ArrayAdapter<SpecialDay> {
     
-    private OnDeleteClickListener listener;
-    
-    public interface OnDeleteClickListener {
-        void onDeleteClick(SpecialDay specialDay);
-    }
-    
-    public SpecialDayAdapter(Context context, List<SpecialDay> specialDays, OnDeleteClickListener listener) {
+    public SpecialDayAdapter(Context context, List<SpecialDay> specialDays) {
         super(context, 0, specialDays);
-        this.listener = listener;
     }
     
     @Override
@@ -33,37 +26,19 @@ public class SpecialDayAdapter extends ArrayAdapter<SpecialDay> {
         
         TextView tvSpecialDayName = convertView.findViewById(R.id.tvSpecialDayName);
         TextView tvSpecialDayDate = convertView.findViewById(R.id.tvSpecialDayDate);
-        Button btnDelete = convertView.findViewById(R.id.btnDelete);
+        TextView tvSpecialDayTime = convertView.findViewById(R.id.tvSpecialDayTime);
         
         tvSpecialDayName.setText(specialDay.getName());
         
         // Convert solar date to lunar date for display
         int[] lunarDate = LunarCalendar.convertSolarToLunar(specialDay.getDay(), specialDay.getMonth(), 2026);
-        String lunarDateString = "Ngày âm: " + lunarDate[0] + "/" + lunarDate[1];
+        String lunarDateString = "Âm lịch: " + lunarDate[0] + "/" + lunarDate[1];
         if (lunarDate[3] == 1) {
-            lunarDateString += " (Nhảy)";
+            lunarDateString += " (Nhuận)";
         }
         
-        tvSpecialDayDate.setText("Ngày dương: " + specialDay.getDay() + "/" + specialDay.getMonth() + "\n" + lunarDateString);
-        
-        btnDelete.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (listener != null) {
-                    new android.app.AlertDialog.Builder(getContext())
-                        .setTitle("Xác nhận xóa")
-                        .setMessage("Bạn có chắc chắn muốn xóa ngày đặc biệt này không?")
-                        .setPositiveButton("Xóa", new android.content.DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(android.content.DialogInterface dialog, int which) {
-                                listener.onDeleteClick(specialDay);
-                            }
-                        })
-                        .setNegativeButton("Hủy", null)
-                        .show();
-                }
-            }
-        });
+        tvSpecialDayDate.setText("Ngày: " + specialDay.getDay() + "/" + specialDay.getMonth() + "  •  " + lunarDateString);
+        tvSpecialDayTime.setText("Báo thức lúc " + specialDay.getNotificationTime() + " ngày trước đó");
         
         return convertView;
     }

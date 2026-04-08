@@ -59,16 +59,15 @@
             android:name="com.example.lunarcalendar.SpecialDayNotificationReceiver"
             android:exported="true" />
 
+        <!-- Exact Alarm Notification Receiver -->
+        <receiver
+            android:name="com.example.lunarcalendar.AlarmNotificationReceiver"
+            android:exported="false" />
+
         <!-- Special Day List Activity -->
         <activity
             android:name="com.example.lunarcalendar.SpecialDayListActivity"
             android:label="Danh sách ngày đặc biệt"
-            android:theme="@style/AppTheme" />
-
-        <!-- Notification Settings Activity -->
-        <activity
-            android:name="com.example.lunarcalendar.NotificationSettingsActivity"
-            android:label="Cài đặt thông báo"
             android:theme="@style/AppTheme" />
 
         <provider

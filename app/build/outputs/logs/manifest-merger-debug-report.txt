@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:2:1-60:12
-INJECTED from D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:2:1-60:12
-INJECTED from D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:2:1-60:12
-INJECTED from D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:2:1-60:12
+ADDED from D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:2:1-44:12
+INJECTED from D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:2:1-44:12
+INJECTED from D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:2:1-44:12
+INJECTED from D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:2:1-44:12
 MERGED from [com.google.android.material:material:1.12.0] C:\Users\Admin\.gradle\caches\8.10\transforms\623c725d8ec88c5ae5e9033cbf7ee87f\transformed\material-1.12.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\Admin\.gradle\caches\8.10\transforms\42b27392238eb0965a27666fc6af8a0f\transformed\constraintlayout-2.1.4\AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.appcompat:appcompat-resources:1.7.0] C:\Users\Admin\.gradle\caches\8.10\transforms\be4d6f3bab9db00f200fed105650900a\transformed\appcompat-resources-1.7.0\AndroidManifest.xml:2:1-7:12
@@ -65,8 +65,8 @@ ADDED from D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:6
 	android:name
 		ADDED from D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:6:22-76
 application
-ADDED from D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:8:5-58:19
-INJECTED from D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:8:5-58:19
+ADDED from D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:8:5-42:19
+INJECTED from D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:8:5-42:19
 MERGED from [com.google.android.material:material:1.12.0] C:\Users\Admin\.gradle\caches\8.10\transforms\623c725d8ec88c5ae5e9033cbf7ee87f\transformed\material-1.12.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.12.0] C:\Users\Admin\.gradle\caches\8.10\transforms\623c725d8ec88c5ae5e9033cbf7ee87f\transformed\material-1.12.0\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\Admin\.gradle\caches\8.10\transforms\42b27392238eb0965a27666fc6af8a0f\transformed\constraintlayout-2.1.4\AndroidManifest.xml:9:5-20
@@ -115,50 +115,26 @@ category#android.intent.category.LAUNCHER
 ADDED from D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:22:17-77
 	android:name
 		ADDED from D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:22:27-74
-activity#com.example.lunarcalendar.EventListActivity
-ADDED from D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:27:9-30:47
-	android:label
-		ADDED from D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:29:13-46
-	android:theme
-		ADDED from D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:30:13-44
-	android:name
-		ADDED from D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:28:13-46
-activity#com.example.lunarcalendar.AddEventActivity
-ADDED from D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:33:9-36:47
-	android:label
-		ADDED from D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:35:13-45
-	android:theme
-		ADDED from D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:36:13-44
-	android:name
-		ADDED from D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:34:13-45
-receiver#com.example.lunarcalendar.NotificationReceiver
-ADDED from D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:39:9-40:40
-	android:exported
-		ADDED from D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:40:13-37
-	android:name
-		ADDED from D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:39:19-55
 receiver#com.example.lunarcalendar.SpecialDayNotificationReceiver
-ADDED from D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:43:9-44:39
+ADDED from D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:29:9-30:39
 	android:exported
-		ADDED from D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:44:13-36
+		ADDED from D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:30:13-36
 	android:name
-		ADDED from D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:43:19-65
+		ADDED from D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:29:19-65
+receiver#com.example.lunarcalendar.AlarmNotificationReceiver
+ADDED from D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:33:9-34:40
+	android:exported
+		ADDED from D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:34:13-37
+	android:name
+		ADDED from D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:33:19-60
 activity#com.example.lunarcalendar.SpecialDayListActivity
-ADDED from D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:47:9-50:47
+ADDED from D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:37:9-40:47
 	android:label
-		ADDED from D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:49:13-52
+		ADDED from D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:39:13-52
 	android:theme
-		ADDED from D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:50:13-44
+		ADDED from D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:40:13-44
 	android:name
-		ADDED from D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:48:13-51
-activity#com.example.lunarcalendar.NotificationSettingsActivity
-ADDED from D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:53:9-56:47
-	android:label
-		ADDED from D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:55:13-46
-	android:theme
-		ADDED from D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:56:13-44
-	android:name
-		ADDED from D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:54:13-57
+		ADDED from D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml:38:13-51
 uses-sdk
 INJECTED from D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from D:\test ai\VietnameseLunarCalendar\app\src\main\AndroidManifest.xml

@@ -65,12 +65,12 @@
         explanation="Calling `String#toLowerCase()` or `#toUpperCase()` **without specifying an explicit locale** is a common source of bugs. The reason for that is that those methods will use the current locale on the user&apos;s device, and even though the code appears to work correctly when you are developing the app, it will fail in some locales. For example, in the Turkish locale, the uppercase replacement for `i` is **not** `I`.&#xA;&#xA;If you want the methods to just perform ASCII replacement, for example to convert an enum name, call `String#toUpperCase(Locale.ROOT)` instead. If you really want to use the current locale, call `String#toUpperCase(Locale.getDefault())` instead."
         url="https://developer.android.com/reference/java/util/Locale.html#default_locale"
         urls="https://developer.android.com/reference/java/util/Locale.html#default_locale"
-        errorLine1="        String timeText = String.format(&quot;%02d:%02d&quot;, currentHour, currentMinute);"
-        errorLine2="                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        errorLine1="                                notificationTime = String.format(&quot;%02d:%02d&quot;, hourOfDay, minuteOfHour);"
+        errorLine2="                                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
-            file="D:\test ai\VietnameseLunarCalendar\app\src\main\java\com\example\lunarcalendar\NotificationSettingsActivity.java"
-            line="83"
-            column="27"/>
+            file="D:\test ai\VietnameseLunarCalendar\app\src\main\java\com\example\lunarcalendar\SpecialDayDialog.java"
+            line="112"
+            column="52"/>
     </issue>
 
     <issue
@@ -270,6 +270,38 @@
     </issue>
 
     <issue
+        id="UseCompoundDrawables"
+        severity="Warning"
+        message="This tag and its children can be replaced by one `&lt;TextView/>` and a compound drawable"
+        category="Performance"
+        priority="6"
+        summary="Node can be replaced by a `TextView` with compound drawables"
+        explanation="A `LinearLayout` which contains an `ImageView` and a `TextView` can be more efficiently handled as a compound drawable (a single TextView, using the `drawableTop`, `drawableLeft`, `drawableRight` and/or `drawableBottom` attributes to draw one or more images adjacent to the text).&#xA;&#xA;If the two widgets are offset from each other with margins, this can be replaced with a `drawablePadding` attribute.&#xA;&#xA;There&apos;s a lint quickfix to perform this conversion in the Eclipse plugin."
+        errorLine1="        &lt;LinearLayout"
+        errorLine2="         ~~~~~~~~~~~~">
+        <location
+            file="D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\item_special_day.xml"
+            line="30"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="UseCompoundDrawables"
+        severity="Warning"
+        message="This tag and its children can be replaced by one `&lt;TextView/>` and a compound drawable"
+        category="Performance"
+        priority="6"
+        summary="Node can be replaced by a `TextView` with compound drawables"
+        explanation="A `LinearLayout` which contains an `ImageView` and a `TextView` can be more efficiently handled as a compound drawable (a single TextView, using the `drawableTop`, `drawableLeft`, `drawableRight` and/or `drawableBottom` attributes to draw one or more images adjacent to the text).&#xA;&#xA;If the two widgets are offset from each other with margins, this can be replaced with a `drawablePadding` attribute.&#xA;&#xA;There&apos;s a lint quickfix to perform this conversion in the Eclipse plugin."
+        errorLine1="        &lt;LinearLayout"
+        errorLine2="         ~~~~~~~~~~~~">
+        <location
+            file="D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\item_special_day.xml"
+            line="53"
+            column="10"/>
+    </issue>
+
+    <issue
         id="Overdraw"
         severity="Warning"
         message="Possible overdraw: Root element paints background `@color/white` with a theme that also paints a background (inferred theme is `@style/AppTheme`)"
@@ -320,15 +352,15 @@
     <issue
         id="Overdraw"
         severity="Warning"
-        message="Possible overdraw: Root element paints background `@color/white` with a theme that also paints a background (inferred theme is `@style/AppTheme`)"
+        message="Possible overdraw: Root element paints background `@color/card_bg` with a theme that also paints a background (inferred theme is `@style/AppTheme`)"
         category="Performance"
         priority="3"
         summary="Overdraw: Painting regions more than once"
         explanation="If you set a background drawable on a root view, then you should use a custom theme where the theme background is null. Otherwise, the theme background will be painted first, only to have your custom background completely cover it; this is called &quot;overdraw&quot;.&#xA;&#xA;NOTE: This detector relies on figuring out which layouts are associated with which activities based on scanning the Java code, and it&apos;s currently doing that using an inexact pattern matching algorithm. Therefore, it can incorrectly conclude which activity the layout is associated with and then wrongly complain that a background-theme is hidden.&#xA;&#xA;If you want your custom background on multiple pages, then you should consider making a custom theme with your custom background and just using that theme instead of a root element background.&#xA;&#xA;Of course it&apos;s possible that your custom drawable is translucent and you want it to be mixed with the background. However, you will get better performance if you pre-mix the background with your drawable and use that resulting image or color as a custom theme background instead."
-        errorLine1="    android:background=&quot;@color/white&quot;>"
-        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        errorLine1="    android:background=&quot;@color/card_bg&quot;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
-            file="D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\activity_notification_settings.xml"
+            file="D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\dialog_special_day.xml"
             line="7"
             column="5"/>
     </issue>
@@ -346,22 +378,6 @@
         <location
             file="D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\header_cell.xml"
             line="12"
-            column="5"/>
-    </issue>
-
-    <issue
-        id="Overdraw"
-        severity="Warning"
-        message="Possible overdraw: Root element paints background `?android:attr/selectableItemBackground` with a theme that also paints a background (inferred theme is `@style/AppTheme`)"
-        category="Performance"
-        priority="3"
-        summary="Overdraw: Painting regions more than once"
-        explanation="If you set a background drawable on a root view, then you should use a custom theme where the theme background is null. Otherwise, the theme background will be painted first, only to have your custom background completely cover it; this is called &quot;overdraw&quot;.&#xA;&#xA;NOTE: This detector relies on figuring out which layouts are associated with which activities based on scanning the Java code, and it&apos;s currently doing that using an inexact pattern matching algorithm. Therefore, it can incorrectly conclude which activity the layout is associated with and then wrongly complain that a background-theme is hidden.&#xA;&#xA;If you want your custom background on multiple pages, then you should consider making a custom theme with your custom background and just using that theme instead of a root element background.&#xA;&#xA;Of course it&apos;s possible that your custom drawable is translucent and you want it to be mixed with the background. However, you will get better performance if you pre-mix the background with your drawable and use that resulting image or color as a custom theme background instead."
-        errorLine1="    android:background=&quot;?android:attr/selectableItemBackground&quot;>"
-        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\item_special_day.xml"
-            line="7"
             column="5"/>
     </issue>
 
@@ -419,6 +435,22 @@
         explanation="Unused resources make applications larger and slow down builds.&#xA;&#xA;&#xA;The unused resource check can ignore tests. If you want to include resources that are only referenced from tests, consider packaging them in a test source set instead.&#xA;&#xA;You can include test sources in the unused resource check by setting the system property lint.unused-resources.include-tests =true, and to exclude them (usually for performance reasons), use lint.unused-resources.exclude-tests =true.&#xA;,">
         <location
             file="D:\test ai\VietnameseLunarCalendar\app\src\main\res\mipmap-hdpi\ic_launcher_round.webp"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.drawable.rounded_background` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds.&#xA;&#xA;&#xA;The unused resource check can ignore tests. If you want to include resources that are only referenced from tests, consider packaging them in a test source set instead.&#xA;&#xA;You can include test sources in the unused resource check by setting the system property lint.unused-resources.include-tests =true, and to exclude them (usually for performance reasons), use lint.unused-resources.exclude-tests =true.&#xA;,"
+        errorLine1="&lt;shape xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;"
+        errorLine2="^">
+        <location
+            file="D:\test ai\VietnameseLunarCalendar\app\src\main\res\drawable\rounded_background.xml"
+            line="2"
+            column="1"/>
     </issue>
 
     <issue
@@ -660,21 +692,21 @@
     </issue>
 
     <issue
-        id="Autofill"
+        id="ContentDescription"
         severity="Warning"
-        message="Missing `autofillHints` attribute"
-        category="Usability"
+        message="Missing `contentDescription` attribute on image"
+        category="Accessibility"
         priority="3"
-        summary="Use Autofill"
-        explanation="Specify an `autofillHints` attribute when targeting SDK version 26 or higher or explicitly specify that the view is not important for autofill. Your app can help an autofill service classify the data correctly by providing the meaning of each view that could be autofillable, such as views representing usernames, passwords, credit card fields, email addresses, etc.&#xA;&#xA;The hints can have any value, but it is recommended to use predefined values like &apos;username&apos; for a username or &apos;creditCardNumber&apos; for a credit card number. For a list of all predefined autofill hint constants, see the `AUTOFILL_HINT_` constants in the `View` reference at https://developer.android.com/reference/android/view/View.html.&#xA;&#xA;You can mark a view unimportant for autofill by specifying an `importantForAutofill` attribute on that view or a parent view. See https://developer.android.com/reference/android/view/View.html#setImportantForAutofill(int)."
-        url="https://developer.android.com/guide/topics/text/autofill.html"
-        urls="https://developer.android.com/guide/topics/text/autofill.html"
-        errorLine1="    &lt;EditText"
-        errorLine2="     ~~~~~~~~">
+        summary="Image without `contentDescription`"
+        explanation="Non-textual widgets like ImageViews and ImageButtons should use the `contentDescription` attribute to specify a textual description of the widget such that screen readers and other accessibility tools can adequately describe the user interface.&#xA;&#xA;Note that elements in application screens that are purely decorative and do not provide any content or enable a user action should not have accessibility content descriptions. In this case, set their descriptions to `@null`. If your app&apos;s minSdkVersion is 16 or higher, you can instead set these graphical elements&apos; `android:importantForAccessibility` attributes to `no`.&#xA;&#xA;Note that for text fields, you should not set both the `hint` and the `contentDescription` attributes since the hint will never be shown. Just set the `hint`."
+        url="https://developer.android.com/guide/topics/ui/accessibility/apps#special-cases"
+        urls="https://developer.android.com/guide/topics/ui/accessibility/apps#special-cases"
+        errorLine1="            &lt;ImageView"
+        errorLine2="             ~~~~~~~~~">
         <location
             file="D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\dialog_special_day.xml"
-            line="16"
-            column="6"/>
+            line="96"
+            column="14"/>
     </issue>
 
     <issue
@@ -693,6 +725,42 @@
             file="D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\event_item.xml"
             line="82"
             column="10"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        severity="Warning"
+        message="Missing `contentDescription` attribute on image"
+        category="Accessibility"
+        priority="3"
+        summary="Image without `contentDescription`"
+        explanation="Non-textual widgets like ImageViews and ImageButtons should use the `contentDescription` attribute to specify a textual description of the widget such that screen readers and other accessibility tools can adequately describe the user interface.&#xA;&#xA;Note that elements in application screens that are purely decorative and do not provide any content or enable a user action should not have accessibility content descriptions. In this case, set their descriptions to `@null`. If your app&apos;s minSdkVersion is 16 or higher, you can instead set these graphical elements&apos; `android:importantForAccessibility` attributes to `no`.&#xA;&#xA;Note that for text fields, you should not set both the `hint` and the `contentDescription` attributes since the hint will never be shown. Just set the `hint`."
+        url="https://developer.android.com/guide/topics/ui/accessibility/apps#special-cases"
+        urls="https://developer.android.com/guide/topics/ui/accessibility/apps#special-cases"
+        errorLine1="            &lt;ImageView"
+        errorLine2="             ~~~~~~~~~">
+        <location
+            file="D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\item_special_day.xml"
+            line="37"
+            column="14"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        severity="Warning"
+        message="Missing `contentDescription` attribute on image"
+        category="Accessibility"
+        priority="3"
+        summary="Image without `contentDescription`"
+        explanation="Non-textual widgets like ImageViews and ImageButtons should use the `contentDescription` attribute to specify a textual description of the widget such that screen readers and other accessibility tools can adequately describe the user interface.&#xA;&#xA;Note that elements in application screens that are purely decorative and do not provide any content or enable a user action should not have accessibility content descriptions. In this case, set their descriptions to `@null`. If your app&apos;s minSdkVersion is 16 or higher, you can instead set these graphical elements&apos; `android:importantForAccessibility` attributes to `no`.&#xA;&#xA;Note that for text fields, you should not set both the `hint` and the `contentDescription` attributes since the hint will never be shown. Just set the `hint`."
+        url="https://developer.android.com/guide/topics/ui/accessibility/apps#special-cases"
+        urls="https://developer.android.com/guide/topics/ui/accessibility/apps#special-cases"
+        errorLine1="            &lt;ImageView"
+        errorLine2="             ~~~~~~~~~">
+        <location
+            file="D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\item_special_day.xml"
+            line="60"
+            column="14"/>
     </issue>
 
     <issue
@@ -723,12 +791,12 @@
         explanation="When calling `TextView#setText`&#xA;* Never call `Number#toString()` to format numbers; it will not handle fraction separators and locale-specific digits properly. Consider using `String#format` with proper format specifications (`%d` or `%f`) instead.&#xA;* Do not pass a string literal (e.g. &quot;Hello&quot;) to display text. Hardcoded text can not be properly translated to other languages. Consider using Android resource strings instead.&#xA;* Do not build messages by concatenating text chunks. Such messages can not be properly translated."
         url="https://developer.android.com/guide/topics/resources/localization.html"
         urls="https://developer.android.com/guide/topics/resources/localization.html"
-        errorLine1="        tvCurrentTime.setText(&quot;Thời gian hiện tại: &quot; + timeText);"
-        errorLine2="                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        errorLine1="        tvSpecialDayDate.setText(&quot;Ngày: &quot; + specialDay.getDay() + &quot;/&quot; + specialDay.getMonth() + &quot;  •  &quot; + lunarDateString);"
+        errorLine2="                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
-            file="D:\test ai\VietnameseLunarCalendar\app\src\main\java\com\example\lunarcalendar\NotificationSettingsActivity.java"
-            line="84"
-            column="31"/>
+            file="D:\test ai\VietnameseLunarCalendar\app\src\main\java\com\example\lunarcalendar\SpecialDayAdapter.java"
+            line="40"
+            column="34"/>
     </issue>
 
     <issue
@@ -741,12 +809,12 @@
         explanation="When calling `TextView#setText`&#xA;* Never call `Number#toString()` to format numbers; it will not handle fraction separators and locale-specific digits properly. Consider using `String#format` with proper format specifications (`%d` or `%f`) instead.&#xA;* Do not pass a string literal (e.g. &quot;Hello&quot;) to display text. Hardcoded text can not be properly translated to other languages. Consider using Android resource strings instead.&#xA;* Do not build messages by concatenating text chunks. Such messages can not be properly translated."
         url="https://developer.android.com/guide/topics/resources/localization.html"
         urls="https://developer.android.com/guide/topics/resources/localization.html"
-        errorLine1="        tvCurrentTime.setText(&quot;Thời gian hiện tại: &quot; + timeText);"
-        errorLine2="                              ~~~~~~~~~~~~~~~~~~~~~~">
+        errorLine1="        tvSpecialDayDate.setText(&quot;Ngày: &quot; + specialDay.getDay() + &quot;/&quot; + specialDay.getMonth() + &quot;  •  &quot; + lunarDateString);"
+        errorLine2="                                 ~~~~~~~~">
         <location
-            file="D:\test ai\VietnameseLunarCalendar\app\src\main\java\com\example\lunarcalendar\NotificationSettingsActivity.java"
-            line="84"
-            column="31"/>
+            file="D:\test ai\VietnameseLunarCalendar\app\src\main\java\com\example\lunarcalendar\SpecialDayAdapter.java"
+            line="40"
+            column="34"/>
     </issue>
 
     <issue
@@ -759,11 +827,11 @@
         explanation="When calling `TextView#setText`&#xA;* Never call `Number#toString()` to format numbers; it will not handle fraction separators and locale-specific digits properly. Consider using `String#format` with proper format specifications (`%d` or `%f`) instead.&#xA;* Do not pass a string literal (e.g. &quot;Hello&quot;) to display text. Hardcoded text can not be properly translated to other languages. Consider using Android resource strings instead.&#xA;* Do not build messages by concatenating text chunks. Such messages can not be properly translated."
         url="https://developer.android.com/guide/topics/resources/localization.html"
         urls="https://developer.android.com/guide/topics/resources/localization.html"
-        errorLine1="        tvSpecialDayDate.setText(&quot;Ngày dương: &quot; + specialDay.getDay() + &quot;/&quot; + specialDay.getMonth() + &quot;\n&quot; + lunarDateString);"
-        errorLine2="                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        errorLine1="        tvSpecialDayTime.setText(&quot;Báo thức lúc &quot; + specialDay.getNotificationTime() + &quot; ngày trước đó&quot;);"
+        errorLine2="                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="D:\test ai\VietnameseLunarCalendar\app\src\main\java\com\example\lunarcalendar\SpecialDayAdapter.java"
-            line="47"
+            line="41"
             column="34"/>
     </issue>
 
@@ -777,12 +845,66 @@
         explanation="When calling `TextView#setText`&#xA;* Never call `Number#toString()` to format numbers; it will not handle fraction separators and locale-specific digits properly. Consider using `String#format` with proper format specifications (`%d` or `%f`) instead.&#xA;* Do not pass a string literal (e.g. &quot;Hello&quot;) to display text. Hardcoded text can not be properly translated to other languages. Consider using Android resource strings instead.&#xA;* Do not build messages by concatenating text chunks. Such messages can not be properly translated."
         url="https://developer.android.com/guide/topics/resources/localization.html"
         urls="https://developer.android.com/guide/topics/resources/localization.html"
-        errorLine1="        tvSpecialDayDate.setText(&quot;Ngày dương: &quot; + specialDay.getDay() + &quot;/&quot; + specialDay.getMonth() + &quot;\n&quot; + lunarDateString);"
-        errorLine2="                                 ~~~~~~~~~~~~~~">
+        errorLine1="        tvSpecialDayTime.setText(&quot;Báo thức lúc &quot; + specialDay.getNotificationTime() + &quot; ngày trước đó&quot;);"
+        errorLine2="                                 ~~~~~~~~~~~~~~~">
         <location
             file="D:\test ai\VietnameseLunarCalendar\app\src\main\java\com\example\lunarcalendar\SpecialDayAdapter.java"
-            line="47"
+            line="41"
             column="34"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        severity="Warning"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        category="Internationalization"
+        priority="6"
+        summary="TextView Internationalization"
+        explanation="When calling `TextView#setText`&#xA;* Never call `Number#toString()` to format numbers; it will not handle fraction separators and locale-specific digits properly. Consider using `String#format` with proper format specifications (`%d` or `%f`) instead.&#xA;* Do not pass a string literal (e.g. &quot;Hello&quot;) to display text. Hardcoded text can not be properly translated to other languages. Consider using Android resource strings instead.&#xA;* Do not build messages by concatenating text chunks. Such messages can not be properly translated."
+        url="https://developer.android.com/guide/topics/resources/localization.html"
+        urls="https://developer.android.com/guide/topics/resources/localization.html"
+        errorLine1="        tvSpecialDayTime.setText(&quot;Báo thức lúc &quot; + specialDay.getNotificationTime() + &quot; ngày trước đó&quot;);"
+        errorLine2="                                                                                      ~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\test ai\VietnameseLunarCalendar\app\src\main\java\com\example\lunarcalendar\SpecialDayAdapter.java"
+            line="41"
+            column="87"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        severity="Warning"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders."
+        category="Internationalization"
+        priority="6"
+        summary="TextView Internationalization"
+        explanation="When calling `TextView#setText`&#xA;* Never call `Number#toString()` to format numbers; it will not handle fraction separators and locale-specific digits properly. Consider using `String#format` with proper format specifications (`%d` or `%f`) instead.&#xA;* Do not pass a string literal (e.g. &quot;Hello&quot;) to display text. Hardcoded text can not be properly translated to other languages. Consider using Android resource strings instead.&#xA;* Do not build messages by concatenating text chunks. Such messages can not be properly translated."
+        url="https://developer.android.com/guide/topics/resources/localization.html"
+        urls="https://developer.android.com/guide/topics/resources/localization.html"
+        errorLine1="        tvDialogDate.setText(&quot;Ngày: &quot; + day + &quot;/&quot; + month + &quot;/&quot; + year);"
+        errorLine2="                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\test ai\VietnameseLunarCalendar\app\src\main\java\com\example\lunarcalendar\SpecialDayDialog.java"
+            line="97"
+            column="30"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        severity="Warning"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        category="Internationalization"
+        priority="6"
+        summary="TextView Internationalization"
+        explanation="When calling `TextView#setText`&#xA;* Never call `Number#toString()` to format numbers; it will not handle fraction separators and locale-specific digits properly. Consider using `String#format` with proper format specifications (`%d` or `%f`) instead.&#xA;* Do not pass a string literal (e.g. &quot;Hello&quot;) to display text. Hardcoded text can not be properly translated to other languages. Consider using Android resource strings instead.&#xA;* Do not build messages by concatenating text chunks. Such messages can not be properly translated."
+        url="https://developer.android.com/guide/topics/resources/localization.html"
+        urls="https://developer.android.com/guide/topics/resources/localization.html"
+        errorLine1="        tvDialogDate.setText(&quot;Ngày: &quot; + day + &quot;/&quot; + month + &quot;/&quot; + year);"
+        errorLine2="                             ~~~~~~~~">
+        <location
+            file="D:\test ai\VietnameseLunarCalendar\app\src\main\java\com\example\lunarcalendar\SpecialDayDialog.java"
+            line="97"
+            column="30"/>
     </issue>
 
     <issue
@@ -1165,104 +1287,8 @@
         errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\activity_main.xml"
-            line="166"
+            line="165"
             column="17"/>
-    </issue>
-
-    <issue
-        id="HardcodedText"
-        severity="Warning"
-        message="Hardcoded string &quot;Thông báo&quot;, should use `@string` resource"
-        category="Internationalization"
-        priority="5"
-        summary="Hardcoded text"
-        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
-        errorLine1="                android:text=&quot;Thông báo&quot;"
-        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\activity_main.xml"
-            line="178"
-            column="17"/>
-    </issue>
-
-    <issue
-        id="HardcodedText"
-        severity="Warning"
-        message="Hardcoded string &quot;Cài đặt thông báo&quot;, should use `@string` resource"
-        category="Internationalization"
-        priority="5"
-        summary="Hardcoded text"
-        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
-        errorLine1="        android:text=&quot;Cài đặt thông báo&quot;"
-        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\activity_notification_settings.xml"
-            line="13"
-            column="9"/>
-    </issue>
-
-    <issue
-        id="HardcodedText"
-        severity="Warning"
-        message="Hardcoded string &quot;Thời gian hiện tại: 18:00&quot;, should use `@string` resource"
-        category="Internationalization"
-        priority="5"
-        summary="Hardcoded text"
-        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
-        errorLine1="        android:text=&quot;Thời gian hiện tại: 18:00&quot;"
-        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\activity_notification_settings.xml"
-            line="25"
-            column="9"/>
-    </issue>
-
-    <issue
-        id="HardcodedText"
-        severity="Warning"
-        message="Hardcoded string &quot;Chọn thời gian thông báo&quot;, should use `@string` resource"
-        category="Internationalization"
-        priority="5"
-        summary="Hardcoded text"
-        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
-        errorLine1="        android:text=&quot;Chọn thời gian thông báo&quot;"
-        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\activity_notification_settings.xml"
-            line="38"
-            column="9"/>
-    </issue>
-
-    <issue
-        id="HardcodedText"
-        severity="Warning"
-        message="Hardcoded string &quot;Đặt lại mặc định (18:00)&quot;, should use `@string` resource"
-        category="Internationalization"
-        priority="5"
-        summary="Hardcoded text"
-        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
-        errorLine1="        android:text=&quot;Đặt lại mặc định (18:00)&quot;"
-        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\activity_notification_settings.xml"
-            line="51"
-            column="9"/>
-    </issue>
-
-    <issue
-        id="HardcodedText"
-        severity="Warning"
-        message="Hardcoded string &quot;Thông báo sẽ được gửi vào thời gian đã chọn mỗi ngày để nhắc nhở về ngày đặc biệt hôm sau.&quot;, should use `@string` resource"
-        category="Internationalization"
-        priority="5"
-        summary="Hardcoded text"
-        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
-        errorLine1="        android:text=&quot;Thông báo sẽ được gửi vào thời gian đã chọn mỗi ngày để nhắc nhở về ngày đặc biệt hôm sau.&quot;"
-        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\activity_notification_settings.xml"
-            line="65"
-            column="9"/>
     </issue>
 
     <issue
@@ -1309,7 +1335,7 @@
         errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\activity_special_day_list.xml"
-            line="34"
+            line="38"
             column="9"/>
     </issue>
 
@@ -1348,33 +1374,145 @@
     <issue
         id="HardcodedText"
         severity="Warning"
-        message="Hardcoded string &quot;Nhập tên cho ngày đặc biệt:&quot;, should use `@string` resource"
+        message="Hardcoded string &quot;Ngày đặc biệt&quot;, should use `@string` resource"
         category="Internationalization"
         priority="5"
         summary="Hardcoded text"
         explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
-        errorLine1="        android:text=&quot;Nhập tên cho ngày đặc biệt:&quot;"
-        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        errorLine1="            android:text=&quot;Ngày đặc biệt&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\dialog_special_day.xml"
-            line="11"
-            column="9"/>
+            line="22"
+            column="13"/>
     </issue>
 
     <issue
         id="HardcodedText"
         severity="Warning"
-        message="Hardcoded string &quot;Ví dụ: Sinh nhật, Kỷ niệm...&quot;, should use `@string` resource"
+        message="Hardcoded string &quot;Ngày: --/--&quot;, should use `@string` resource"
         category="Internationalization"
         priority="5"
         summary="Hardcoded text"
         explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
-        errorLine1="        android:hint=&quot;Ví dụ: Sinh nhật, Kỷ niệm...&quot;"
-        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        errorLine1="            android:text=&quot;Ngày: --/--&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\dialog_special_day.xml"
-            line="20"
-            column="9"/>
+            line="31"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;Tên ngày đặc biệt&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="            android:hint=&quot;Tên ngày đặc biệt&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\dialog_special_day.xml"
+            line="47"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;Ghi chú (Tùy chọn)&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="            android:hint=&quot;Ghi chú (Tùy chọn)&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\dialog_special_day.xml"
+            line="65"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;Giờ thông báo (trước 1 ngày):&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="                android:text=&quot;Giờ thông báo (trước 1 ngày):&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\dialog_special_day.xml"
+            line="106"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;18:00&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="                android:text=&quot;18:00&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\dialog_special_day.xml"
+            line="119"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;XÓA&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="            android:text=&quot;XÓA&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\dialog_special_day.xml"
+            line="138"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;HỦY&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="            android:text=&quot;HỦY&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\dialog_special_day.xml"
+            line="152"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;LƯU&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="            android:text=&quot;LƯU&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\dialog_special_day.xml"
+            line="160"
+            column="13"/>
     </issue>
 
     <issue
@@ -1487,22 +1625,6 @@
             file="D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\header_cell.xml"
             line="7"
             column="5"/>
-    </issue>
-
-    <issue
-        id="HardcodedText"
-        severity="Warning"
-        message="Hardcoded string &quot;Xóa&quot;, should use `@string` resource"
-        category="Internationalization"
-        priority="5"
-        summary="Hardcoded text"
-        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
-        errorLine1="        android:text=&quot;Xóa&quot;"
-        errorLine2="        ~~~~~~~~~~~~~~~~~~">
-        <location
-            file="D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\item_special_day.xml"
-            line="36"
-            column="9"/>
     </issue>
 
     <issue

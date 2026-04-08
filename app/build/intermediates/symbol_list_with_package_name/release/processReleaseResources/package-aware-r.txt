@@ -3220,15 +3220,14 @@ id bounceStart
 id btnAddEvent
 id btnAddSpecialDay
 id btnCancel
+id btnCancelSpecialDay
 id btnDatePicker
 id btnDelete
 id btnDeleteSpecialDay
 id btnEdit
-id btnNotificationSettings
-id btnResetDefault
 id btnSave
+id btnSaveSpecialDay
 id btnSearch
-id btnSetTime
 id btnSpecialDayList
 id btnViewCalendar
 id buttonPanel
@@ -3323,6 +3322,7 @@ id etSolarDay
 id etSolarMonth
 id etSolarYear
 id etSpecialDayName
+id etSpecialDayNotes
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
@@ -3390,6 +3390,7 @@ id linear
 id listMode
 id list_item
 id llActionButtons
+id llNotificationTime
 id llSpinners
 id lvSpecialDays
 id m3_side_sheet
@@ -3634,7 +3635,8 @@ id transition_scene_layoutid_cache
 id transition_transform
 id triangle
 id tvCalendarInfo
-id tvCurrentTime
+id tvDialogDate
+id tvDialogTitle
 id tvEmptyMessage
 id tvEventDate
 id tvEventDescription
@@ -3645,12 +3647,13 @@ id tvLunarDate
 id tvLunarDay
 id tvLunarMonth
 id tvLunarYear
+id tvNotificationTime
 id tvSolarDate
 id tvSpecialDayDate
 id tvSpecialDayIndicator
 id tvSpecialDayName
+id tvSpecialDayTime
 id tvTitle
-id tvTitleDialog
 id unchecked
 id uniform
 id unlabeled
@@ -3792,7 +3795,6 @@ layout abc_tooltip
 layout activity_add_event
 layout activity_event_list
 layout activity_main
-layout activity_notification_settings
 layout activity_special_day_list
 layout calendar_cell
 layout custom_dialog

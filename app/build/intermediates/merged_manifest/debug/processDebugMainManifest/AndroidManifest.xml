@@ -38,38 +38,20 @@
             </intent-filter>
         </activity>
 
-        <!-- Event List Activity -->
-        <activity
-            android:name="com.example.lunarcalendar.EventListActivity"
-            android:label="Danh sách sự kiện"
-            android:theme="@style/AppTheme" />
-
-        <!-- Add Event Activity -->
-        <activity
-            android:name="com.example.lunarcalendar.AddEventActivity"
-            android:label="Thêm/Sửa sự kiện"
-            android:theme="@style/AppTheme" />
-
-        <!-- Notification Receiver -->
-        <receiver
-            android:name="com.example.lunarcalendar.NotificationReceiver"
-            android:exported="false" />
-
         <!-- Special Day Notification Receiver -->
         <receiver
             android:name="com.example.lunarcalendar.SpecialDayNotificationReceiver"
             android:exported="true" />
 
+        <!-- Exact Alarm Notification Receiver -->
+        <receiver
+            android:name="com.example.lunarcalendar.AlarmNotificationReceiver"
+            android:exported="false" />
+
         <!-- Special Day List Activity -->
         <activity
             android:name="com.example.lunarcalendar.SpecialDayListActivity"
             android:label="Danh sách ngày đặc biệt"
-            android:theme="@style/AppTheme" />
-
-        <!-- Notification Settings Activity -->
-        <activity
-            android:name="com.example.lunarcalendar.NotificationSettingsActivity"
-            android:label="Cài đặt thông báo"
             android:theme="@style/AppTheme" />
 
         <provider

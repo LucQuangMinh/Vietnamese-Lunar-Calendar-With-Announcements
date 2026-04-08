@@ -11,6 +11,9 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.app.TimePickerDialog;
+import android.widget.TimePicker;
+import android.widget.LinearLayout;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -24,19 +27,21 @@ public class SpecialDayDialog extends DialogFragment {
     private int specialDayId = -1;
     private String specialDayName = "";
     private String specialDayNotes = "";
+    private String notificationTime = "18:00";
+    private TextView tvNotificationTime;
     private OnSpecialDayActionListener listener;
     
     public interface OnSpecialDayActionListener {
-        void onSpecialDayCreated(String name, String notes, int day, int month, int year);
-        void onSpecialDayUpdated(int id, String newName, String newNotes);
+        void onSpecialDayCreated(String name, String notes, int day, int month, int year, String notificationTime);
+        void onSpecialDayUpdated(int id, String newName, String newNotes, String notificationTime);
         void onSpecialDayDeleted(int id);
     }
     
     public static SpecialDayDialog newInstance(int day, int month, int year) {
-        return newInstance(day, month, year, -1, "", "");
+        return newInstance(day, month, year, -1, "", "", "18:00");
     }
     
-    public static SpecialDayDialog newInstance(int day, int month, int year, int specialDayId, String specialDayName, String specialDayNotes) {
+    public static SpecialDayDialog newInstance(int day, int month, int year, int specialDayId, String specialDayName, String specialDayNotes, String notificationTime) {
         SpecialDayDialog dialog = new SpecialDayDialog();
         Bundle args = new Bundle();
         args.putInt("day", day);
@@ -45,6 +50,7 @@ public class SpecialDayDialog extends DialogFragment {
         args.putInt("specialDayId", specialDayId);
         args.putString("specialDayName", specialDayName);
         args.putString("specialDayNotes", specialDayNotes);
+        args.putString("notificationTime", notificationTime);
         dialog.setArguments(args);
         return dialog;
     }
@@ -69,6 +75,7 @@ public class SpecialDayDialog extends DialogFragment {
             specialDayId = getArguments().getInt("specialDayId", -1);
             specialDayName = getArguments().getString("specialDayName", "");
             specialDayNotes = getArguments().getString("specialDayNotes", "");
+            notificationTime = getArguments().getString("notificationTime", "18:00");
         }
         
         AlertDialog.Builder builder = new AlertDialog.Builder(requireActivity());
@@ -77,6 +84,8 @@ public class SpecialDayDialog extends DialogFragment {
         
         etSpecialDayName = view.findViewById(R.id.etSpecialDayName);
         etSpecialDayNotes = view.findViewById(R.id.etSpecialDayNotes);
+        tvNotificationTime = view.findViewById(R.id.tvNotificationTime);
+        LinearLayout llNotificationTime = view.findViewById(R.id.llNotificationTime);
         TextView tvDialogTitle = view.findViewById(R.id.tvDialogTitle);
         TextView tvDialogDate = view.findViewById(R.id.tvDialogDate);
         View btnDeleteSpecialDay = view.findViewById(R.id.btnDeleteSpecialDay);
@@ -86,6 +95,27 @@ public class SpecialDayDialog extends DialogFragment {
         boolean isEditMode = (specialDayId != -1);
         tvDialogTitle.setText(isEditMode ? "Thông tin ngày đặc biệt" : "Tạo ngày đặc biệt");
         tvDialogDate.setText("Ngày: " + day + "/" + month + "/" + year);
+        tvNotificationTime.setText(notificationTime);
+        
+        // Setup Time Picker
+        llNotificationTime.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String[] parts = notificationTime.split(":");
+                int hour = parts.length == 2 ? Integer.parseInt(parts[0]) : 18;
+                int minute = parts.length == 2 ? Integer.parseInt(parts[1]) : 0;
+                
+                TimePickerDialog timePickerDialog = new TimePickerDialog(requireContext(),
+                        new TimePickerDialog.OnTimeSetListener() {
+                            @Override
+                            public void onTimeSet(TimePicker view, int hourOfDay, int minuteOfHour) {
+                                notificationTime = String.format("%02d:%02d", hourOfDay, minuteOfHour);
+                                tvNotificationTime.setText(notificationTime);
+                            }
+                        }, hour, minute, true);
+                timePickerDialog.show();
+            }
+        });
         
         if (isEditMode) {
             etSpecialDayName.setText(specialDayName);
@@ -134,9 +164,9 @@ public class SpecialDayDialog extends DialogFragment {
                 String notes = etSpecialDayNotes.getText().toString().trim();
                 if (!TextUtils.isEmpty(name)) {
                     if (isEditMode) {
-                        listener.onSpecialDayUpdated(specialDayId, name, notes);
+                        listener.onSpecialDayUpdated(specialDayId, name, notes, notificationTime);
                     } else {
-                        listener.onSpecialDayCreated(name, notes, day, month, year);
+                        listener.onSpecialDayCreated(name, notes, day, month, year, notificationTime);
                     }
                     dialog.dismiss();
                 } else {

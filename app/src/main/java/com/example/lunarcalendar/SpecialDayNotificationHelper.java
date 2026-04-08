@@ -49,13 +49,13 @@ public class SpecialDayNotificationHelper {
     }
 
     /**
-     * Schedule daily check for special days (mùng một and rằm)
+     * Schedule daily check (Daily Planner) for 00:01 AM every day
      */
-    public void scheduleDailyCheck(Context context) {
+    public static void scheduleDailyPlanner(Context context) {
         AlarmManager alarmManager = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
         
-        // Create intent for the notification
         Intent intent = new Intent(context, SpecialDayNotificationReceiver.class);
+        intent.setAction("DAILY_PLANNER");
         
         PendingIntent pendingIntent = PendingIntent.getBroadcast(
                 context, 
@@ -64,47 +64,65 @@ public class SpecialDayNotificationHelper {
                 PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE
         );
 
-        // Get notification time from SharedPreferences
-        int[] notificationTime = getNotificationTime(context);
-        int hour = notificationTime[0];
-        int minute = notificationTime[1];
+        // Schedule for 00:01 AM every day
+        Calendar calendar = Calendar.getInstance();
+        calendar.set(Calendar.HOUR_OF_DAY, 0);
+        calendar.set(Calendar.MINUTE, 1);
+        calendar.set(Calendar.SECOND, 0);
 
-        // Schedule for the specified time every day (Vietnam timezone UTC+7)
-        Calendar notificationCalendar = Calendar.getInstance();
-        notificationCalendar.set(Calendar.HOUR_OF_DAY, hour);
-        notificationCalendar.set(Calendar.MINUTE, minute);
-        notificationCalendar.set(Calendar.SECOND, 0);
+        if (calendar.before(Calendar.getInstance())) {
+            calendar.add(Calendar.DAY_OF_MONTH, 1);
+        }
 
-        // If it's already past the notification time today, schedule for tomorrow
-        Calendar now = Calendar.getInstance();
-        if (notificationCalendar.before(now)) {
-            notificationCalendar.add(Calendar.DAY_OF_MONTH, 1);
+        if (alarmManager != null) {
+            alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), AlarmManager.INTERVAL_DAY, pendingIntent);
+        }
+        
+        // Cần phải chạy Planner ngay bây giờ để hẹn giờ cho sự kiện trong ngày hôm nay!
+        Intent runNowIntent = new Intent(context, SpecialDayNotificationReceiver.class);
+        runNowIntent.setAction("DAILY_PLANNER");
+        context.sendBroadcast(runNowIntent);
+    }
+
+    /**
+     * Schedule a specific exact alarm for today
+     */
+    public static void scheduleSpecificAlarm(Context context, int hour, int minute, int requestCode, String title, String content) {
+        AlarmManager alarmManager = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
+        
+        Intent intent = new Intent(context, AlarmNotificationReceiver.class);
+        intent.putExtra("title", title);
+        intent.putExtra("content", content);
+        
+        PendingIntent pendingIntent = PendingIntent.getBroadcast(
+                context, 
+                requestCode, 
+                intent, 
+                PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE
+        );
+        
+        Calendar alarmCal = Calendar.getInstance();
+        alarmCal.set(Calendar.HOUR_OF_DAY, hour);
+        alarmCal.set(Calendar.MINUTE, minute);
+        alarmCal.set(Calendar.SECOND, 0);
+        
+        // Nếu giờ này đã qua trong ngày thì bỏ qua (hoặc bạn có thể cho phép nổ ngay cũng được)
+        if (alarmCal.before(Calendar.getInstance())) {
+            return;
         }
 
         if (alarmManager != null) {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
-                // Android 12+ requires checking for exact alarm permission
                 if (alarmManager.canScheduleExactAlarms()) {
-                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-                        alarmManager.setExactAndAllowWhileIdle(AlarmManager.RTC_WAKEUP, 
-                                notificationCalendar.getTimeInMillis(), pendingIntent);
-                    } else {
-                        alarmManager.setExact(AlarmManager.RTC_WAKEUP, 
-                                notificationCalendar.getTimeInMillis(), pendingIntent);
-                    }
+                    alarmManager.setExactAndAllowWhileIdle(AlarmManager.RTC_WAKEUP, alarmCal.getTimeInMillis(), pendingIntent);
                 } else {
-                    // Fallback to non-exact alarm if permission not granted
-                    alarmManager.setAndAllowWhileIdle(AlarmManager.RTC_WAKEUP, 
-                            notificationCalendar.getTimeInMillis(), pendingIntent);
+                    alarmManager.setAndAllowWhileIdle(AlarmManager.RTC_WAKEUP, alarmCal.getTimeInMillis(), pendingIntent);
                 }
             } else {
-                // For Android versions below 12, use exact alarm
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-                    alarmManager.setExactAndAllowWhileIdle(AlarmManager.RTC_WAKEUP, 
-                            notificationCalendar.getTimeInMillis(), pendingIntent);
+                    alarmManager.setExactAndAllowWhileIdle(AlarmManager.RTC_WAKEUP, alarmCal.getTimeInMillis(), pendingIntent);
                 } else {
-                    alarmManager.setExact(AlarmManager.RTC_WAKEUP, 
-                            notificationCalendar.getTimeInMillis(), pendingIntent);
+                    alarmManager.setExact(AlarmManager.RTC_WAKEUP, alarmCal.getTimeInMillis(), pendingIntent);
                 }
             }
         }
@@ -121,88 +139,22 @@ public class SpecialDayNotificationHelper {
     }
 
     /**
-     * Show special day notification
+     * Generic show notification method
      */
-    public void showSpecialDayNotification(int lunarDay, int lunarMonth, int lunarYear) {
-        String title = "Thông báo ngày đặc biệt";
-        String content;
-        
-        if (lunarDay == 1) {
-            content = "Mai là ngày mùng một tháng " + lunarMonth + " năm " + lunarYear;
-        } else if (lunarDay == 15) {
-            content = "Mai là ngày rằm tháng " + lunarMonth + " năm " + lunarYear;
-        } else {
-            return; // Should not happen, but just in case
-        }
-
+    public void showNotification(String title, String content, int id) {
         NotificationCompat.Builder builder = new NotificationCompat.Builder(context, CHANNEL_ID)
                 .setSmallIcon(android.R.drawable.ic_dialog_info)
                 .setContentTitle(title)
                 .setContentText(content)
                 .setPriority(NotificationCompat.PRIORITY_HIGH)
                 .setCategory(NotificationCompat.CATEGORY_ALARM)
-                .setAutoCancel(true)
-                .setOngoing(false)
-                .setFullScreenIntent(null, true);
-
-        // Add dismiss action
-        Intent dismissIntent = new Intent(context, SpecialDayNotificationReceiver.class);
-        dismissIntent.setAction("DISMISS");
-        
-        PendingIntent dismissPendingIntent = PendingIntent.getBroadcast(
-                context, 
-                1001, 
-                dismissIntent, 
-                PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE
-        );
-
-        builder.addAction(android.R.drawable.ic_menu_close_clear_cancel, "X", dismissPendingIntent);
+                .setAutoCancel(true);
 
         NotificationManagerCompat notificationManager = NotificationManagerCompat.from(context);
         
-        // Check runtime permission before showing notification
         if (androidx.core.content.ContextCompat.checkSelfPermission(context, android.Manifest.permission.POST_NOTIFICATIONS) 
             == android.content.pm.PackageManager.PERMISSION_GRANTED) {
-            notificationManager.notify(NOTIFICATION_ID, builder.build());
-        }
-    }
-
-    /**
-     * Show special day notification with custom name
-     */
-    public void showSpecialDayNotification(String specialDayName) {
-        String title = "Thông báo ngày đặc biệt";
-        String content = "Mai là ngày " + specialDayName;
-
-        NotificationCompat.Builder builder = new NotificationCompat.Builder(context, CHANNEL_ID)
-                .setSmallIcon(android.R.drawable.ic_dialog_info)
-                .setContentTitle(title)
-                .setContentText(content)
-                .setPriority(NotificationCompat.PRIORITY_HIGH)
-                .setCategory(NotificationCompat.CATEGORY_ALARM)
-                .setAutoCancel(true)
-                .setOngoing(false)
-                .setFullScreenIntent(null, true);
-
-        // Add dismiss action
-        Intent dismissIntent = new Intent(context, SpecialDayNotificationReceiver.class);
-        dismissIntent.setAction("DISMISS");
-        
-        PendingIntent dismissPendingIntent = PendingIntent.getBroadcast(
-                context, 
-                1001, 
-                dismissIntent, 
-                PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE
-        );
-
-        builder.addAction(android.R.drawable.ic_menu_close_clear_cancel, "X", dismissPendingIntent);
-
-        NotificationManagerCompat notificationManager = NotificationManagerCompat.from(context);
-        
-        // Check runtime permission before showing notification
-        if (androidx.core.content.ContextCompat.checkSelfPermission(context, android.Manifest.permission.POST_NOTIFICATIONS) 
-            == android.content.pm.PackageManager.PERMISSION_GRANTED) {
-            notificationManager.notify(NOTIFICATION_ID, builder.build());
+            notificationManager.notify(id, builder.build());
         }
     }
 

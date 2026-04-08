@@ -11,6 +11,8 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.content.Intent;
+import android.view.GestureDetector;
+import android.view.MotionEvent;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -21,7 +23,6 @@ import java.util.List;
 import com.example.lunarcalendar.SpecialDay;
 import com.example.lunarcalendar.SpecialDayDialog;
 import com.example.lunarcalendar.SpecialDayListActivity;
-import com.example.lunarcalendar.NotificationSettingsActivity;
 
 public class MainActivity extends AppCompatActivity implements SpecialDayDialog.OnSpecialDayActionListener {
 
@@ -36,6 +37,7 @@ public class MainActivity extends AppCompatActivity implements SpecialDayDialog.
     public int selectedMonth;
     public int selectedYear;
     private int currentDay, currentMonth, currentYear;
+    private GestureDetector gestureDetector;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -73,12 +75,14 @@ public class MainActivity extends AppCompatActivity implements SpecialDayDialog.
         calendarAdapter = new CalendarAdapter(this, calendarCells);
         gridViewCalendar.setAdapter(calendarAdapter);
 
+        // Setup swipe gesture
+        setupSwipeGesture();
+
         // Display current month calendar
         displayCalendar(selectedMonth, selectedYear);
 
         // Schedule special day notifications
-        SpecialDayNotificationHelper specialDayHelper = new SpecialDayNotificationHelper(this);
-        specialDayHelper.scheduleDailyCheck(this);
+        SpecialDayNotificationHelper.scheduleDailyPlanner(this);
 
         // Button click listeners
         btnViewCalendar.setOnClickListener(new View.OnClickListener() {
@@ -97,16 +101,6 @@ public class MainActivity extends AppCompatActivity implements SpecialDayDialog.
                 startActivity(intent);
             }
         });
-
-        // Notification Settings button
-        Button btnNotificationSettings = findViewById(R.id.btnNotificationSettings);
-        btnNotificationSettings.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, NotificationSettingsActivity.class);
-                startActivity(intent);
-            }
-        });
     }
 
     @Override
@@ -116,22 +110,88 @@ public class MainActivity extends AppCompatActivity implements SpecialDayDialog.
         displayCalendar(selectedMonth, selectedYear);
     }
 
-    public void showSpecialDayDialog(int day, int month, int year) {
-        showSpecialDayDialog(day, month, year, -1, "", "");
+    @Override
+    public boolean dispatchTouchEvent(MotionEvent ev) {
+        if (gestureDetector != null && gestureDetector.onTouchEvent(ev)) {
+            return true;
+        }
+        return super.dispatchTouchEvent(ev);
     }
 
-    public void showSpecialDayDialog(int day, int month, int year, int specialDayId, String specialDayName, String specialDayNotes) {
-        SpecialDayDialog dialog = SpecialDayDialog.newInstance(day, month, year, specialDayId, specialDayName, specialDayNotes);
+    private void setupSwipeGesture() {
+        gestureDetector = new GestureDetector(this, new GestureDetector.SimpleOnGestureListener() {
+            private static final int SWIPE_THRESHOLD = 100;
+            private static final int SWIPE_VELOCITY_THRESHOLD = 100;
+
+            @Override
+            public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
+                if (e1 == null || e2 == null) return false;
+                
+                boolean result = false;
+                try {
+                    float diffY = e2.getY() - e1.getY();
+                    float diffX = e2.getX() - e1.getX();
+                    if (Math.abs(diffX) > Math.abs(diffY)) {
+                        if (Math.abs(diffX) > SWIPE_THRESHOLD && Math.abs(velocityX) > SWIPE_VELOCITY_THRESHOLD) {
+                            if (diffX > 0) {
+                                goToPreviousMonth();
+                            } else {
+                                goToNextMonth();
+                            }
+                            result = true;
+                        }
+                    }
+                } catch (Exception exception) {
+                    exception.printStackTrace();
+                }
+                return result;
+            }
+        });
+    }
+
+    private void goToPreviousMonth() {
+        selectedMonth--;
+        if (selectedMonth < 1) {
+            selectedMonth = 12;
+            selectedYear--;
+            if (selectedYear >= 1900) {
+                spinnerYear.setSelection(selectedYear - 1900);
+            }
+        }
+        spinnerMonth.setSelection(selectedMonth - 1);
+        displayCalendar(selectedMonth, selectedYear);
+    }
+
+    private void goToNextMonth() {
+        selectedMonth++;
+        if (selectedMonth > 12) {
+            selectedMonth = 1;
+            selectedYear++;
+            if (selectedYear <= 2100) {
+                spinnerYear.setSelection(selectedYear - 1900);
+            }
+        }
+        spinnerMonth.setSelection(selectedMonth - 1);
+        displayCalendar(selectedMonth, selectedYear);
+    }
+
+    public void showSpecialDayDialog(int day, int month, int year) {
+        showSpecialDayDialog(day, month, year, -1, "", "", "18:00");
+    }
+
+    public void showSpecialDayDialog(int day, int month, int year, int specialDayId, String specialDayName, String specialDayNotes, String notificationTime) {
+        SpecialDayDialog dialog = SpecialDayDialog.newInstance(day, month, year, specialDayId, specialDayName, specialDayNotes, notificationTime);
         dialog.show(getSupportFragmentManager(), "SpecialDayDialog");
     }
 
     @Override
-    public void onSpecialDayCreated(String name, String notes, int day, int month, int year) {
+    public void onSpecialDayCreated(String name, String notes, int day, int month, int year, String notificationTime) {
         // Save special day to database
         DatabaseHelper dbHelper = new DatabaseHelper(this);
         SpecialDay specialDay = new SpecialDay();
         specialDay.setName(name);
         specialDay.setNotes(notes);
+        specialDay.setNotificationTime(notificationTime);
         specialDay.setDay(day);
         specialDay.setMonth(month);
         specialDay.setCreatedAt(java.text.DateFormat.getDateTimeInstance().format(new java.util.Date()));
@@ -139,32 +199,24 @@ public class MainActivity extends AppCompatActivity implements SpecialDayDialog.
         dbHelper.addSpecialDay(specialDay);
         Toast.makeText(this, "Đã tạo ngày đặc biệt: " + name, Toast.LENGTH_SHORT).show();
         
-        // Cập nhật lại giao diện ngay lập tức thay vì phải bấm nút
         displayCalendar(selectedMonth, selectedYear);
+        SpecialDayNotificationHelper.scheduleDailyPlanner(this);
     }
 
     @Override
-    public void onSpecialDayUpdated(int id, String newName, String newNotes) {
+    public void onSpecialDayUpdated(int id, String newName, String newNotes, String notificationTime) {
         DatabaseHelper dbHelper = new DatabaseHelper(this);
-        SpecialDay specialDay = new SpecialDay();
-        specialDay.setId(id);
-        specialDay.setName(newName);
-        specialDay.setNotes(newNotes);
-        // We need day and month, let's fetch it first before update
-        // Or we can just create a method that updates name only
-        // Wait, updateSpecialDay needs day/month. Let's fetch the existing one first.
-        // Actually, dbHelper.getSpecialDayByDate requires date. Wait, we can get by id.
-        // It's better to add getSpecialDayById to DB Helper, or I can just update the name using a direct query.
-        // Actually I'll use raw db.execSQL to simplify unless I add getSpecialDayById.
         android.database.sqlite.SQLiteDatabase db = dbHelper.getWritableDatabase();
         android.content.ContentValues values = new android.content.ContentValues();
         values.put("name", newName);
         values.put("notes", newNotes);
+        values.put("notification_time", notificationTime);
         db.update("special_days", values, "id = ?", new String[]{String.valueOf(id)});
         db.close();
 
         Toast.makeText(this, "Đã cập nhật: " + newName, Toast.LENGTH_SHORT).show();
         displayCalendar(selectedMonth, selectedYear);
+        SpecialDayNotificationHelper.scheduleDailyPlanner(this);
     }
 
     @Override
@@ -173,10 +225,10 @@ public class MainActivity extends AppCompatActivity implements SpecialDayDialog.
         dbHelper.deleteSpecialDay(id);
         Toast.makeText(this, "Đã xóa ngày đặc biệt", Toast.LENGTH_SHORT).show();
         displayCalendar(selectedMonth, selectedYear);
+        SpecialDayNotificationHelper.scheduleDailyPlanner(this);
     }
 
     private void setupMonthSpinner() {
-        // Create month array (1-12)
         String[] months = new String[12];
         for (int i = 0; i < 12; i++) {
             months[i] = String.valueOf(i + 1);
@@ -201,7 +253,6 @@ public class MainActivity extends AppCompatActivity implements SpecialDayDialog.
     }
 
     private void setupYearSpinner() {
-        // Create year array (1900-2100)
         List<String> years = new ArrayList<>();
         for (int i = 1900; i <= 2100; i++) {
             years.add(String.valueOf(i));
@@ -242,58 +293,43 @@ public class MainActivity extends AppCompatActivity implements SpecialDayDialog.
     }
 
     private void displayCalendar(int month, int year) {
-        // Update title
         tvTitle.setText(getString(R.string.calendar_title, month, year));
         tvCalendarInfo.setText(getString(R.string.view_calendar, month, year));
 
-        // Clear previous data
         calendarCells.clear();
 
-        // Get first day of month
         Calendar calendar = Calendar.getInstance();
         calendar.set(year, month - 1, 1);
         int firstDayOfWeek = calendar.get(Calendar.DAY_OF_WEEK);
-        
-        // Convert Sunday=1 to Monday=1 format
-        // In Java Calendar: Sunday=1, Monday=2, ..., Saturday=7
-        // We want: Monday=1, Tuesday=2, ..., Sunday=7
         int startDayOffset = (firstDayOfWeek == 1) ? 6 : firstDayOfWeek - 2;
 
-        // Get days in month
         int daysInMonth = calendar.getActualMaximum(Calendar.DAY_OF_MONTH);
 
-        // Get previous month info
         Calendar prevMonth = (Calendar) calendar.clone();
         prevMonth.add(Calendar.MONTH, -1);
         int daysInPrevMonth = prevMonth.getActualMaximum(Calendar.DAY_OF_MONTH);
         int prevMonthNum = prevMonth.get(Calendar.MONTH) + 1;
         int prevYear = prevMonth.get(Calendar.YEAR);
 
-        // Get next month info
         Calendar nextMonth = (Calendar) calendar.clone();
         nextMonth.add(Calendar.MONTH, 1);
         int nextMonthNum = nextMonth.get(Calendar.MONTH) + 1;
         int nextYear = nextMonth.get(Calendar.YEAR);
 
-        // Add previous month's trailing days
         for (int i = startDayOffset - 1; i >= 0; i--) {
             int day = daysInPrevMonth - i;
             int[] lunarDate = LunarCalendar.convertSolarToLunar(day, prevMonthNum, prevYear);
             calendarCells.add(new CalendarCell(day, lunarDate[0], lunarDate[1], false, false));
         }
 
-        // Add current month's days
         for (int day = 1; day <= daysInMonth; day++) {
             int[] lunarDate = LunarCalendar.convertSolarToLunar(day, month, year);
             boolean isToday = (day == currentDay && month == currentMonth && year == currentYear);
             calendarCells.add(new CalendarCell(day, lunarDate[0], lunarDate[1], isToday, true));
         }
 
-        // Add next month's leading days to complete the grid
         int totalCells = calendarCells.size();
         int remainingCells = (totalCells % 7 == 0) ? 0 : 7 - (totalCells % 7);
-        
-        // Always show at least 5 rows (35 cells)
         if (totalCells + remainingCells < 35) {
             remainingCells += 7;
         }
@@ -303,7 +339,6 @@ public class MainActivity extends AppCompatActivity implements SpecialDayDialog.
             calendarCells.add(new CalendarCell(day, lunarDate[0], lunarDate[1], false, false));
         }
 
-        // Update adapter
         calendarAdapter.updateData(calendarCells);
     }
 }

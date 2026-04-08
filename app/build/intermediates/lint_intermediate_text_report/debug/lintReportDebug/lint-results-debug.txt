@@ -7,9 +7,9 @@ D:\test ai\VietnameseLunarCalendar\app\src\main\java\com\example\lunarcalendar\E
 D:\test ai\VietnameseLunarCalendar\app\src\main\java\com\example\lunarcalendar\EventListActivity.java:93: Warning: Implicitly using the default locale is a common source of bugs: Use toLowerCase(Locale) instead. For strings meant to be internal use Locale.ROOT, otherwise Locale.getDefault(). [DefaultLocale]
             if (event.getName().toLowerCase().contains(query.toLowerCase())) {
                                                              ~~~~~~~~~~~
-D:\test ai\VietnameseLunarCalendar\app\src\main\java\com\example\lunarcalendar\NotificationSettingsActivity.java:83: Warning: Implicitly using the default locale is a common source of bugs: Use String.format(Locale, ...) instead [DefaultLocale]
-        String timeText = String.format("%02d:%02d", currentHour, currentMinute);
-                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\test ai\VietnameseLunarCalendar\app\src\main\java\com\example\lunarcalendar\SpecialDayDialog.java:112: Warning: Implicitly using the default locale is a common source of bugs: Use String.format(Locale, ...) instead [DefaultLocale]
+                                notificationTime = String.format("%02d:%02d", hourOfDay, minuteOfHour);
+                                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
    Explanation for issues of type "DefaultLocale":
    Calling String#toLowerCase() or #toUpperCase() without specifying an
@@ -105,6 +105,24 @@ D:\test ai\VietnameseLunarCalendar\app\src\main\java\com\example\lunarcalendar\E
    all existing items and structure may no longer be valid. `LayoutManager`s
    will be forced to fully rebind and relayout all visible views.
 
+D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\item_special_day.xml:30: Warning: This tag and its children can be replaced by one <TextView/> and a compound drawable [UseCompoundDrawables]
+        <LinearLayout
+         ~~~~~~~~~~~~
+D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\item_special_day.xml:53: Warning: This tag and its children can be replaced by one <TextView/> and a compound drawable [UseCompoundDrawables]
+        <LinearLayout
+         ~~~~~~~~~~~~
+
+   Explanation for issues of type "UseCompoundDrawables":
+   A LinearLayout which contains an ImageView and a TextView can be more
+   efficiently handled as a compound drawable (a single TextView, using the
+   drawableTop, drawableLeft, drawableRight and/or drawableBottom attributes
+   to draw one or more images adjacent to the text).
+
+   If the two widgets are offset from each other with margins, this can be
+   replaced with a drawablePadding attribute.
+
+   There's a lint quickfix to perform this conversion in the Eclipse plugin.
+
 D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\activity_add_event.xml:5: Warning: Possible overdraw: Root element paints background @color/white with a theme that also paints a background (inferred theme is @style/AppTheme) [Overdraw]
     android:background="@color/white">
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -114,15 +132,12 @@ D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\activity_event_list.x
 D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\activity_main.xml:6: Warning: Possible overdraw: Root element paints background @color/surface_bg with a theme that also paints a background (inferred theme is @style/AppTheme) [Overdraw]
     android:background="@color/surface_bg">
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\activity_notification_settings.xml:7: Warning: Possible overdraw: Root element paints background @color/white with a theme that also paints a background (inferred theme is @style/AppTheme) [Overdraw]
-    android:background="@color/white">
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\dialog_special_day.xml:7: Warning: Possible overdraw: Root element paints background @color/card_bg with a theme that also paints a background (inferred theme is @style/AppTheme) [Overdraw]
+    android:background="@color/card_bg"
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\header_cell.xml:12: Warning: Possible overdraw: Root element paints background @color/header_bg with a theme that also paints a background (inferred theme is @style/AppTheme) [Overdraw]
     android:background="@color/header_bg"
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\item_special_day.xml:7: Warning: Possible overdraw: Root element paints background ?android:attr/selectableItemBackground with a theme that also paints a background (inferred theme is @style/AppTheme) [Overdraw]
-    android:background="?android:attr/selectableItemBackground">
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
    Explanation for issues of type "Overdraw":
    If you set a background drawable on a root view, then you should use a
@@ -153,6 +168,9 @@ D:\test ai\VietnameseLunarCalendar\app\src\main\res\values\colors.xml:20: Warnin
     <color name="weekend_bg">#FFF8ED</color>
            ~~~~~~~~~~~~~~~~~
 D:\test ai\VietnameseLunarCalendar\app\src\main\res\mipmap-hdpi\ic_launcher_round.webp: Warning: The resource R.mipmap.ic_launcher_round appears to be unused [UnusedResources]
+D:\test ai\VietnameseLunarCalendar\app\src\main\res\drawable\rounded_background.xml:2: Warning: The resource R.drawable.rounded_background appears to be unused [UnusedResources]
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+^
 
    Explanation for issues of type "UnusedResources":
    Unused resources make applications larger and slow down builds.
@@ -257,9 +275,6 @@ D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\activity_add_event.xm
 D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\activity_event_list.xml:48: Warning: Missing autofillHints attribute [Autofill]
         <EditText
          ~~~~~~~~
-D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\dialog_special_day.xml:16: Warning: Missing autofillHints attribute [Autofill]
-    <EditText
-     ~~~~~~~~
 
    Explanation for issues of type "Autofill":
    Specify an autofillHints attribute when targeting SDK version 26 or higher
@@ -281,9 +296,18 @@ D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\dialog_special_day.xm
 
    https://developer.android.com/guide/topics/text/autofill.html
 
+D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\dialog_special_day.xml:96: Warning: Missing contentDescription attribute on image [ContentDescription]
+            <ImageView
+             ~~~~~~~~~
 D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\event_item.xml:82: Warning: Missing contentDescription attribute on image [ContentDescription]
         <ImageView
          ~~~~~~~~~
+D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\item_special_day.xml:37: Warning: Missing contentDescription attribute on image [ContentDescription]
+            <ImageView
+             ~~~~~~~~~
+D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\item_special_day.xml:60: Warning: Missing contentDescription attribute on image [ContentDescription]
+            <ImageView
+             ~~~~~~~~~
 
    Explanation for issues of type "ContentDescription":
    Non-textual widgets like ImageViews and ImageButtons should use the
@@ -307,18 +331,27 @@ D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\event_item.xml:82: Wa
 D:\test ai\VietnameseLunarCalendar\app\src\main\java\com\example\lunarcalendar\CalendarAdapter.java:72: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
             holder.tvLunarDate.setText(cell.getLunarDay() + " / " + cell.getLunarMonth());
                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\test ai\VietnameseLunarCalendar\app\src\main\java\com\example\lunarcalendar\NotificationSettingsActivity.java:84: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
-        tvCurrentTime.setText("Thời gian hiện tại: " + timeText);
-                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\test ai\VietnameseLunarCalendar\app\src\main\java\com\example\lunarcalendar\NotificationSettingsActivity.java:84: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
-        tvCurrentTime.setText("Thời gian hiện tại: " + timeText);
-                              ~~~~~~~~~~~~~~~~~~~~~~
-D:\test ai\VietnameseLunarCalendar\app\src\main\java\com\example\lunarcalendar\SpecialDayAdapter.java:47: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
-        tvSpecialDayDate.setText("Ngày dương: " + specialDay.getDay() + "/" + specialDay.getMonth() + "\n" + lunarDateString);
-                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\test ai\VietnameseLunarCalendar\app\src\main\java\com\example\lunarcalendar\SpecialDayAdapter.java:47: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
-        tvSpecialDayDate.setText("Ngày dương: " + specialDay.getDay() + "/" + specialDay.getMonth() + "\n" + lunarDateString);
-                                 ~~~~~~~~~~~~~~
+D:\test ai\VietnameseLunarCalendar\app\src\main\java\com\example\lunarcalendar\SpecialDayAdapter.java:40: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+        tvSpecialDayDate.setText("Ngày: " + specialDay.getDay() + "/" + specialDay.getMonth() + "  •  " + lunarDateString);
+                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\test ai\VietnameseLunarCalendar\app\src\main\java\com\example\lunarcalendar\SpecialDayAdapter.java:40: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+        tvSpecialDayDate.setText("Ngày: " + specialDay.getDay() + "/" + specialDay.getMonth() + "  •  " + lunarDateString);
+                                 ~~~~~~~~
+D:\test ai\VietnameseLunarCalendar\app\src\main\java\com\example\lunarcalendar\SpecialDayAdapter.java:41: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+        tvSpecialDayTime.setText("Báo thức lúc " + specialDay.getNotificationTime() + " ngày trước đó");
+                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\test ai\VietnameseLunarCalendar\app\src\main\java\com\example\lunarcalendar\SpecialDayAdapter.java:41: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+        tvSpecialDayTime.setText("Báo thức lúc " + specialDay.getNotificationTime() + " ngày trước đó");
+                                 ~~~~~~~~~~~~~~~
+D:\test ai\VietnameseLunarCalendar\app\src\main\java\com\example\lunarcalendar\SpecialDayAdapter.java:41: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+        tvSpecialDayTime.setText("Báo thức lúc " + specialDay.getNotificationTime() + " ngày trước đó");
+                                                                                      ~~~~~~~~~~~~~~~~
+D:\test ai\VietnameseLunarCalendar\app\src\main\java\com\example\lunarcalendar\SpecialDayDialog.java:97: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+        tvDialogDate.setText("Ngày: " + day + "/" + month + "/" + year);
+                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\test ai\VietnameseLunarCalendar\app\src\main\java\com\example\lunarcalendar\SpecialDayDialog.java:97: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+        tvDialogDate.setText("Ngày: " + day + "/" + month + "/" + year);
+                             ~~~~~~~~
 
    Explanation for issues of type "SetTextI18n":
    When calling TextView#setText
@@ -402,34 +435,16 @@ D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\activity_event_list.x
 D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\activity_event_list.xml:62: Warning: Hardcoded string "Tìm", should use @string resource [HardcodedText]
             android:text="Tìm"
             ~~~~~~~~~~~~~~~~~~
-D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\activity_main.xml:166: Warning: Hardcoded string "Ngày Đặc Biệt", should use @string resource [HardcodedText]
+D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\activity_main.xml:165: Warning: Hardcoded string "Ngày Đặc Biệt", should use @string resource [HardcodedText]
                 android:text="Ngày Đặc Biệt"
                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\activity_main.xml:178: Warning: Hardcoded string "Thông báo", should use @string resource [HardcodedText]
-                android:text="Thông báo"
-                ~~~~~~~~~~~~~~~~~~~~~~~~
-D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\activity_notification_settings.xml:13: Warning: Hardcoded string "Cài đặt thông báo", should use @string resource [HardcodedText]
-        android:text="Cài đặt thông báo"
-        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\activity_notification_settings.xml:25: Warning: Hardcoded string "Thời gian hiện tại: 18:00", should use @string resource [HardcodedText]
-        android:text="Thời gian hiện tại: 18:00"
-        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\activity_notification_settings.xml:38: Warning: Hardcoded string "Chọn thời gian thông báo", should use @string resource [HardcodedText]
-        android:text="Chọn thời gian thông báo"
-        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\activity_notification_settings.xml:51: Warning: Hardcoded string "Đặt lại mặc định (18:00)", should use @string resource [HardcodedText]
-        android:text="Đặt lại mặc định (18:00)"
-        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\activity_notification_settings.xml:65: Warning: Hardcoded string "Thông báo sẽ được gửi vào thời gian đã chọn mỗi ngày để nhắc nhở về ngày đặc biệt hôm sau.", should use @string resource [HardcodedText]
-        android:text="Thông báo sẽ được gửi vào thời gian đã chọn mỗi ngày để nhắc nhở về ngày đặc biệt hôm sau."
-        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\activity_special_day_list.xml:11: Warning: Hardcoded string "Danh sách ngày đặc biệt", should use @string resource [HardcodedText]
         android:text="Danh sách ngày đặc biệt"
         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\activity_special_day_list.xml:21: Warning: Hardcoded string "Tạo ngày đặc biệt mới", should use @string resource [HardcodedText]
         android:text="Tạo ngày đặc biệt mới"
         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\activity_special_day_list.xml:34: Warning: Hardcoded string "Chưa có ngày đặc biệt nào được tạo", should use @string resource [HardcodedText]
+D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\activity_special_day_list.xml:38: Warning: Hardcoded string "Chưa có ngày đặc biệt nào được tạo", should use @string resource [HardcodedText]
         android:text="Chưa có ngày đặc biệt nào được tạo"
         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\calendar_cell.xml:15: Warning: Hardcoded string "1", should use @string resource [HardcodedText]
@@ -438,12 +453,33 @@ D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\calendar_cell.xml:15:
 D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\calendar_cell.xml:31: Warning: Hardcoded string "1/1", should use @string resource [HardcodedText]
             android:text="1/1"
             ~~~~~~~~~~~~~~~~~~
-D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\dialog_special_day.xml:11: Warning: Hardcoded string "Nhập tên cho ngày đặc biệt:", should use @string resource [HardcodedText]
-        android:text="Nhập tên cho ngày đặc biệt:"
-        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\dialog_special_day.xml:20: Warning: Hardcoded string "Ví dụ: Sinh nhật, Kỷ niệm...", should use @string resource [HardcodedText]
-        android:hint="Ví dụ: Sinh nhật, Kỷ niệm..."
-        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\dialog_special_day.xml:22: Warning: Hardcoded string "Ngày đặc biệt", should use @string resource [HardcodedText]
+            android:text="Ngày đặc biệt"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\dialog_special_day.xml:31: Warning: Hardcoded string "Ngày: --/--", should use @string resource [HardcodedText]
+            android:text="Ngày: --/--"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\dialog_special_day.xml:47: Warning: Hardcoded string "Tên ngày đặc biệt", should use @string resource [HardcodedText]
+            android:hint="Tên ngày đặc biệt"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\dialog_special_day.xml:65: Warning: Hardcoded string "Ghi chú (Tùy chọn)", should use @string resource [HardcodedText]
+            android:hint="Ghi chú (Tùy chọn)"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\dialog_special_day.xml:106: Warning: Hardcoded string "Giờ thông báo (trước 1 ngày):", should use @string resource [HardcodedText]
+                android:text="Giờ thông báo (trước 1 ngày):"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\dialog_special_day.xml:119: Warning: Hardcoded string "18:00", should use @string resource [HardcodedText]
+                android:text="18:00"
+                ~~~~~~~~~~~~~~~~~~~~
+D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\dialog_special_day.xml:138: Warning: Hardcoded string "XÓA", should use @string resource [HardcodedText]
+            android:text="XÓA"
+            ~~~~~~~~~~~~~~~~~~
+D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\dialog_special_day.xml:152: Warning: Hardcoded string "HỦY", should use @string resource [HardcodedText]
+            android:text="HỦY"
+            ~~~~~~~~~~~~~~~~~~
+D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\dialog_special_day.xml:160: Warning: Hardcoded string "LƯU", should use @string resource [HardcodedText]
+            android:text="LƯU"
+            ~~~~~~~~~~~~~~~~~~
 D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\event_item.xml:37: Warning: Hardcoded string "Sinh nhật", should use @string resource [HardcodedText]
                 android:text="Sinh nhật"
                 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -465,9 +501,6 @@ D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\event_item.xml:116: W
 D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\header_cell.xml:7: Warning: Hardcoded string "Thứ 2", should use @string resource [HardcodedText]
     android:text="Thứ 2"
     ~~~~~~~~~~~~~~~~~~~~
-D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\item_special_day.xml:36: Warning: Hardcoded string "Xóa", should use @string resource [HardcodedText]
-        android:text="Xóa"
-        ~~~~~~~~~~~~~~~~~~
 
    Explanation for issues of type "HardcodedText":
    Hardcoding text attributes directly in layout files is bad for several
@@ -542,4 +575,4 @@ D:\test ai\VietnameseLunarCalendar\app\src\main\res\layout\event_item.xml:118: W
    the left bitmask. Therefore, you can use gravity="start" rather than
    gravity="left|start".)
 
-0 errors, 105 warnings
+0 errors, 112 warnings

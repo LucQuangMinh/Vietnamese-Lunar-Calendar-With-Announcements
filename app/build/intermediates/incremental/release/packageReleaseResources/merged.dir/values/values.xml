@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="card_bg">#FFFFFF</color>
+    <color name="cell_border">#F2EDD7</color>
+    <color name="current_day_bg">#BA112A</color>
+    <color name="gold_accent">#D4AF37</color>
+    <color name="header_bg">#FDFBF7</color>
+    <color name="header_text">#757575</color>
+    <color name="lunar_text">#A30F25</color>
+    <color name="red_button">#A30F25</color>
+    <color name="red_dark">#8B0000</color>
+    <color name="red_primary">#BA112A</color>
+    <color name="surface_bg">#FDFBF7</color>
+    <color name="text_main">#212121</color>
+    <color name="text_secondary">#757575</color>
+    <color name="transparent">#00000000</color>
+    <color name="weekend_bg">#FFF8ED</color>
+    <color name="white">#FFFFFFFF</color>
+    <string name="app_name">Lịch Âm Việt Nam</string>
+    <string name="calendar_title">Lịch âm dương tháng %1$d/%2$d</string>
+    <string name="friday">Thứ 6</string>
+    <string name="monday">Thứ 2</string>
+    <string name="month_label">Tháng</string>
+    <string name="saturday">Thứ 7</string>
+    <string name="sunday">C.Nhật</string>
+    <string name="thursday">Thứ 5</string>
+    <string name="tuesday">Thứ 3</string>
+    <string name="view_button">Xem ngày</string>
+    <string name="view_calendar">Xem lịch âm tháng %1$d năm %2$d</string>
+    <string name="wednesday">Thứ 4</string>
+    <string name="year_label">Năm</string>
+    <style name="AppTheme" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">@color/red_primary</item>
+        <item name="colorPrimaryDark">@color/red_dark</item>
+        <item name="colorAccent">@color/gold_accent</item>
+        <item name="android:statusBarColor">@color/red_primary</item>
+        <item name="android:windowBackground">@color/surface_bg</item>
+    </style>
+</resources>
